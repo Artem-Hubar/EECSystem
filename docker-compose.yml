@@ -1,0 +1,81 @@
+version: '3.8'
+
+services:
+  influxdb:
+    image: influxdb:latest
+    container_name: influxdb
+    ports:
+      - "8086:8086"
+    volumes:
+      - ./volume/influxdb:/var/lib/influxdb2
+    restart: always
+    environment:
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=admin
+      - DOCKER_INFLUXDB_INIT_PASSWORD=admin123
+      - DOCKER_INFLUXDB_INIT_ORG=nure
+      - DOCKER_INFLUXDB_INIT_BUCKET=eecsystem
+
+  node-red:
+    image: nodered/node-red:latest
+    container_name: node-red
+    environment:
+      - NODE_RED_USER_DIR=/data
+    ports:
+      - "1880:1880"
+    volumes:
+      - ./volume/node-red:/data
+    restart: always
+    networks:
+      - nodered-net
+
+  emqx:
+    image: emqx/emqx:latest
+    container_name: emqx
+    ports:
+      - "1883:1883"    # MQTT
+      - "8083:8083"    # MQTT WebSocket
+      - "18083:18083"  # Панель управления
+    volumes:
+      - ./volume/emqx/emqx_data:/opt/emqx/data
+      - ./volume/emqx/emqx_plugins:/opt/emqx/plugins
+    environment:
+      EMQX_LOADED_PLUGINS: "emqx_dashboard,emqx_management" # Включение панели и API
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: eecsystem
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./volume/postgres:/var/lib/postgresql/data
+    restart: always
+    networks:
+      - my-network
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin123
+    ports:
+      - "5050:80" # Доступ к интерфейсу через localhost:5050
+    volumes:
+      - ./volume/pgadmin:/var/lib/pgadmin
+    restart: always
+    networks:
+      - my-network
+
+
+networks:
+  nodered-net:
+    driver: bridge
+
+  my-network:
+    driver: bridge

@@ -1,0 +1,629 @@
+[
+    {
+        "id": "ed6fc9b850d374ff",
+        "type": "tab",
+        "label": "Поток 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1d60f77e2f32593d",
+        "type": "group",
+        "z": "ed6fc9b850d374ff",
+        "name": "Цех 1",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "c25b13a2126a541f",
+            "fa5e7da91dbafed2",
+            "3",
+            "13e68fddacb57d16",
+            "75b592483e14f61c"
+        ],
+        "x": 1474,
+        "y": 799,
+        "w": 1192,
+        "h": 322
+    },
+    {
+        "id": "9247c215d6f5dddb",
+        "type": "mqtt-broker",
+        "name": "MQTT Server",
+        "broker": "host.docker.internal",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "c25b13a2126a541f",
+        "type": "function",
+        "z": "ed6fc9b850d374ff",
+        "g": "1d60f77e2f32593d",
+        "name": "Transformer",
+        "func": "// Проверяем, что в msg.payload есть input_data и voltage\nif (msg.payload && msg.payload.input_data && msg.payload.input_data.voltage !== undefined && msg.payload.input_data.current !== undefined && msg.payload.transformer !== undefined) {\n    var voltage = msg.payload.input_data.voltage;\n    var current = msg.payload.input_data.current;\n    var turns_ratio = msg.payload.transformer;  // Коэффициент трансформации\n\n    // Применение коэффициента трансформации\n    var new_voltage = voltage / turns_ratio;\n    var new_current = current * turns_ratio;\n\n    // Обновляем msg.payload с новыми значениями\n    msg.payload = { voltage: new_voltage, current: new_current };\n\n    return msg; // Возвращаем сообщение с обновленным payload\n} else {\n    // Если каких-либо данных нет, не отправляем сообщение дальше\n    return null;\n}\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2250,
+        "y": 1080,
+        "wires": [
+            [
+                "fa5e7da91dbafed2",
+                "b2b951f277f4734f"
+            ]
+        ]
+    },
+    {
+        "id": "fa5e7da91dbafed2",
+        "type": "debug",
+        "z": "ed6fc9b850d374ff",
+        "g": "1d60f77e2f32593d",
+        "name": "Results",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2560,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "3",
+        "type": "join",
+        "z": "ed6fc9b850d374ff",
+        "g": "1d60f77e2f32593d",
+        "name": "Join",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": true,
+        "timeout": "1",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 2000,
+        "y": 1080,
+        "wires": [
+            [
+                "c25b13a2126a541f"
+            ]
+        ]
+    },
+    {
+        "id": "ad6cc7925839a40e",
+        "type": "mqtt in",
+        "z": "ed6fc9b850d374ff",
+        "d": true,
+        "name": "TransporterDataListener",
+        "topic": "client/transformer/devise1/turns_ratio",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "9247c215d6f5dddb",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 350,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "13e68fddacb57d16",
+        "type": "mqtt in",
+        "z": "ed6fc9b850d374ff",
+        "g": "1d60f77e2f32593d",
+        "name": "TransporterDataListener",
+        "topic": "client/transformer/device1/data",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "9247c215d6f5dddb",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1610,
+        "y": 840,
+        "wires": [
+            [
+                "75b592483e14f61c"
+            ]
+        ]
+    },
+    {
+        "id": "75b592483e14f61c",
+        "type": "function",
+        "z": "ed6fc9b850d374ff",
+        "g": "1d60f77e2f32593d",
+        "name": "Transformer",
+        "func": "var turns_ratio = msg.payload[\"turnsRation\"];  // Коэффициент трансформации\nmsg.payload = parseInt(turns_ratio);\nmsg.topic = \"transformer\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1850,
+        "y": 840,
+        "wires": [
+            [
+                "3"
+            ]
+        ]
+    },
+    {
+        "id": "cb2d47b7afe4e580",
+        "type": "inject",
+        "z": "ed6fc9b850d374ff",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "test",
+                "v": "{\"voltage\":220,\"current\":5}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "15",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "input_data",
+        "payload": "[1, 2, 3]",
+        "payloadType": "json",
+        "x": 260,
+        "y": 1640,
+        "wires": [
+            [
+                "4ebf6e1f9327fbaa",
+                "ba77df1a13f469b8"
+            ]
+        ]
+    },
+    {
+        "id": "ba77df1a13f469b8",
+        "type": "switch",
+        "z": "ed6fc9b850d374ff",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "cont",
+                "v": "2",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "3",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 750,
+        "y": 1600,
+        "wires": [
+            [
+                "f8ee96304d8ee4b0"
+            ],
+            [
+                "d92d810ec03d2994",
+                "6705a400ab98dbb8"
+            ],
+            [
+                "9a7744deef5f6e95",
+                "31ca889f5b44e7e1"
+            ]
+        ]
+    },
+    {
+        "id": "d92d810ec03d2994",
+        "type": "debug",
+        "z": "ed6fc9b850d374ff",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "test",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "9a7744deef5f6e95",
+        "type": "debug",
+        "z": "ed6fc9b850d374ff",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "test",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "3175c361a41c7051",
+        "type": "mqtt out",
+        "z": "ed6fc9b850d374ff",
+        "name": "sensor banch 1",
+        "topic": "client/currentsensor/devise1/current",
+        "qos": "1",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9247c215d6f5dddb",
+        "x": 1520,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "db59d1050f2f58ce",
+        "type": "mqtt out",
+        "z": "ed6fc9b850d374ff",
+        "name": "sensor banch 2",
+        "topic": "client/currentsensor/devise2/current",
+        "qos": "2",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9247c215d6f5dddb",
+        "x": 1520,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "4bd60787793c461e",
+        "type": "mqtt out",
+        "z": "ed6fc9b850d374ff",
+        "name": "sensor banch 3",
+        "topic": "client/currentsensor/devise3/current",
+        "qos": "2",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9247c215d6f5dddb",
+        "x": 1520,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "f8ee96304d8ee4b0",
+        "type": "change",
+        "z": "ed6fc9b850d374ff",
+        "name": "function",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "test",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "input_data",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1160,
+        "y": 1460,
+        "wires": [
+            [
+                "3175c361a41c7051",
+                "3"
+            ]
+        ]
+    },
+    {
+        "id": "6705a400ab98dbb8",
+        "type": "change",
+        "z": "ed6fc9b850d374ff",
+        "name": "function",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "test",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1160,
+        "y": 1560,
+        "wires": [
+            [
+                "db59d1050f2f58ce"
+            ]
+        ]
+    },
+    {
+        "id": "31ca889f5b44e7e1",
+        "type": "change",
+        "z": "ed6fc9b850d374ff",
+        "name": "function",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "test",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1160,
+        "y": 1640,
+        "wires": [
+            [
+                "4bd60787793c461e"
+            ]
+        ]
+    },
+    {
+        "id": "0b548126e6b076c4",
+        "type": "mqtt out",
+        "z": "ed6fc9b850d374ff",
+        "name": "sensor banch ",
+        "topic": "client/currentsensor/devise/current",
+        "qos": "2",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9247c215d6f5dddb",
+        "x": 760,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "4ebf6e1f9327fbaa",
+        "type": "change",
+        "z": "ed6fc9b850d374ff",
+        "name": "function",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "test",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 1700,
+        "wires": [
+            [
+                "0b548126e6b076c4"
+            ]
+        ]
+    },
+    {
+        "id": "1e7bcc3e77a38514",
+        "type": "mqtt in",
+        "z": "ed6fc9b850d374ff",
+        "name": "TransporterDataListener",
+        "topic": "client/currentsensor/devise/data",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "9247c215d6f5dddb",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 430,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2d0e8b698c8e65cb",
+        "type": "mqtt in",
+        "z": "ed6fc9b850d374ff",
+        "d": true,
+        "name": "TransporterDataListener",
+        "topic": "client/currentsensor/devise1/current",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "9247c215d6f5dddb",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 430,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "93afb8059adac7ea",
+        "type": "mqtt in",
+        "z": "ed6fc9b850d374ff",
+        "d": true,
+        "name": "TransporterDataListener",
+        "topic": "client/currentsensor/devise2/current",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "9247c215d6f5dddb",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 410,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e846920c6d972d0a",
+        "type": "mqtt in",
+        "z": "ed6fc9b850d374ff",
+        "d": true,
+        "name": "TransporterDataListener",
+        "topic": "client/currentsensor/devise3/current",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "9247c215d6f5dddb",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 430,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "35f598ba52914f04",
+        "type": "function",
+        "z": "ed6fc9b850d374ff",
+        "name": "function",
+        "func": "// Проверяем, что msg.payload — массив\nif (!Array.isArray(msg.payload)) {\n    node.error(\"msg.payload должен быть массивом, например [1,1,0]\");\n    return null;\n}\n\n// Сохраняем другие данные из msg\nlet originalMsg = { ...msg };\ndelete originalMsg.payload; // Убираем payload из общего объекта\n\n// Создаём сообщения для каждой ветви\nlet branches = msg.payload.map((state, index) => {\n    return {\n        ...originalMsg, // Сохраняем все остальные свойства сообщения\n        payload: state, // Состояние ветви (1 или 0)\n        topic: `branch/${index}` // Уникальная тема\n    };\n});\n\n// Возвращаем массив сообщений\nreturn branches;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 1420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b2b951f277f4734f",
+        "type": "mqtt out",
+        "z": "ed6fc9b850d374ff",
+        "name": "sensor banch 1",
+        "topic": "client/currentsensor/devise4/current",
+        "qos": "1",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9247c215d6f5dddb",
+        "x": 2660,
+        "y": 1180,
+        "wires": []
+    }
+]
