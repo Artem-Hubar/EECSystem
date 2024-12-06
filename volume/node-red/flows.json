@@ -210,7 +210,7 @@
                 "vt": "json"
             }
         ],
-        "repeat": "15",
+        "repeat": "5",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
@@ -465,7 +465,6 @@
         "id": "0b548126e6b076c4",
         "type": "mqtt out",
         "z": "ed6fc9b850d374ff",
-        "d": true,
         "name": "sensor banch ",
         "topic": "client/currentsensor/devise/current",
         "qos": "2",

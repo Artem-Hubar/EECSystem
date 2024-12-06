@@ -23,11 +23,12 @@ public class MQTTClientSubscriber {
         client.setCallback(new MqttCallback() {
             @Override
             public void connectionLost(Throwable cause) {
+                cause.printStackTrace();
                 System.err.println("Connection error: " + cause.getCause());
             }
 
             @Override
-            public void messageArrived(String topic, MqttMessage message) throws MqttException {
+            public void messageArrived(String topic, MqttMessage message){
                 subscriberBehaviour.execute(client, topic, message);
             }
 
@@ -50,4 +51,6 @@ public class MQTTClientSubscriber {
             System.out.println("Subscribe topic: " + topic);
         }
     }
+
+
 }

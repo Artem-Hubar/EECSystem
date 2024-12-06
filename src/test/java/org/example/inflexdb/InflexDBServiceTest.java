@@ -5,6 +5,9 @@ import org.example.entity.Device;
 import org.example.entity.CurrentLineSensor;
 import org.example.service.inflexdb.InflexDBService;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class InflexDBServiceTest extends TestCase {
     public void testWriteData() {
         CurrentLineSensor device = new CurrentLineSensor();
@@ -16,5 +19,11 @@ public class InflexDBServiceTest extends TestCase {
             inflexDBService.writeData(device);
 
         }
+    }
+
+    public void testGetDevices(){
+        InflexDBService inflexDBService = new InflexDBService();
+        List<Device> deviceList = inflexDBService.getAllDevices();
+        System.out.println(deviceList);
     }
 }

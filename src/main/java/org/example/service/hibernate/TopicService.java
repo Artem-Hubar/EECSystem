@@ -5,18 +5,16 @@ import org.example.repostiory.TopicRepository;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import java.util.ArrayList;
+import java.util.List;
+
 import java.util.List;
 
 public class TopicService {
 
-    private final TopicRepository topicRepository;
-
-    public TopicService() {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("my-persistence-unit");
-        EntityManager em = emf.createEntityManager();
-        this.topicRepository = new TopicRepository(em);
-    }
+    private final TopicRepository topicRepository = new TopicRepository();
 
     public void addTopic(Topic topic) {
         topicRepository.save(topic);
@@ -38,9 +36,14 @@ public class TopicService {
         topicRepository.delete(id);
     }
 
-    public void subscribeTopic(String topic){
+    public void deleteByTitle(String title){
+        topicRepository.deleteByTitle(title);
+    }
+
+    public void subscribeTopic(String topic) {
         Topic topicEntity = new Topic();
         topicEntity.setTitle(topic);
         topicRepository.processTopic(topicEntity);
     }
 }
+

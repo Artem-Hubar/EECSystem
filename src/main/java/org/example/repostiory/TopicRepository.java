@@ -1,99 +1,102 @@
 package org.example.repostiory;
 
 import org.example.entity.Topic;
-import org.example.service.hibernate.HibernateUtil;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
+import org.example.service.hibernate.EntityManagerUtil;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityTransaction;
-import javax.persistence.TypedQuery;
+import javax.persistence.*;
 import java.time.Duration;
 import java.time.ZonedDateTime;
 import java.util.List;
+import java.util.function.Consumer;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+
 
 public class TopicRepository {
 
-    private final EntityManager entityManager;
-
-    public TopicRepository(EntityManager entityManager) {
-        this.entityManager = entityManager;
-    }
-
     public void save(Topic topic) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        Transaction transaction = session.beginTransaction();
-        session.save(topic);
-        transaction.commit();
-        session.close();
+        executeInTransaction(em -> em.persist(topic));
     }
 
     public Topic getById(Integer id) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        Topic topic = session.get(Topic.class, id);
-        session.close();
-        return topic;
+        EntityManager em = EntityManagerUtil.getEntityManager();
+        return em.find(Topic.class, id);
     }
 
     public List<Topic> getAll() {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        List<Topic> topics = session.createQuery("FROM Topic", Topic.class).list();
-        session.close();
-        return topics;
+        EntityManager em = EntityManagerUtil.getEntityManager();
+
+        return em.createQuery("SELECT t FROM Topic t", Topic.class).getResultList();
     }
 
     public void update(Topic topic) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        Transaction transaction = session.beginTransaction();
-        session.update(topic);
-        transaction.commit();
-        session.close();
+        executeInTransaction(em -> em.merge(topic));
     }
 
     public void delete(Integer id) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        Transaction transaction = session.beginTransaction();
-        Topic topic = session.get(Topic.class, id);
-        if (topic != null) {
-            session.delete(topic);
-        }
-        transaction.commit();
-        session.close();
+        executeInTransaction(em -> {
+            Topic topic = em.find(Topic.class, id);
+            if (topic != null) {
+                em.remove(topic);
+            }
+        });
     }
+    public void deleteByTitle(String title) {
+        executeInTransaction(em -> {
+            // Создаем запрос для поиска сущности по title
+            TypedQuery<Topic> query = em.createQuery(
+                    "SELECT t FROM Topic t WHERE t.title = :title", Topic.class
+            );
+            query.setParameter("title", title);
 
-    public void processTopic(Topic incomingTopic) {
-        EntityTransaction transaction = entityManager.getTransaction();
-        transaction.begin();
-
-        try {
-            // Получение всех топиков из базы данных
-            TypedQuery<Topic> query = entityManager.createQuery("SELECT t FROM Topic t", Topic.class);
+            // Получаем результат
             List<Topic> topics = query.getResultList();
 
-            // Текущее время
+            // Удаляем все найденные сущности
+            for (Topic topic : topics) {
+                em.remove(topic);
+            }
+        });
+    }
+    public void processTopic(Topic incomingTopic) {
+        executeInTransaction(em -> {
+            TypedQuery<Topic> query = em.createQuery("SELECT t FROM Topic t", Topic.class);
+            List<Topic> topics = query.getResultList();
+
             ZonedDateTime now = ZonedDateTime.now();
 
             for (Topic topic : topics) {
-                // Если разница во времени больше заданного (например, 1 час)
                 if (Duration.between(topic.getData(), now).toSeconds() > 30) {
-                    // Удаление старого топика
-                    entityManager.remove(topic);
+                    em.remove(topic);
                 } else if (topic.getTitle().equals(incomingTopic.getTitle())) {
-                    // Если топик совпадает с переданным, обновляем время
                     topic.setData(now.toInstant());
+                    em.merge(topic);
                 }
             }
 
-            // Если переданный топик не найден, сохраняем его
             if (topics.stream().noneMatch(t -> t.getTitle().equals(incomingTopic.getTitle()))) {
                 incomingTopic.setData(now.toInstant());
-                entityManager.persist(incomingTopic);
+                em.persist(incomingTopic);
             }
+        });
+    }
 
+    private void executeInTransaction(Consumer<EntityManager> action) {
+        EntityManager em = EntityManagerUtil.getEntityManager();
+        EntityTransaction transaction = em.getTransaction();
+        try {
+            transaction.begin();
+            action.accept(em);
             transaction.commit();
         } catch (Exception e) {
-            transaction.rollback();
-            e.printStackTrace();
+            if (transaction.isActive()) {
+                transaction.rollback();
+            }
+            throw new RuntimeException("Transaction failed, rolled back", e);
+        } finally {
+            EntityManagerUtil.closeEntityManager();
         }
     }
 }
+

@@ -5,6 +5,8 @@ import com.influxdb.client.InfluxDBClientFactory;
 import com.influxdb.client.WriteApiBlocking;
 import org.example.entity.Device;
 
+import java.util.List;
+
 
 public interface InflexDBRepository {
     String url = "http://localhost:8086"; // URL вашего InfluxDB сервера
@@ -16,5 +18,5 @@ public interface InflexDBRepository {
 
     void writeData(Device device);
 
-
+    List<Device> getAllDevices();
 }

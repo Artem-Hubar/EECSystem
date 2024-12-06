@@ -1,36 +1,41 @@
 package org.example.service.hibernate;
 
-import org.example.entity.Topic;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 public class HibernateUtil {
+    private static final SessionFactory sessionFactory = buildSessionFactory();
+    private static final ThreadLocal<Session> threadLocal = new ThreadLocal<>();
 
-    private static SessionFactory sessionFactory;
-
-    static {
+    private static SessionFactory buildSessionFactory() {
         try {
-            // Создаем Configuration объект для настройки Hibernate
-            Configuration configuration = new Configuration();
-            configuration.configure("hibernate.cfg.xml"); // Путь к конфигурационному файлу
+            return new Configuration().configure("в.xml").buildSessionFactory();
+        } catch (Throwable ex) {
+            throw new ExceptionInInitializerError(ex);
+        }
+    }
 
-            // Добавляем класс сущности, чтобы Hibernate знал о нем
-            configuration.addAnnotatedClass(Topic.class);
+    public static Session getSession() {
+        Session session = threadLocal.get();
+        if (session == null || !session.isOpen()) {
+            session = sessionFactory.openSession();
+            threadLocal.set(session);
 
-            // Создаем SessionFactory
-            sessionFactory = configuration.buildSessionFactory();
-        } catch (Exception e) {
-            e.printStackTrace();
-            throw new ExceptionInInitializerError("SessionFactory creation failed");
+        }
+        return session;
+    }
+
+    public static void closeSession() {
+        Session session = threadLocal.get();
+        if (session != null) {
+            session.close();
+            threadLocal.remove();
         }
     }
 
     public static SessionFactory getSessionFactory() {
         return sessionFactory;
     }
-
-    public static void shutdown() {
-        // Закрытие SessionFactory
-        getSessionFactory().close();
-    }
 }
+

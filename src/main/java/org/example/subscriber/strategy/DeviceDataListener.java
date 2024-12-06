@@ -27,6 +27,8 @@ public class DeviceDataListener extends SubscriberBehaviour {
     @Override
     public void execute(MqttClient client, String topic, MqttMessage message) {
         String[] topicParts = topic.split("/");
+        System.out.println(topic);
+
         if (isTopicNotEmpty(topicParts)) {
             proceedData(topic, message, topicParts);
             updateSubscribedTopic(client);
@@ -34,7 +36,6 @@ public class DeviceDataListener extends SubscriberBehaviour {
     }
 
     private void proceedData(String topic, MqttMessage message, String[] topicParts) {
-        System.out.println(topic);
         String deviceType = topicParts[1];
         DeviceDataHandler handler = handlerFactory.getHandler(deviceType);
         Optional<Device> device = handleData(topic, message, handler, deviceType);
@@ -46,7 +47,7 @@ public class DeviceDataListener extends SubscriberBehaviour {
 
     private void updateSubscribedTopic(MqttClient client) {
         try {
-            UpdatedSubscriberTopic updatedSubscriberTopic = new UpdatedSubscriberTopic();
+            UpdatedSubscribedTopic updatedSubscriberTopic = new UpdatedSubscribedTopic();
             updatedSubscriberTopic.update(client, initTopics);
         } catch (MqttException e) {
             throw new RuntimeException(e);
