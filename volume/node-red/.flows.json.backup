@@ -20,7 +20,8 @@
             "fa5e7da91dbafed2",
             "3",
             "13e68fddacb57d16",
-            "75b592483e14f61c"
+            "75b592483e14f61c",
+            "ede5a48d6b5ffb08"
         ],
         "x": 1474,
         "y": 799,
@@ -187,7 +188,8 @@
         "y": 840,
         "wires": [
             [
-                "3"
+                "3",
+                "ede5a48d6b5ffb08"
             ]
         ]
     },
@@ -343,7 +345,6 @@
         "id": "4bd60787793c461e",
         "type": "mqtt out",
         "z": "ed6fc9b850d374ff",
-        "d": true,
         "name": "sensor banch 3",
         "topic": "client/currentsensor/devise3/current",
         "qos": "2",
@@ -625,6 +626,24 @@
         "broker": "9247c215d6f5dddb",
         "x": 2660,
         "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "ede5a48d6b5ffb08",
+        "type": "debug",
+        "z": "ed6fc9b850d374ff",
+        "g": "1d60f77e2f32593d",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "test",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2140,
+        "y": 900,
         "wires": []
     }
 ]

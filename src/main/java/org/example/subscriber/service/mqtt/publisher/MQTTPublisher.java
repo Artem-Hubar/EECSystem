@@ -13,7 +13,7 @@ public class MQTTPublisher {
         this.client = client;
     }
 
-    public void writeData(Device device){
+    public <T extends Device> void writeData(T device){
         try {
             MqttConnectOptions options = new MqttConnectOptions();
             options.setCleanSession(true);
@@ -32,5 +32,10 @@ public class MQTTPublisher {
             System.err.println("Error: " + e.getMessage());
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public String toString() {
+        return "MQTTPublisher";
     }
 }
