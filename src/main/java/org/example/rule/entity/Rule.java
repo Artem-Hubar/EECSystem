@@ -22,6 +22,5 @@ public class Rule {
     public Rule(List<ConditionWithOperator> conditionsWithOperators, List<Action> actions) {
         this.conditionsWithOperators = conditionsWithOperators;
         this.actions = actions;
-//        System.out.println("Создано правило с " + conditionsWithOperators.size() + " условиями и " + actions.size() + " действиями.");
     }
 }

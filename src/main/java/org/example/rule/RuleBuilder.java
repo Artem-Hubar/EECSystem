@@ -8,15 +8,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RuleBuilder {
-    private List<ConditionWithOperator> conditionsWithOperators = new ArrayList<>(); // Список условий с операторами
-    private List<Action> actions = new ArrayList<>();                                // Список действий
+    private List<ConditionWithOperator> conditionsWithOperators = new ArrayList<>();
+    private List<Action> actions = new ArrayList<>();
 
     // Добавление условия с логическим оператором
     public RuleBuilder addCondition(ConditionWithOperator conditionWithOperator) {
         if (conditionsWithOperators.isEmpty() && !"AND".equalsIgnoreCase(conditionWithOperator.getLogicalOperator())) {
             throw new IllegalStateException("Первое условие должно начинаться с оператора 'AND'.");
         }
-
         conditionsWithOperators.add(conditionWithOperator);
         return this;
     }

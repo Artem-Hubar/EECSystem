@@ -18,18 +18,6 @@ public class Condition {
     private String operator;       // Оператор: ==, !=, >, <, и т.д.
     private Object value;          // Значение для сравнения (число, строка, другой объект)
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Condition condition = (Condition) o;
-        return Objects.equals(targetObject, condition.targetObject) && Objects.equals(fieldName, condition.fieldName) && Objects.equals(operator, condition.operator) && Objects.equals(value, condition.value);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(targetObject, fieldName, operator, value);
-    }
 
     public Condition() {
     }
@@ -117,5 +105,19 @@ public class Condition {
         }
         return ((Comparable<Object>) fieldValue).compareTo(comparisonValue) < 0;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Condition condition = (Condition) o;
+        return Objects.equals(targetObject, condition.targetObject) && Objects.equals(fieldName, condition.fieldName) && Objects.equals(operator, condition.operator) && Objects.equals(value, condition.value);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(targetObject, fieldName, operator, value);
+    }
+
 
 }

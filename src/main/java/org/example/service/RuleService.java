@@ -37,8 +37,7 @@ public class RuleService {
     public List<Rule> getAllRule() {
         List<RuleData> ruleData = ruleDataService.getAllRuleData();
         return ruleData.stream()
-                .map(
-                this::getRuleByData
-                ).toList();
+                .map(this::getRuleByData)
+                .toList();
     }
 }

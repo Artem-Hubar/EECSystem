@@ -26,8 +26,12 @@ public class TopicRepository {
 
     public List<Topic> getAll() {
         EntityManager em = EntityManagerUtil.getEntityManager();
+        return getAllTopicQuery(em)
+                .getResultList();
+    }
 
-        return em.createQuery("SELECT t FROM Topic t", Topic.class).getResultList();
+    private TypedQuery<Topic> getAllTopicQuery(EntityManager em) {
+        return em.createQuery("SELECT t FROM Topic t", Topic.class);
     }
 
     public void update(Topic topic) {
@@ -42,44 +46,61 @@ public class TopicRepository {
             }
         });
     }
+
     public void deleteByTitle(String title) {
         executeInTransaction(em -> {
-            // Создаем запрос для поиска сущности по title
-            TypedQuery<Topic> query = em.createQuery(
-                    "SELECT t FROM Topic t WHERE t.title = :title", Topic.class
-            );
+            TypedQuery<Topic> query = getTopicByTitleQuery(em);
             query.setParameter("title", title);
-
-            // Получаем результат
             List<Topic> topics = query.getResultList();
 
-            // Удаляем все найденные сущности
             for (Topic topic : topics) {
                 em.remove(topic);
             }
         });
     }
+
+    private TypedQuery<Topic> getTopicByTitleQuery(EntityManager em) {
+        return em.createQuery(
+                "SELECT t FROM Topic t WHERE t.title = :title", Topic.class
+        );
+    }
+
     public void processTopic(Topic incomingTopic) {
         executeInTransaction(em -> {
-            TypedQuery<Topic> query = em.createQuery("SELECT t FROM Topic t", Topic.class);
+            TypedQuery<Topic> query = getAllTopicQuery(em);
             List<Topic> topics = query.getResultList();
 
             ZonedDateTime now = ZonedDateTime.now();
+            proceedUpdateTopicList(incomingTopic, em, topics, now);
 
-            for (Topic topic : topics) {
-                if (Duration.between(topic.getData(), now).toSeconds() > 30) {
-                    em.remove(topic);
-                } else if (topic.getTitle().equals(incomingTopic.getTitle())) {
-                    topic.setData(now.toInstant());
-                    em.merge(topic);
-                }
-            }
-
-            if (topics.stream().noneMatch(t -> t.getTitle().equals(incomingTopic.getTitle()))) {
+            if (isTopicNotExist(incomingTopic, topics)) {
                 incomingTopic.setData(now.toInstant());
                 em.persist(incomingTopic);
             }
         });
+    }
+
+    private void proceedUpdateTopicList(Topic incomingTopic, EntityManager em, List<Topic> topics, ZonedDateTime now) {
+        for (Topic topic : topics) {
+            if (isTooOld(topic, now)) {
+                em.remove(topic);
+            } else if (isTopicsEquels(incomingTopic, topic)) {
+                topic.setData(now.toInstant());
+                em.merge(topic);
+            }
+        }
+    }
+
+    private boolean isTopicNotExist(Topic incomingTopic, List<Topic> topics) {
+        return topics.stream().noneMatch(t -> isTopicsEquels(incomingTopic, t));
+    }
+
+    private boolean isTopicsEquels(Topic incomingTopic, Topic topic) {
+        return topic.getTitle().equals(incomingTopic.getTitle());
+    }
+
+    private boolean isTooOld(Topic topic, ZonedDateTime now) {
+        return Duration.between(topic.getData(), now).toSeconds() > 30;
     }
 
     private void executeInTransaction(Consumer<EntityManager> action) {

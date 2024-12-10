@@ -1,10 +1,12 @@
 package org.example.service.hibernate;
 
+import lombok.Getter;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 public class HibernateUtil {
+    @Getter
     private static final SessionFactory sessionFactory = buildSessionFactory();
     private static final ThreadLocal<Session> threadLocal = new ThreadLocal<>();
 
@@ -34,8 +36,5 @@ public class HibernateUtil {
         }
     }
 
-    public static SessionFactory getSessionFactory() {
-        return sessionFactory;
-    }
 }
 

@@ -12,22 +12,13 @@ public class CurrentLineSensor extends Device {
     private final DoubleProperty voltage = new SimpleDoubleProperty();
     private final DoubleProperty current = new SimpleDoubleProperty();
 
-    @Override
-    public String toString() {
-        return "CurrentLineSensor{" +
-                "idDevice=" + getSensorId()+
-                "current=" + current +
-                ", voltage=" + voltage +
-                '}';
+    public CurrentLineSensor() {
     }
 
-    public CurrentLineSensor(String deviceId,  Double voltage,Double current) {
+    public CurrentLineSensor(String deviceId, Double voltage, Double current) {
         setSensorId(deviceId);
         this.current.set(current);
         this.voltage.set(voltage);
-    }
-
-    public CurrentLineSensor() {
     }
 
     @Override
@@ -70,6 +61,10 @@ public class CurrentLineSensor extends Device {
         return voltage;
     }
 
+    public void setVoltage(double voltage) {
+        this.voltage.set(voltage);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -79,11 +74,16 @@ public class CurrentLineSensor extends Device {
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(voltage, current);
+    public String toString() {
+        return "CurrentLineSensor{" +
+                "idDevice=" + getSensorId() +
+                "current=" + current +
+                ", voltage=" + voltage +
+                '}';
     }
 
-    public void setVoltage(double voltage) {
-        this.voltage.set(voltage);
+    @Override
+    public int hashCode() {
+        return Objects.hash(voltage, current);
     }
 }
