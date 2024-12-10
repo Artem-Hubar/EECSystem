@@ -12,7 +12,7 @@ public class RuleServiceTest extends TestCase {
         RuleService ruleService = new RuleService();
         ruleService.saveRule(rule);
 
-        List<Rule> rules =  ruleService.getAllRuleData();
+        List<Rule> rules =  ruleService.getAllRule();
         System.out.println(rules.getFirst());
         RuleSerializerTest.isRuleEqual(rule, rules.getFirst());
     }

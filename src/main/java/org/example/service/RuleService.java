@@ -23,19 +23,22 @@ public class RuleService {
 
     public Rule getRuleDataById(Long id) {
         RuleData ruleData = ruleDataService.getRuleDataById(id);
-        Rule rule = getRuleByData(ruleData);
+        return getRuleByData(ruleData);
+    }
+
+    public Rule getRuleByData(RuleData ruleData) {
+        RuleDeserializer deserializer = new RuleDeserializer();
+        Rule rule = deserializer.deserialize(ruleData.getData());
         rule.setId(ruleData.getId());
         rule.setTimeStamp(ruleData.getCreatedAt());
         return rule;
     }
 
-    public Rule getRuleByData(RuleData ruleData) {
-        RuleDeserializer deserializer = new RuleDeserializer();
-        return deserializer.deserialize(ruleData.getData());
-    }
-
-    public List<Rule> getAllRuleData() {
+    public List<Rule> getAllRule() {
         List<RuleData> ruleData = ruleDataService.getAllRuleData();
-        return ruleData.stream().map(this::getRuleByData).toList();
+        return ruleData.stream()
+                .map(
+                this::getRuleByData
+                ).toList();
     }
 }

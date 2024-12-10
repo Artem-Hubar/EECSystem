@@ -4,6 +4,8 @@ import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 
 import lombok.EqualsAndHashCode;
+import org.example.subscriber.service.mqtt.publisher.MQTTPublisher;
+import org.example.subscriber.service.mqtt.publisher.MQTTPublisherFactory;
 
 
 import java.time.Instant;
@@ -62,6 +64,10 @@ public class Transformer extends Device{
 
     public void setTurnsRation(Double turnsRatio) {
         this.turnsRatio.set(turnsRatio);
+        System.out.println(turnsRatio);
+        MQTTPublisher mqttPublisher = MQTTPublisherFactory.getPublisher("transformer");
+        mqttPublisher.writeData(this);
+
     }
 
     @Override

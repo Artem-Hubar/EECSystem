@@ -59,6 +59,7 @@ public class RuleExecutor {
         try {
             return condition.evaluate();
         }catch (Exception e){
+            System.out.println(3);
             throw new NoSuchElementException(e);
         }
 

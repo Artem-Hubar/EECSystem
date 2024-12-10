@@ -64,7 +64,8 @@ public class InflexDBService implements InflexDBRepository {
                 // Присваиваем значения на основе поля (_field)
                 if (device != null) {
                     if (device instanceof Transformer && "turnsRation".equals(field)) {
-                        ((Transformer) device).setTurnsRation(Double.valueOf((String) value));
+                        System.out.println(value);
+                        ((Transformer) device).setTurnsRation((Double) value);
                     } else if (device instanceof CurrentLineSensor) {
                         if ("voltage".equals(field)) {
                             ((CurrentLineSensor) device).setVoltage(value != null ? ((Number) value).doubleValue() : 0.0);

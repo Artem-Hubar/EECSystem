@@ -6,6 +6,7 @@ import lombok.ToString;
 import org.example.rule.serializer.TargetObjectDeserializer;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.Objects;
 
 @ToString
@@ -41,22 +42,80 @@ public class Condition {
     }
 
     public boolean evaluate() throws Exception {
-        Field field = targetObject.getClass().getDeclaredField(fieldName);
+        Object fieldValue = getFieldValue();
+        return compareValues(fieldValue);
+    }
+
+    // Извлечение значения поля из объекта
+    private Object getFieldValue() throws Exception {
+        Method field = targetObject.getClass().getDeclaredMethod(fieldName);
         field.setAccessible(true);
-        Object fieldValue = field.get(targetObject);
-        System.out.println(fieldValue + " " + value);
-        // Сравниваем значение
+        return field.invoke(targetObject);
+    }
+
+    // Сравнение значения поля с заданным значением
+    private boolean compareValues(Object fieldValue) {
+        value = convertValueToFieldType(fieldValue, value);
         switch (operator) {
             case "==":
-                return fieldValue.equals(value);
+                return isEqual(fieldValue, value);
             case "!=":
-                return !fieldValue.equals(value);
+                return isNotEqual(fieldValue, value);
             case ">":
-                return ((Comparable) fieldValue).compareTo(value) > 0;
+                return isGreaterThan(fieldValue, value);
             case "<":
-                return ((Comparable) fieldValue).compareTo(value) < 0;
+                return isLessThan(fieldValue, value);
             default:
                 throw new IllegalArgumentException("Unsupported operator: " + operator);
         }
     }
+
+    private Object convertValueToFieldType(Object fieldValue, Object rawValue) {
+        if (fieldValue == null || rawValue == null) {
+            return rawValue; // Нет значения, возвращаем как есть
+        }
+
+        Class<?> fieldClass = fieldValue.getClass();
+
+        // Преобразуем значение в тип поля
+        if (fieldClass.equals(Double.class)) {
+            return Double.parseDouble(rawValue.toString()); // Преобразуем в Double
+        } else if (fieldClass.equals(Integer.class)) {
+            return Integer.parseInt(rawValue.toString()); // Преобразуем в Integer
+        } else if (fieldClass.equals(Boolean.class)) {
+            return Boolean.parseBoolean(rawValue.toString()); // Преобразуем в Boolean
+        } else if (fieldClass.equals(String.class)) {
+            return rawValue.toString(); // Строка, возвращаем как есть
+        } else {
+            throw new IllegalArgumentException("Unsupported field type: " + fieldClass);
+        }
+    }
+
+
+    // Логика проверки равенства
+    private boolean isEqual(Object fieldValue, Object comparisonValue) {
+        return fieldValue.equals(comparisonValue);
+    }
+
+    // Логика проверки неравенства
+    private boolean isNotEqual(Object fieldValue, Object comparisonValue) {
+        return !fieldValue.equals(comparisonValue);
+    }
+
+    // Логика проверки "больше"
+    private boolean isGreaterThan(Object fieldValue, Object comparisonValue) {
+        if (!(fieldValue instanceof Comparable)) {
+            throw new IllegalArgumentException("Field value is not comparable: " + fieldValue);
+        }
+        return ((Comparable<Object>) fieldValue).compareTo(comparisonValue) > 0;
+    }
+
+    // Логика проверки "меньше"
+    private boolean isLessThan(Object fieldValue, Object comparisonValue) {
+        if (!(fieldValue instanceof Comparable)) {
+            throw new IllegalArgumentException("Field value is not comparable: " + fieldValue);
+        }
+        return ((Comparable<Object>) fieldValue).compareTo(comparisonValue) < 0;
+    }
+
 }
