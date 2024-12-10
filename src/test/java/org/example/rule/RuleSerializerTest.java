@@ -15,6 +15,7 @@ import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -42,8 +43,8 @@ public class RuleSerializerTest {
     }
 
     private static void isTimeStampEqual(Rule rule, Rule deserializedRule) {
-        Instant timeStampOrig = rule.getTimeStamp();
-        Instant timeStampDes = deserializedRule.getTimeStamp();
+        LocalDateTime timeStampOrig = rule.getTimeStamp();
+        LocalDateTime timeStampDes = deserializedRule.getTimeStamp();
         assertEquals(timeStampOrig, timeStampDes);
     }
 
@@ -102,7 +103,7 @@ public class RuleSerializerTest {
     }
 
     public static @NotNull Rule getRule() {
-        Transformer transformer = new Transformer("device1", 2.0);
+
         CurrentLineSensor sensor = new CurrentLineSensor("device1", 220.0, 10.0);
         CurrentLineSensor sensor2 = new CurrentLineSensor("device", 222.0, 10.0);
 
@@ -111,6 +112,7 @@ public class RuleSerializerTest {
         ConditionWithOperator conditionWithOperator = new ConditionWithOperator(condition, "AND");
         ConditionWithOperator conditionWithOperator2 = new ConditionWithOperator(condition2, "AND");
 
+        Transformer transformer = new Transformer("device1", 2.0);
         MQTTPublisher mqttPublisher = MQTTPublisherFactory.getPublisher("test");
         Action action = new Action(transformer, "turnsRatio", 2.0);
         Action action2 = new Action(mqttPublisher, "writeData", transformer);

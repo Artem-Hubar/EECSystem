@@ -65,6 +65,7 @@ public class RuleExecutor {
     }
 
     private void performAction(Action action) {
-
+        ActionExecutor actionExecutor = new DefaultActionExecutor();
+        actionExecutor.execute(action);
     }
 }

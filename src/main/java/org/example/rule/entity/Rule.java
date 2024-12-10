@@ -1,16 +1,20 @@
 package org.example.rule.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
 public class Rule {
+    @JsonIgnore
     private long id;
     private List<ConditionWithOperator> conditionsWithOperators;
     private List<Action> actions;
-    private Instant timeStamp;
+    @JsonIgnore
+    private LocalDateTime timeStamp;
 
     public Rule() {
     }

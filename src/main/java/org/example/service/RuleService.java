@@ -23,7 +23,10 @@ public class RuleService {
 
     public Rule getRuleDataById(Long id) {
         RuleData ruleData = ruleDataService.getRuleDataById(id);
-        return getRuleByData(ruleData);
+        Rule rule = getRuleByData(ruleData);
+        rule.setId(ruleData.getId());
+        rule.setTimeStamp(ruleData.getCreatedAt());
+        return rule;
     }
 
     public Rule getRuleByData(RuleData ruleData) {
