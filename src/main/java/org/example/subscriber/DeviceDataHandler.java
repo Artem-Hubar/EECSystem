@@ -12,7 +12,6 @@ public abstract class DeviceDataHandler {
         if (device.isPresent()){
             setDeviceData(device.get(), topicParts, message);
         }
-
         return device;
     }
 

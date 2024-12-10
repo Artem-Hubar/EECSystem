@@ -18,7 +18,6 @@ public class MQTTClientSubscriber {
         setClientCallback(client);
     }
 
-
     private void setClientCallback(MqttClient client) {
         client.setCallback(new MqttCallback() {
             @Override
@@ -37,9 +36,6 @@ public class MQTTClientSubscriber {
             }
         });
     }
-
-
-
 
     public void connectAndSubscribe(Set<Topic> topics) throws MqttException {
         MqttConnectOptions options = new MqttConnectOptions();

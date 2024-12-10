@@ -22,9 +22,9 @@ public class TransformerDataHandler extends DeviceDataHandler {
 
     private Map<String, String> getMessageData(String message) {
         ObjectMapper objectMapper = new ObjectMapper();
-        Map<String, String> messageData = new HashMap<>();
+        Map<String, String> messageData;
         try {
-            messageData =  objectMapper.readValue(message, new TypeReference<Map<String, String>>() {
+            messageData =  objectMapper.readValue(message, new TypeReference<>() {
             });
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);

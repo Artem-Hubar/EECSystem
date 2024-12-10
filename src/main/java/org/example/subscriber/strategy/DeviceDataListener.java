@@ -40,7 +40,7 @@ public class DeviceDataListener extends SubscriberBehaviour {
         DeviceDataHandler handler = handlerFactory.getHandler(deviceType);
         Optional<Device> device = handleData(topic, message, handler, deviceType);
         if (device.isPresent()) {
-            writeToDataBase(device);
+            writeToDataBase(device.get());
         }
 
     }
@@ -54,10 +54,9 @@ public class DeviceDataListener extends SubscriberBehaviour {
         }
     }
 
-    private void writeToDataBase(Optional<Device> device) {
-        Device deviceEntity = device.get();
+    private void writeToDataBase(Device device) {
         InflexDBService inflexDBService = new InflexDBService();
-        inflexDBService.writeData(deviceEntity);
+        inflexDBService.writeData(device);
     }
 
     private Optional<Device> handleData(String topic, MqttMessage message, DeviceDataHandler handler, String deviceType) {

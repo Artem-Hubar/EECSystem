@@ -9,7 +9,6 @@ import org.example.subscriber.SubscriberBehaviour;
 @Getter
 public class TopicSubscriber extends SubscriberBehaviour {
 
-
     @Override
     public void execute(MqttClient client, String topic, MqttMessage message) {
         TopicService topicService = new TopicService();
