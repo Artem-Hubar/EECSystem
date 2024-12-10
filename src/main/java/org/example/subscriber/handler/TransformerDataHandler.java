@@ -17,7 +17,7 @@ public class TransformerDataHandler extends DeviceDataHandler {
         super.setDeviceData(device, topicParts, message);
         Transformer transporter = (Transformer) device;
         Map<String, String> messageData = getMessageData(message);
-        transporter.setTurnsRation(messageData.get("turnsRation"));
+        transporter.setTurnsRation(Double.valueOf(messageData.get("turnsRation")));
     }
 
     private Map<String, String> getMessageData(String message) {

@@ -3,7 +3,7 @@ package org.example.subscriber.strategy;
 
 import lombok.Getter;
 import org.eclipse.paho.client.mqttv3.*;
-import org.example.service.hibernate.TopicService;
+import org.example.service.TopicService;
 import org.example.subscriber.SubscriberBehaviour;
 
 @Getter

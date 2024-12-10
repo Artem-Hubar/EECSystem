@@ -5,7 +5,7 @@ import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.example.entity.Device;
 import org.example.entity.Topic;
-import org.example.service.inflexdb.InflexDBService;
+import org.example.service.InflexDBService;
 import org.example.subscriber.DeviceDataHandler;
 import org.example.subscriber.DeviceDataHandlerFactory;
 import org.example.subscriber.SubscriberBehaviour;

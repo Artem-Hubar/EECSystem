@@ -9,16 +9,13 @@ import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import org.example.entity.Device;
-import org.example.entity.Transformer;
-import org.example.service.inflexdb.InflexDBService;
+import org.example.service.InflexDBService;
 import org.example.subscriber.service.mqtt.publisher.MQTTPublisher;
 import org.example.subscriber.service.mqtt.publisher.MQTTPublisherFactory;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 /**
  * Hello world!

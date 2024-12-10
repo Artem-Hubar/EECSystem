@@ -3,7 +3,7 @@ package org.example.subscriber.strategy;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.example.entity.Topic;
-import org.example.service.hibernate.TopicService;
+import org.example.service.TopicService;
 import org.jetbrains.annotations.NotNull;
 
 import java.time.Duration;

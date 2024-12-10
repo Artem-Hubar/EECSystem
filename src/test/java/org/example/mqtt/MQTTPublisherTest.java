@@ -10,7 +10,7 @@ public class MQTTPublisherTest extends TestCase {
         MQTTPublisher mqttPublisher = MQTTPublisherFactory.getPublisher("testClient");
         Transformer transporter = new Transformer();
         transporter.setSensorId("device1");
-        transporter.setTurnsRation("2");
+        transporter.setTurnsRation(2.0);
         mqttPublisher.writeData(transporter);
     }
 }

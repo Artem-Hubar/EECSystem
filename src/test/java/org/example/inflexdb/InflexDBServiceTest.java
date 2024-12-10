@@ -3,9 +3,8 @@ package org.example.inflexdb;
 import junit.framework.TestCase;
 import org.example.entity.Device;
 import org.example.entity.CurrentLineSensor;
-import org.example.service.inflexdb.InflexDBService;
+import org.example.service.InflexDBService;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class InflexDBServiceTest extends TestCase {

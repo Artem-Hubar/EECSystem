@@ -33,7 +33,7 @@ public class MainSceneController {
         MQTTPublisher mqttPublisher = MQTTPublisherFactory.getPublisher("GUIClientPusher");
         Transformer transporter = new Transformer();
         transporter.setSensorId("device1");
-        transporter.setTurnsRation(turnsRation.getText());
+        transporter.setTurnsRation(Double.parseDouble(turnsRation.getText()));
         mqttPublisher.writeData(transporter);
     }
 }

@@ -1,7 +1,7 @@
 package org.example.mqtt;
 
 import junit.framework.TestCase;
-import org.example.service.hibernate.TopicService;
+import org.example.service.TopicService;
 
 import java.net.HttpURLConnection;
 import java.net.URL;

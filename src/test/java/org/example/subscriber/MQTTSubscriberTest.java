@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.example.entity.Topic;
-import org.example.service.hibernate.TopicService;
+import org.example.service.TopicService;
 import org.example.subscriber.service.mqtt.MQTTClientFactory;
 import org.example.subscriber.handler.CurrentLineDataHandler;
 import org.example.subscriber.handler.TransformerDataHandler;

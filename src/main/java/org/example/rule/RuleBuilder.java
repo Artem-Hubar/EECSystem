@@ -1,5 +1,9 @@
 package org.example.rule;
 
+import org.example.rule.entity.Action;
+import org.example.rule.entity.ConditionWithOperator;
+import org.example.rule.entity.Rule;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,23 +12,19 @@ public class RuleBuilder {
     private List<Action> actions = new ArrayList<>();                                // Список действий
 
     // Добавление условия с логическим оператором
-    public RuleBuilder addCondition(Object object, String field, String operator, Object value, String logicalOperator) {
-        if (conditionsWithOperators.isEmpty() && !"AND".equalsIgnoreCase(logicalOperator)) {
+    public RuleBuilder addCondition(ConditionWithOperator conditionWithOperator) {
+        if (conditionsWithOperators.isEmpty() && !"AND".equalsIgnoreCase(conditionWithOperator.getLogicalOperator())) {
             throw new IllegalStateException("Первое условие должно начинаться с оператора 'AND'.");
         }
 
-        System.out.println("Добавление условия: объект=" + object + ", поле=" + field +
-                ", оператор=" + operator + ", значение=" + value +
-                ", логический оператор=" + logicalOperator);
-
-        conditionsWithOperators.add(new ConditionWithOperator(new Condition(object, field, operator, value), logicalOperator));
+        conditionsWithOperators.add(conditionWithOperator);
         return this;
     }
 
     // Добавление действия
-    public RuleBuilder addAction(Object object, String field, Object value) {
-        System.out.println("Добавление действия: объект=" + object + ", поле=" + field + ", значение=" + value);
-        actions.add(new Action(object, field, value));
+    public RuleBuilder addAction(Action action) {
+        System.out.println("Добавление действия: объект=" + action.getTargetObject() + ", поле=" + action.getFieldName() + ", значение=" + action.getNewValue());
+        actions.add(action);
         return this;
     }
 
