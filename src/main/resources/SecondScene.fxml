@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<VBox xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" spacing="10">
+    <Label text="Конструктор правил" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+
+    <VBox spacing="5">
+        <Label text="Условия:" />
+        <VBox fx:id="conditionsContainer" spacing="5" />
+        <Button text="Добавить условие" onAction="#onAddCondition" />
+    </VBox>
+
+    <VBox spacing="5">
+        <Label text="Действия:" />
+        <VBox fx:id="actionsContainer" spacing="5" />
+        <Button text="Добавить действие" onAction="#onAddAction" />
+    </VBox>
+
+    <Button text="Добавить правило" onAction="#onSaveRule" />
+</VBox>
