@@ -14,7 +14,6 @@ public class UiActionsExtractor {
     public List<Action> extractActions(VBox actionsContainer) {
         for (var actionNode : actionsContainer.getChildren()) {
             if (actionNode instanceof HBox actionRow) {
-
                 ComboBox<Object> actionObjectSelector = (ComboBox<Object>) actionRow.getChildren().get(0);
                 ComboBox<String> actionFieldSelector = (ComboBox<String>) actionRow.getChildren().get(1);
                 TextField actionValue = (TextField) actionRow.getChildren().get(2);

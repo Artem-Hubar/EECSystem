@@ -2,6 +2,7 @@ package org.example.client.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
 import javafx.scene.layout.VBox;
 import org.example.client.entity.ActionUI;
 import org.example.client.entity.ConditionUI;
@@ -60,5 +61,15 @@ public class RuleBuilderSceneController {
         RuleService ruleService = new RuleService();
         ruleService.saveRule(ruleBuilder.build());
         System.out.println("Rule successfully added!");
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Success");
+        alert.setHeaderText(null);
+        alert.setContentText("Rule successfully added!");
+        alert.showAndWait();
+
+        // Очистка контейнеров
+        conditionsContainer.getChildren().clear();
+        actionsContainer.getChildren().clear();
     }
 }

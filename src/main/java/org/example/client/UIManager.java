@@ -29,7 +29,7 @@ public class UIManager {
         MenuBar menuBar = createMenuBar();
         mainLayout.getChildren().add(menuBar);
 
-        Scene scene = new Scene(mainLayout, 400, 300);
+        Scene scene = new Scene(mainLayout, 1200, 800);
         primaryStage.setScene(scene);
         primaryStage.setTitle("EECSystem");
         primaryStage.show();
