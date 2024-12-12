@@ -23,7 +23,9 @@
             }
         },
         "debug": {
-            "clearType": "all"
+            "clearType": "all",
+            "filteredNodes": [],
+            "filter": "filterAll"
         }
     }
 }

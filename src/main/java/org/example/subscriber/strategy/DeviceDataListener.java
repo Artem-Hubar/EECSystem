@@ -42,7 +42,6 @@ public class DeviceDataListener extends SubscriberBehaviour {
         if (device.isPresent()) {
             writeToDataBase(device.get());
         }
-
     }
 
     private void updateSubscribedTopic(MqttClient client) {
