@@ -29,29 +29,30 @@ public class RuleExecutor {
     }
 
     private boolean conditionsMet(int index, boolean accumulatedResult) {
-        List<ConditionWithOperator> conditionsWithOperators = rule.getConditionsWithOperators();
-        if (index >= conditionsWithOperators.size()) {
-            return accumulatedResult;
-        }
-
-        ConditionWithOperator current = conditionsWithOperators.get(index);
-        boolean conditionResult = evaluateCondition(current.getCondition());
-        System.out.println("Результат условия " + current.getCondition() + ": " + conditionResult);
-
-        String logicalOperator = current.getLogicalOperator();
-        boolean newResult;
-
-
-        if ("AND".equalsIgnoreCase(logicalOperator)) {
-            newResult = accumulatedResult && conditionResult;
-        } else if ("OR".equalsIgnoreCase(logicalOperator)) {
-            newResult = accumulatedResult || conditionResult;
-        } else {
-            throw new IllegalStateException("Неизвестный логический оператор: " + logicalOperator);
-        }
-        System.out.println("accumulated: " + accumulatedResult + " conditionalResult "+conditionResult + " newResult "+newResult);
-
-        return conditionsMet(index + 1, newResult);
+//        List<ConditionWithOperator> conditionsWithOperators = rule.getConditionsWithOperators();
+//        if (index >= conditionsWithOperators.size()) {
+//            return accumulatedResult;
+//        }
+//
+//        ConditionWithOperator current = conditionsWithOperators.get(index);
+//        boolean conditionResult = evaluateCondition(current.getCondition());
+//        System.out.println("Результат условия " + current.getCondition() + ": " + conditionResult);
+//
+//        String logicalOperator = current.getLogicalOperator();
+//        boolean newResult;
+//
+//
+//        if ("AND".equalsIgnoreCase(logicalOperator)) {
+//            newResult = accumulatedResult && conditionResult;
+//        } else if ("OR".equalsIgnoreCase(logicalOperator)) {
+//            newResult = accumulatedResult || conditionResult;
+//        } else {
+//            throw new IllegalStateException("Неизвестный логический оператор: " + logicalOperator);
+//        }
+//        System.out.println("accumulated: " + accumulatedResult + " conditionalResult "+conditionResult + " newResult "+newResult);
+//
+//        return conditionsMet(index + 1, newResult);
+        return false;
     }
 
     private boolean evaluateCondition(Condition condition) {

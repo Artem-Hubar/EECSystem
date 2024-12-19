@@ -3,10 +3,7 @@ package org.example.rule;
 import junit.framework.TestCase;
 import org.example.entity.CurrentLineSensor;
 import org.example.entity.Transformer;
-import org.example.rule.entity.Action;
-import org.example.rule.entity.Condition;
-import org.example.rule.entity.ConditionWithOperator;
-import org.example.rule.entity.Rule;
+import org.example.rule.entity.*;
 import org.example.rule.executor.RuleExecutor;
 import org.example.subscriber.service.mqtt.publisher.MQTTPublisher;
 import org.example.subscriber.service.mqtt.publisher.MQTTPublisherFactory;
@@ -20,16 +17,34 @@ public class RuleBuilderTest extends TestCase {
         objB.setVoltage(110.0);
         objA.setSensorId("device1");
         RuleBuilder builder = new RuleBuilder();
+        Expression condition1Expr = new Expression(
+                new Expression(objB, "getVoltage"),
+                ">",
+                new Expression(110.0)
+        );
+        Expression condition2Expr = new Expression(
+                new Expression(objB, "getVoltage"),
+                "<",
+                new Expression(330.0)
+        );
+        Expression condition3Expr = new Expression(
+                new Expression(objB, "getVoltage"),
+                "<",
+                new Expression(330.0)
+        );
+        Expression condition4Expr = new Expression(
+                new Expression(objB, "getVoltage"),
+                ">",
+                new Expression(100.0)
+        );
 
-        Condition condition1= new Condition(objB, "voltage", ">", 110.0);
-        Condition condition2= new Condition(objB, "voltage", "<", 330.0);
-        Condition condition3= new Condition(objB, "voltage", "<", 330.0);
-        Condition condition4= new Condition(objB, "voltage", ">", 100.0);
-        ConditionWithOperator conditionWithOperator1 = new ConditionWithOperator(condition1, "AND");
-        ConditionWithOperator conditionWithOperator2 = new ConditionWithOperator(condition2,  "AND");
-        ConditionWithOperator conditionWithOperator3 = new ConditionWithOperator(condition3,  "OR");
-        ConditionWithOperator conditionWithOperator4 = new ConditionWithOperator(condition4,  "AND");
+        ConditionWithOperator conditionWithOperator1 = new ConditionWithOperator(condition1Expr, "AND");
+        ConditionWithOperator conditionWithOperator2 = new ConditionWithOperator(condition2Expr, "AND");
+        ConditionWithOperator conditionWithOperator3 = new ConditionWithOperator(condition3Expr, "OR");
+        ConditionWithOperator conditionWithOperator4 = new ConditionWithOperator(condition4Expr, "AND");
+
         Action action = new Action(mqttPublisher, "writeData", "4");
+
 
         Rule rule = builder
                 .addCondition(conditionWithOperator1)

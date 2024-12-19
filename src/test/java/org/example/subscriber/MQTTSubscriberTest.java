@@ -38,7 +38,7 @@ public class MQTTSubscriberTest extends TestCase {
         Set<Topic> topics = new HashSet<>(topicService.getAllTopics());
         while (topics.isEmpty()){
             try {
-                Thread.sleep(3000);
+                Thread.sleep(30000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -55,27 +55,35 @@ public class MQTTSubscriberTest extends TestCase {
         Set<Topic> topics = new HashSet<>(Set.of(new Topic("client/#", ZonedDateTime.now().toInstant())));
         SubscriberBehaviour subscriberBehaviour = new TopicSubscriber();
         String idClient = "DeviceEnvironmentListener";
-        Thread thread = new Thread(new SubscriberThread(idClient, subscriberBehaviour, topics));
-        thread.start();
+        MQTTClientSubscriber clientSubscriber = null;
+        try {
+            MqttClient client = MQTTClientFactory.getMqttClient(idClient);
+            clientSubscriber = new MQTTClientSubscriber(client, subscriberBehaviour);
+            clientSubscriber.connectAndSubscribe(topics);
+        } catch (MqttException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void testTopicListener() {
         topicListener();
-        while (true) {
-
-        }
+        while (true) {}
     }
 
     public void testDeviceDataListener() {
         deviceDataListener();
-        while (true) {
-        }
+        while (true) {}
     }
 
     public void testSubscriberThread() {
         topicListener();
         deviceDataListener();
         while (true) {
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 }

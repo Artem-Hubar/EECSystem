@@ -28,7 +28,8 @@ public class MQTTClientSubscriber {
 
             @Override
             public void messageArrived(String topic, MqttMessage message){
-                subscriberBehaviour.execute(client, topic, message);
+                subscriberBehaviour
+                        .execute(client, topic, message);
             }
 
             @Override

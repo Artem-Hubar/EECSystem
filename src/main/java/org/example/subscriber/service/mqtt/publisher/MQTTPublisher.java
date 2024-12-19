@@ -31,7 +31,7 @@ public class MQTTPublisher {
             MqttConnectOptions options = new MqttConnectOptions();
             options.setCleanSession(true);
             client.connect(options);
-            String payload = device.getMqttPayload(); // Пример данных для передачи в JSON формате
+            String payload = device.getMqttPayload();
             MqttMessage message = new MqttMessage(payload.getBytes());
             message.setQos(2); // Уровень качества обслуживания (QoS), 2 - это "exactly once"
             message.setRetained(true);

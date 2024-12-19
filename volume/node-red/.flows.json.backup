@@ -23,12 +23,86 @@
             "587f45b77529eae0",
             "55968e0848533750",
             "d94c04ce11127202",
-            "c38900d4ecaa42cf"
+            "c38900d4ecaa42cf",
+            "7aa44d4855b16267",
+            "201e278336a2a40b"
         ],
-        "x": 1114,
+        "x": 898,
         "y": 1173,
-        "w": 1092,
+        "w": 1328,
         "h": 294
+    },
+    {
+        "id": "dc5a4ca141aca5d9",
+        "type": "group",
+        "z": "ed6fc9b850d374ff",
+        "name": "Цех 2",
+        "style": {
+            "label": true,
+            "stroke": "#000000",
+            "color": "#000000"
+        },
+        "nodes": [
+            "a7bff8dbbc10e1ee",
+            "543daa9296356b77",
+            "140f80d37077c2e5",
+            "38368fc655a747d7",
+            "d92d810ec03d2994",
+            "8d6324e4b84c3c21",
+            "e508b7ba44c26253",
+            "c424c808617f5be2"
+        ],
+        "x": 908,
+        "y": 1507,
+        "w": 1338,
+        "h": 220
+    },
+    {
+        "id": "3b359d0aad2cca26",
+        "type": "group",
+        "z": "ed6fc9b850d374ff",
+        "name": "Цех 3",
+        "style": {
+            "label": true,
+            "stroke": "#000000",
+            "color": "#000000"
+        },
+        "nodes": [
+            "e5d2efe201e71691",
+            "a9c807796e660481",
+            "9cda28550342dbf0",
+            "dc676fdb3abf8f7e",
+            "60d6ceed67416d95",
+            "f01ffa43f38001a4",
+            "3821a06871a1cf90",
+            "4b5f3d55970b8983",
+            "628a3f0f8ba0748f"
+        ],
+        "x": 908,
+        "y": 1778,
+        "w": 1438,
+        "h": 249
+    },
+    {
+        "id": "b89a0935f6fe7b0a",
+        "type": "group",
+        "z": "ed6fc9b850d374ff",
+        "name": "Timer",
+        "style": {
+            "label": true,
+            "stroke": "#000000",
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "f6dc9a60ad3987b5",
+            "8ec30c1b65ed8457",
+            "7319b8fb2699fda4"
+        ],
+        "x": 274,
+        "y": 1079,
+        "w": 202,
+        "h": 82
     },
     {
         "id": "55968e0848533750",
@@ -47,29 +121,6 @@
         "h": 40
     },
     {
-        "id": "dc5a4ca141aca5d9",
-        "type": "group",
-        "z": "ed6fc9b850d374ff",
-        "name": "Цех 2",
-        "style": {
-            "label": true,
-            "stroke": "#000000",
-            "color": "#000000"
-        },
-        "nodes": [
-            "a7bff8dbbc10e1ee",
-            "543daa9296356b77",
-            "140f80d37077c2e5",
-            "38368fc655a747d7",
-            "d92d810ec03d2994",
-            "8d6324e4b84c3c21"
-        ],
-        "x": 1114,
-        "y": 1507,
-        "w": 1092,
-        "h": 220
-    },
-    {
         "id": "140f80d37077c2e5",
         "type": "group",
         "z": "ed6fc9b850d374ff",
@@ -80,7 +131,7 @@
             "label": true
         },
         "nodes": [],
-        "x": 1188,
+        "x": 1208,
         "y": 1533,
         "w": 40,
         "h": 40
@@ -103,34 +154,10 @@
             "fb1c98c8da522669",
             "0b1328f40a1516f9"
         ],
-        "x": 1544,
+        "x": 1564,
         "y": 1559,
         "w": 182,
         "h": 142
-    },
-    {
-        "id": "3b359d0aad2cca26",
-        "type": "group",
-        "z": "ed6fc9b850d374ff",
-        "name": "Цех 3",
-        "style": {
-            "label": true,
-            "stroke": "#000000",
-            "color": "#000000"
-        },
-        "nodes": [
-            "e5d2efe201e71691",
-            "a9c807796e660481",
-            "9cda28550342dbf0",
-            "dc676fdb3abf8f7e",
-            "60d6ceed67416d95",
-            "f01ffa43f38001a4",
-            "3821a06871a1cf90"
-        ],
-        "x": 1114,
-        "y": 1778,
-        "w": 1092,
-        "h": 249
     },
     {
         "id": "9cda28550342dbf0",
@@ -143,7 +170,7 @@
             "label": true
         },
         "nodes": [],
-        "x": 1154,
+        "x": 1194,
         "y": 1804,
         "w": 40,
         "h": 40
@@ -166,7 +193,7 @@
             "36bc783664bc5319",
             "56de72dee2125192"
         ],
-        "x": 1324,
+        "x": 1344,
         "y": 1559,
         "w": 182,
         "h": 142
@@ -236,7 +263,7 @@
             "100940c2d95fb2b4",
             "c75694c09fd54100"
         ],
-        "x": 1334,
+        "x": 1374,
         "y": 1859,
         "w": 182,
         "h": 142
@@ -259,7 +286,7 @@
             "da55bcf17e243f42",
             "0f5cc417cc08d9be"
         ],
-        "x": 1554,
+        "x": 1594,
         "y": 1859,
         "w": 182,
         "h": 142
@@ -282,31 +309,85 @@
             "2b634e503e9abf41",
             "25429cb187bfeffa"
         ],
-        "x": 1774,
+        "x": 1814,
         "y": 1859,
         "w": 182,
         "h": 142
     },
     {
-        "id": "b89a0935f6fe7b0a",
+        "id": "628a3f0f8ba0748f",
         "type": "group",
         "z": "ed6fc9b850d374ff",
-        "name": "Timer",
+        "g": "3b359d0aad2cca26",
+        "name": "РЩ",
         "style": {
-            "label": true,
             "stroke": "#000000",
-            "label-position": "n",
+            "label": true,
             "color": "#000000"
         },
         "nodes": [
-            "f6dc9a60ad3987b5",
-            "8ec30c1b65ed8457",
-            "7319b8fb2699fda4"
+            "c7eb2dea3371c873",
+            "08bd37463ab1899c",
+            "87ddce3618d3f4e2",
+            "31ca889f5b44e7e1",
+            "4bd60787793c461e",
+            "8378de078689c619",
+            "690ef4e684a6bd33"
         ],
-        "x": 274,
-        "y": 1079,
-        "w": 202,
-        "h": 82
+        "x": 934,
+        "y": 1859,
+        "w": 192,
+        "h": 142
+    },
+    {
+        "id": "201e278336a2a40b",
+        "type": "group",
+        "z": "ed6fc9b850d374ff",
+        "g": "1d60f77e2f32593d",
+        "name": "РЩ",
+        "style": {
+            "stroke": "#000000",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "e91d62efa5b8e092",
+            "9705f1a56879f512",
+            "e80a6f9cd4a8fa7a",
+            "6eef64f6b9f89dde",
+            "fc773309f830ab31",
+            "f8ee96304d8ee4b0",
+            "3175c361a41c7051"
+        ],
+        "x": 924,
+        "y": 1299,
+        "w": 192,
+        "h": 142
+    },
+    {
+        "id": "c424c808617f5be2",
+        "type": "group",
+        "z": "ed6fc9b850d374ff",
+        "g": "dc5a4ca141aca5d9",
+        "name": "РЩ",
+        "style": {
+            "stroke": "#000000",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "5480dc6b15e084d4",
+            "e6cc48740b1cf28e",
+            "62ca22bb0dcf7e86",
+            "2177c81d5fe32716",
+            "a820249c46dcdec7",
+            "6705a400ab98dbb8",
+            "db59d1050f2f58ce"
+        ],
+        "x": 934,
+        "y": 1559,
+        "w": 172,
+        "h": 142
     },
     {
         "id": "9247c215d6f5dddb",
@@ -367,7 +448,7 @@
         "type": "debug",
         "z": "ed6fc9b850d374ff",
         "g": "1d60f77e2f32593d",
-        "name": "Results",
+        "name": "CurrentLine1",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -376,7 +457,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2100,
+        "x": 2110,
         "y": 1340,
         "wires": []
     },
@@ -467,7 +548,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1405,
+        "x": 1465,
         "y": 1240,
         "wires": [
             [
@@ -542,13 +623,13 @@
         "y": 1600,
         "wires": [
             [
-                "f8ee96304d8ee4b0"
+                "e80a6f9cd4a8fa7a"
             ],
             [
-                "6705a400ab98dbb8"
+                "62ca22bb0dcf7e86"
             ],
             [
-                "31ca889f5b44e7e1"
+                "87ddce3618d3f4e2"
             ]
         ]
     },
@@ -556,6 +637,7 @@
         "id": "3175c361a41c7051",
         "type": "mqtt out",
         "z": "ed6fc9b850d374ff",
+        "g": "201e278336a2a40b",
         "name": "sensor",
         "topic": "client/currentsensor/devise1/current",
         "qos": "1",
@@ -566,14 +648,16 @@
         "correl": "",
         "expiry": "",
         "broker": "9247c215d6f5dddb",
-        "x": 950,
-        "y": 1380,
-        "wires": []
+        "x": 1075,
+        "y": 1400,
+        "wires": [],
+        "l": false
     },
     {
         "id": "db59d1050f2f58ce",
         "type": "mqtt out",
         "z": "ed6fc9b850d374ff",
+        "g": "c424c808617f5be2",
         "name": "sensor",
         "topic": "client/currentsensor/devise2/current",
         "qos": "2",
@@ -584,14 +668,16 @@
         "correl": "",
         "expiry": "",
         "broker": "9247c215d6f5dddb",
-        "x": 950,
+        "x": 1065,
         "y": 1640,
-        "wires": []
+        "wires": [],
+        "l": false
     },
     {
         "id": "4bd60787793c461e",
         "type": "mqtt out",
         "z": "ed6fc9b850d374ff",
+        "g": "628a3f0f8ba0748f",
         "name": "sensor",
         "topic": "client/currentsensor/devise3/current",
         "qos": "2",
@@ -602,14 +688,16 @@
         "correl": "",
         "expiry": "",
         "broker": "9247c215d6f5dddb",
-        "x": 950,
+        "x": 1085,
         "y": 1940,
-        "wires": []
+        "wires": [],
+        "l": false
     },
     {
         "id": "f8ee96304d8ee4b0",
         "type": "change",
         "z": "ed6fc9b850d374ff",
+        "g": "201e278336a2a40b",
         "name": "function",
         "rules": [
             {
@@ -637,7 +725,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 855,
+        "x": 1025,
         "y": 1340,
         "wires": [
             [
@@ -651,6 +739,7 @@
         "id": "6705a400ab98dbb8",
         "type": "change",
         "z": "ed6fc9b850d374ff",
+        "g": "c424c808617f5be2",
         "name": "function",
         "rules": [
             {
@@ -671,7 +760,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 845,
+        "x": 1035,
         "y": 1600,
         "wires": [
             [
@@ -685,6 +774,7 @@
         "id": "31ca889f5b44e7e1",
         "type": "change",
         "z": "ed6fc9b850d374ff",
+        "g": "628a3f0f8ba0748f",
         "name": "function",
         "rules": [
             {
@@ -705,7 +795,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 855,
+        "x": 1035,
         "y": 1900,
         "wires": [
             [
@@ -819,8 +909,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 1200,
-        "y": 1380,
+        "x": 1220,
+        "y": 1400,
         "wires": [
             [
                 "587f45b77529eae0"
@@ -840,8 +930,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1275,
-        "y": 1380,
+        "x": 1295,
+        "y": 1400,
         "wires": [
             [
                 "3"
@@ -863,8 +953,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 1200,
-        "y": 1640,
+        "x": 1220,
+        "y": 1660,
         "wires": [
             [
                 "543daa9296356b77"
@@ -884,8 +974,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1265,
-        "y": 1640,
+        "x": 1285,
+        "y": 1660,
         "wires": [
             [
                 "36bc783664bc5319"
@@ -913,7 +1003,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1655,
+        "x": 1675,
         "y": 1660,
         "wires": [
             [
@@ -937,7 +1027,7 @@
         "correl": "",
         "expiry": "",
         "broker": "9247c215d6f5dddb",
-        "x": 1685,
+        "x": 1705,
         "y": 1660,
         "wires": [],
         "l": false
@@ -955,7 +1045,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1585,
+        "x": 1605,
         "y": 1600,
         "wires": [
             [
@@ -985,11 +1075,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1615,
+        "x": 1635,
         "y": 1600,
         "wires": [
             [
-                "d92d810ec03d2994"
+                "e508b7ba44c26253"
             ]
         ],
         "l": false
@@ -1008,7 +1098,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 1200,
+        "x": 1240,
         "y": 1960,
         "wires": [
             [
@@ -1029,7 +1119,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1275,
+        "x": 1315,
         "y": 1960,
         "wires": [
             [
@@ -1043,7 +1133,7 @@
         "type": "debug",
         "z": "ed6fc9b850d374ff",
         "g": "3b359d0aad2cca26",
-        "name": "debug 4",
+        "name": "CurrentLine3",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -1052,7 +1142,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2100,
+        "x": 2230,
         "y": 1900,
         "wires": []
     },
@@ -1061,7 +1151,7 @@
         "type": "debug",
         "z": "ed6fc9b850d374ff",
         "g": "dc5a4ca141aca5d9",
-        "name": "debug 2",
+        "name": "CurrentLine2",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -1070,7 +1160,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2100,
+        "x": 2130,
         "y": 1600,
         "wires": []
     },
@@ -1094,7 +1184,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1435,
+        "x": 1455,
         "y": 1660,
         "wires": [
             [
@@ -1118,7 +1208,7 @@
         "correl": "",
         "expiry": "",
         "broker": "9247c215d6f5dddb",
-        "x": 1465,
+        "x": 1485,
         "y": 1660,
         "wires": [],
         "l": false
@@ -1136,7 +1226,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1365,
+        "x": 1385,
         "y": 1600,
         "wires": [
             [
@@ -1166,7 +1256,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1395,
+        "x": 1415,
         "y": 1600,
         "wires": [
             [
@@ -1271,7 +1361,7 @@
         "y": 1340,
         "wires": [
             [
-                "fa5e7da91dbafed2"
+                "7aa44d4855b16267"
             ]
         ],
         "l": false
@@ -1296,7 +1386,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1445,
+        "x": 1485,
         "y": 1960,
         "wires": [
             [
@@ -1320,7 +1410,7 @@
         "correl": "",
         "expiry": "",
         "broker": "9247c215d6f5dddb",
-        "x": 1475,
+        "x": 1515,
         "y": 1960,
         "wires": [],
         "l": false
@@ -1338,7 +1428,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1375,
+        "x": 1415,
         "y": 1900,
         "wires": [
             [
@@ -1368,7 +1458,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1405,
+        "x": 1445,
         "y": 1900,
         "wires": [
             [
@@ -1397,7 +1487,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1665,
+        "x": 1705,
         "y": 1960,
         "wires": [
             [
@@ -1421,7 +1511,7 @@
         "correl": "",
         "expiry": "",
         "broker": "9247c215d6f5dddb",
-        "x": 1695,
+        "x": 1735,
         "y": 1960,
         "wires": [],
         "l": false
@@ -1439,7 +1529,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1595,
+        "x": 1635,
         "y": 1900,
         "wires": [
             [
@@ -1469,7 +1559,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1625,
+        "x": 1665,
         "y": 1900,
         "wires": [
             [
@@ -1498,7 +1588,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1885,
+        "x": 1925,
         "y": 1960,
         "wires": [
             [
@@ -1522,7 +1612,7 @@
         "correl": "",
         "expiry": "",
         "broker": "9247c215d6f5dddb",
-        "x": 1915,
+        "x": 1955,
         "y": 1960,
         "wires": [],
         "l": false
@@ -1540,7 +1630,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1815,
+        "x": 1855,
         "y": 1900,
         "wires": [
             [
@@ -1570,11 +1660,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1845,
+        "x": 1885,
         "y": 1900,
         "wires": [
             [
-                "dc676fdb3abf8f7e"
+                "4b5f3d55970b8983"
             ]
         ],
         "l": false
@@ -1649,6 +1739,544 @@
         "x": 415,
         "y": 1120,
         "wires": [],
+        "l": false
+    },
+    {
+        "id": "4b5f3d55970b8983",
+        "type": "function",
+        "z": "ed6fc9b850d374ff",
+        "g": "3b359d0aad2cca26",
+        "name": "CurrentLine3",
+        "func": "if(msg.payload[\"current\"]<3){\n    global.set(\"isThirdLineCongestion\", true)\n    node.error(\"Перевантаження!\", msg);\n    return null;\n}\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2155,
+        "y": 1900,
+        "wires": [
+            [
+                "dc676fdb3abf8f7e"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "c7eb2dea3371c873",
+        "type": "function",
+        "z": "ed6fc9b850d374ff",
+        "g": "628a3f0f8ba0748f",
+        "name": "function 7",
+        "func": "global.set(\"isThirdLineCongestion\", false)\nglobal.set(\"lineThirdTransaction\", false)\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1035,
+        "y": 1960,
+        "wires": [
+            []
+        ],
+        "l": false
+    },
+    {
+        "id": "08bd37463ab1899c",
+        "type": "switch",
+        "z": "ed6fc9b850d374ff",
+        "g": "628a3f0f8ba0748f",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "LineCongestion",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1005,
+        "y": 1900,
+        "wires": [
+            [
+                "690ef4e684a6bd33"
+            ],
+            [
+                "31ca889f5b44e7e1"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "87ddce3618d3f4e2",
+        "type": "function",
+        "z": "ed6fc9b850d374ff",
+        "g": "628a3f0f8ba0748f",
+        "name": "function 8",
+        "func": "if (global.get(\"isThirdLineCongestion\")){\n    msg.payload = \"LineCongestion\"\n    return msg\n}else{\nreturn msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// Добавленный здесь код будет исполняться\n// однократно при развертывании узла.\nglobal.set(\"lineThirdTransaction\", false)\nglobal.set(\"isThirdLineCongestion\", false)",
+        "finalize": "",
+        "libs": [],
+        "x": 975,
+        "y": 1900,
+        "wires": [
+            [
+                "08bd37463ab1899c"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "e508b7ba44c26253",
+        "type": "function",
+        "z": "ed6fc9b850d374ff",
+        "g": "dc5a4ca141aca5d9",
+        "name": "CurrentLine2",
+        "func": "if(msg.payload[\"current\"]<3){\n    global.set(\"isSecondLineCongestion\", true)\n    node.error(\"Перевантаження!\", msg);\n    return null;\n}\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2055,
+        "y": 1600,
+        "wires": [
+            [
+                "d92d810ec03d2994"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "7aa44d4855b16267",
+        "type": "function",
+        "z": "ed6fc9b850d374ff",
+        "g": "1d60f77e2f32593d",
+        "name": "CurrentLine1",
+        "func": "if(msg.payload[\"current\"]<3){\n    global.set(\"isFirstLineCongestion\", true)\n    node.error(\"Перевантаження!\", msg);\n    return null;\n}\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2025,
+        "y": 1340,
+        "wires": [
+            [
+                "fa5e7da91dbafed2"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "4c3a7395e37e9090",
+        "type": "debug",
+        "z": "ed6fc9b850d374ff",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 2300,
+        "wires": []
+    },
+    {
+        "id": "3a72e4edb3faddd7",
+        "type": "trigger",
+        "z": "ed6fc9b850d374ff",
+        "name": "",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "250",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 280,
+        "y": 1880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8378de078689c619",
+        "type": "delay",
+        "z": "ed6fc9b850d374ff",
+        "g": "628a3f0f8ba0748f",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "15",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1015,
+        "y": 1960,
+        "wires": [
+            [
+                "c7eb2dea3371c873"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "690ef4e684a6bd33",
+        "type": "function",
+        "z": "ed6fc9b850d374ff",
+        "g": "628a3f0f8ba0748f",
+        "name": "function 11",
+        "func": "if (global.get(\"lineThirdTransaction\")){\n    return null;\n}\nglobal.set(\"lineThirdTransaction\", true)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 985,
+        "y": 1960,
+        "wires": [
+            [
+                "8378de078689c619"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "d0ed9851a302930f",
+        "type": "inject",
+        "z": "ed6fc9b850d374ff",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 820,
+        "y": 2300,
+        "wires": [
+            [
+                "2eccab7687e83c06"
+            ]
+        ]
+    },
+    {
+        "id": "2eccab7687e83c06",
+        "type": "function",
+        "z": "ed6fc9b850d374ff",
+        "name": "function 12",
+        "func": "msg.payload = global.get(\"isThirdLineCongestion\")\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 2300,
+        "wires": [
+            [
+                "4c3a7395e37e9090"
+            ]
+        ]
+    },
+    {
+        "id": "fc5260c2d5a28aef",
+        "type": "debug",
+        "z": "ed6fc9b850d374ff",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1380,
+        "y": 2200,
+        "wires": []
+    },
+    {
+        "id": "e91d62efa5b8e092",
+        "type": "function",
+        "z": "ed6fc9b850d374ff",
+        "g": "201e278336a2a40b",
+        "name": "function 13",
+        "func": "global.set(\"isFirstLineCongestion\", false)\nglobal.set(\"lineFirstTransaction\", false)\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1015,
+        "y": 1400,
+        "wires": [
+            []
+        ],
+        "l": false
+    },
+    {
+        "id": "9705f1a56879f512",
+        "type": "switch",
+        "z": "ed6fc9b850d374ff",
+        "g": "201e278336a2a40b",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "LineCongestion",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 995,
+        "y": 1340,
+        "wires": [
+            [
+                "fc773309f830ab31"
+            ],
+            [
+                "f8ee96304d8ee4b0"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "e80a6f9cd4a8fa7a",
+        "type": "function",
+        "z": "ed6fc9b850d374ff",
+        "g": "201e278336a2a40b",
+        "name": "function 14",
+        "func": "if (global.get(\"isFirstLineCongestion\")){\n    msg.payload = \"LineCongestion\"\n    return msg\n}else{\nreturn msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// Добавленный здесь код будет исполняться\n// однократно при развертывании узла.\nglobal.set(\"lineFirstTransaction\", false)\nglobal.set(\"isFirstLineCongestion\", false)",
+        "finalize": "",
+        "libs": [],
+        "x": 965,
+        "y": 1340,
+        "wires": [
+            [
+                "9705f1a56879f512"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "6eef64f6b9f89dde",
+        "type": "delay",
+        "z": "ed6fc9b850d374ff",
+        "g": "201e278336a2a40b",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "15",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 995,
+        "y": 1400,
+        "wires": [
+            [
+                "e91d62efa5b8e092"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "fc773309f830ab31",
+        "type": "function",
+        "z": "ed6fc9b850d374ff",
+        "g": "201e278336a2a40b",
+        "name": "function 15",
+        "func": "if (global.get(\"lineFirstTransaction\")){\n    return null;\n}\nglobal.set(\"lineFirstTransaction\", true)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 965,
+        "y": 1400,
+        "wires": [
+            [
+                "6eef64f6b9f89dde"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "5480dc6b15e084d4",
+        "type": "function",
+        "z": "ed6fc9b850d374ff",
+        "g": "c424c808617f5be2",
+        "name": "function 16",
+        "func": "global.set(\"isSecondLineCongestion\", false)\nglobal.set(\"lineSecondTransaction\", false)\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1025,
+        "y": 1660,
+        "wires": [
+            []
+        ],
+        "l": false
+    },
+    {
+        "id": "e6cc48740b1cf28e",
+        "type": "switch",
+        "z": "ed6fc9b850d374ff",
+        "g": "c424c808617f5be2",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "LineCongestion",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1005,
+        "y": 1600,
+        "wires": [
+            [
+                "a820249c46dcdec7"
+            ],
+            [
+                "6705a400ab98dbb8"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "62ca22bb0dcf7e86",
+        "type": "function",
+        "z": "ed6fc9b850d374ff",
+        "g": "c424c808617f5be2",
+        "name": "function 17",
+        "func": "if (global.get(\"isSecondLineCongestion\")){\n    msg.payload = \"LineCongestion\"\n    return msg\n}else{\nreturn msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// Добавленный здесь код будет исполняться\n// однократно при развертывании узла.\nglobal.set(\"lineSecondTransaction\", false)\nglobal.set(\"isSecondLineCongestion\", false)",
+        "finalize": "",
+        "libs": [],
+        "x": 975,
+        "y": 1600,
+        "wires": [
+            [
+                "e6cc48740b1cf28e"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "2177c81d5fe32716",
+        "type": "delay",
+        "z": "ed6fc9b850d374ff",
+        "g": "c424c808617f5be2",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "15",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1005,
+        "y": 1660,
+        "wires": [
+            [
+                "5480dc6b15e084d4"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "a820249c46dcdec7",
+        "type": "function",
+        "z": "ed6fc9b850d374ff",
+        "g": "c424c808617f5be2",
+        "name": "function 18",
+        "func": "if (global.get(\"lineSecondTransaction\")){\n    return null;\n}\nglobal.set(\"lineSecondTransaction\", true)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 975,
+        "y": 1660,
+        "wires": [
+            [
+                "2177c81d5fe32716"
+            ]
+        ],
         "l": false
     }
 ]

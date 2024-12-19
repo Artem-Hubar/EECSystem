@@ -76,5 +76,4 @@ public class DeviceDataListener extends SubscriberBehaviour {
     private boolean isHandlerNotNull(DeviceDataHandler handler) {
         return handler != null;
     }
-
 }

@@ -36,9 +36,9 @@ public class Transformer extends Device {
 
     public void setTurnsRation(Double turnsRatio) {
         this.turnsRatio.set(turnsRatio);
-        System.out.println(turnsRatio);
-        MQTTPublisher mqttPublisher = MQTTPublisherFactory.getPublisher("transformer");
-        mqttPublisher.writeData(this);
+//        System.out.println(turnsRatio);
+//        MQTTPublisher mqttPublisher = MQTTPublisherFactory.getPublisher("transformer");
+//        mqttPublisher.writeData(this);
 
     }
 

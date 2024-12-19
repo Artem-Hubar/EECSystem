@@ -1,6 +1,5 @@
 package org.example.client;
 
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Menu;
@@ -9,19 +8,19 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import org.example.App;
-import org.example.client.controllers.RuleBuilderSceneController;
 
 
-import java.io.IOException;
 import java.util.List;
 
 
 public class UIManager {
     private final Stage primaryStage;
     private VBox mainLayout;
+    SceneManager sceneManager;
 
     public UIManager(Stage primaryStage) {
         this.primaryStage = primaryStage;
+        sceneManager = new SceneManager();
     }
 
     public void init() {
@@ -36,31 +35,25 @@ public class UIManager {
     }
 
     public void showMainScene() {
-        Parent mainContent = loadFXML("/mainScene.fxml");
+        Parent mainContent = sceneManager.loadFXML("/mainScene.fxml");
         updateContent(mainContent);
         primaryStage.setTitle("Main window");
     }
 
-    public void showSecondScene(List<Object> objects) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/SecondScene.fxml"));
-            RuleBuilderSceneController controller = new RuleBuilderSceneController(objects);
-            loader.setController(controller);
-            Parent secondContent = loader.load();
-            updateContent(secondContent);
-        } catch (IOException e) {
-            System.err.println("Loading error SecondScene.fxml: " + e.getMessage());
-            e.printStackTrace();
-        }
+    public void showRuleBuilder(List<Object> objects) {
+        Parent secondContent = sceneManager.getRuleBuilder(objects);
+        updateContent(secondContent);
     }
 
-    private Parent loadFXML(String resource) {
-        try {
-            return new FXMLLoader(getClass().getResource(resource)).load();
-        } catch (IOException e) {
-            throw new RuntimeException("Не удалось загрузить FXML: " + resource, e);
-        }
+
+
+    public void showThirdScene(List<Object> objects) {
+        Parent secondContent = sceneManager.getThirdScene(objects);
+        updateContent(secondContent);
+        primaryStage.setTitle("third window");
     }
+
+
 
     private void updateContent(Parent newContent) {
         if (mainLayout.getChildren().size() > 1) {
@@ -77,9 +70,12 @@ public class UIManager {
         mainSceneItem.setOnAction(e -> showMainScene());
 
         MenuItem ruleConstructorItem = new MenuItem("Rule builder");
-        ruleConstructorItem.setOnAction(e -> showSecondScene(App.getObjects()));
+        ruleConstructorItem.setOnAction(e -> showRuleBuilder(App.getObjects()));
 
-        menuWindows.getItems().addAll(mainSceneItem, ruleConstructorItem);
+        MenuItem testItem = new MenuItem("Third window");
+        testItem.setOnAction(e -> showThirdScene(App.getObjects()));
+
+        menuWindows.getItems().addAll(mainSceneItem, ruleConstructorItem, testItem);
         menuBar.getMenus().add(menuWindows);
 
         return menuBar;

@@ -8,13 +8,13 @@ import java.util.Objects;
 @Getter
 @ToString
 public class ConditionWithOperator {
-    private Condition condition;
+    private Expression condition;
     private String logicalOperator;
 
     public ConditionWithOperator() {
     }
 
-    public ConditionWithOperator(Condition condition, String logicalOperator) {
+    public ConditionWithOperator(Expression condition, String logicalOperator) {
         this.condition = condition;
         this.logicalOperator = logicalOperator;
     }

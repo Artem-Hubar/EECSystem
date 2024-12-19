@@ -14,7 +14,6 @@ public class CurrentLineDataHandler extends DeviceDataHandler {
     @Override
     protected void setDeviceData(Device device, String[] topicParts, String message) {
         super.setDeviceData(device, topicParts, message);
-
         CurrentLineSensor currentLineSensor = (CurrentLineSensor) device;
         Map<String, Integer> messageData = getMessageData(message);
         currentLineSensor.setCurrent(messageData.get("current"));

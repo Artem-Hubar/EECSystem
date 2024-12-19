@@ -2,14 +2,19 @@ package org.example.client.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.control.Alert;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import org.example.client.SceneManager;
 import org.example.client.entity.ActionUI;
-import org.example.client.entity.ConditionUI;
+import org.example.client.view.ConditionalView;
+import org.example.client.view.ToolBarView;
 import org.example.rule.RuleBuilder;
 import org.example.service.RuleService;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class RuleBuilderSceneController {
@@ -22,22 +27,43 @@ public class RuleBuilderSceneController {
 
     private final List<Object> objects;
 
+    private ConditionalController conditionControllers;
+
+    @FXML
+    Pane toolBarPane;
+
+    private ToolBarController toolBarController;
+
     public RuleBuilderSceneController(List<Object> objects) {
         this.objects = objects;
     }
 
-    @FXML
-    public void onAddCondition() {
-        ConditionUI conditionUI = new ConditionUI(objects, this::onDeleteCondition);
-        Node conditionRow = conditionUI.createConditionRow();
-        conditionsContainer.getChildren().add(conditionRow);
-    }
+
 
     @FXML
-    public void onDeleteCondition() {
-        if (!conditionsContainer.getChildren().isEmpty()) {
-            conditionsContainer.getChildren().removeLast();
-        }
+    private void initialize() {
+        addCondition();
+        addToolBar();
+    }
+
+
+    @FXML
+    public void addCondition() {
+        SceneManager sceneManager = new SceneManager();
+        ConditionalView conditionalView = new ConditionalView(objects);
+        Parent conditionalScene = conditionalView.getView();
+        ConditionalController conditionalModelView = conditionalView.getConditionalView();
+        conditionsContainer.getChildren().add(conditionalScene);
+        conditionControllers =conditionalModelView ;
+    }
+
+
+    private void addToolBar() {
+        ToolBarView toolBarView = new ToolBarView(objects);
+        Parent toolBarParent = toolBarView.getView();
+        toolBarController = toolBarView.getToolBarController();
+        toolBarPane.getChildren().add(toolBarParent);
+
     }
 
     @FXML
@@ -54,12 +80,32 @@ public class RuleBuilderSceneController {
         }
     }
 
+
+    private List<ConditionalController> getConditionalList(){
+        List<ConditionalController> conditionalModelViews = new ArrayList<>();
+        for (Node node : conditionsContainer.getChildren()){
+            System.out.println(node);
+            ConditionalController model = (ConditionalController) node.getUserData();
+            System.out.println(3);
+            if (model != null) { // Защита от null
+                System.out.println(4);
+                conditionalModelViews.add(model);
+            }
+        }
+        return conditionalModelViews;
+    }
+
     @FXML
     public void onSaveRule() {
+
         RuleBuilder ruleBuilder = new RuleBuilder()
-                .fromUi(conditionsContainer, actionsContainer);
+                .fromUi(conditionControllers, actionsContainer);
         RuleService ruleService = new RuleService();
-        ruleService.saveRule(ruleBuilder.build());
+//        ruleService.saveRule(ruleBuilder.build());
+
+
+        System.out.println(getConditionalList());
+
         System.out.println("Rule successfully added!");
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);

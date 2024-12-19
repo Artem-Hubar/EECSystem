@@ -26,7 +26,6 @@ public class SubscriberThread implements Runnable {
             MqttClient client = MQTTClientFactory.getMqttClient(clientId);
             MQTTClientSubscriber clientSubscriber = new MQTTClientSubscriber(client, subscriberBehaviour);
             clientSubscriber.connectAndSubscribe(topics);
-
         } catch (MqttException e) {
             e.printStackTrace();
         }

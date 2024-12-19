@@ -24,7 +24,7 @@ public class CurrentLineSensor extends Device {
     @Override
     public String toInfluxDBLineProtocol() {
         String measurement = "current_line_sensor";
-        String tags = "device=" + super.getSensorId();  // предполагаем, что есть метод getDeviceName() в родительском классе
+        String tags = "device=" + super.getSensorId();
         String fields = "voltage=" + getVoltage() + ",current=" + getCurrent();
         String timestamp = String.valueOf(Instant.now().getEpochSecond());
         return measurement + "," + tags + " " + fields + " " + timestamp;

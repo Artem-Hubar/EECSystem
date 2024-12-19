@@ -8,9 +8,8 @@ import lombok.Data;
 
 
 
-public abstract class   Device {
+public abstract class Device {
     private final StringProperty sensorId = new SimpleStringProperty();
-
 
     @JsonIgnore
     public abstract String toInfluxDBLineProtocol();

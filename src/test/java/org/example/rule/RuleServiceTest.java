@@ -1,8 +1,8 @@
-package org.example.service;
+package org.example.rule;
 
 import junit.framework.TestCase;
 import org.example.rule.entity.Rule;
-import org.example.rule.RuleSerializerTest;
+import org.example.service.RuleService;
 
 import java.util.List;
 

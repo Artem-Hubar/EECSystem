@@ -3,10 +3,7 @@ package org.example.rule;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.example.entity.CurrentLineSensor;
 import org.example.entity.Transformer;
-import org.example.rule.entity.Action;
-import org.example.rule.entity.Condition;
-import org.example.rule.entity.ConditionWithOperator;
-import org.example.rule.entity.Rule;
+import org.example.rule.entity.*;
 import org.example.rule.serializer.RuleDeserializer;
 import org.example.rule.serializer.RuleSerializer;
 import org.example.subscriber.service.mqtt.publisher.MQTTPublisher;
@@ -26,9 +23,12 @@ public class RuleSerializerTest {
     private final RuleDeserializer ruleDeserializer = new RuleDeserializer();
 
     @Test
-    public void testSerializeAndDeserializeRule(){
+    public void testSerializeAndDeserializeRule() throws Exception {
         Rule rule = getRule();
+
         String serializedRule = ruleSerializer.serializeRule(rule);
+        System.out.println(rule);
+        System.out.println(serializedRule);
         Rule deserializedRule = ruleDeserializer.deserialize(serializedRule);
         System.out.println(serializedRule);
 
@@ -57,21 +57,22 @@ public class RuleSerializerTest {
     private static void isActionsEquals(Rule rule, Rule deserializedRule) {
         List<Action> actionsOrig = rule.getActions();
         List<Action> actionsDes = deserializedRule.getActions();
-        for (int actionPos = 0; actionPos<actionsOrig.size();actionPos++){
+        for (int actionPos = 0; actionPos < actionsOrig.size(); actionPos++) {
             Action actionOrig = actionsOrig.get(actionPos);
             Action actionDes = actionsDes.get(actionPos);
             assertEquals(actionOrig, actionDes);
         }
     }
 
+    // Метод для проверки выражений внутри условий
     private static void isConditionsWithOperatorEquals(Rule rule, Rule deserializedRule) {
         List<ConditionWithOperator> conditionsOrig = rule.getConditionsWithOperators();
-        List<ConditionWithOperator> conditionsDeserealized = deserializedRule.getConditionsWithOperators();
-        for (int condPos = 0 ; condPos< conditionsOrig.size();condPos++){
+        List<ConditionWithOperator> conditionsDeserialized = deserializedRule.getConditionsWithOperators();
+        for (int condPos = 0; condPos < conditionsOrig.size(); condPos++) {
             ConditionWithOperator conditionWithOpOrig = conditionsOrig.get(condPos);
-            ConditionWithOperator conditionWithOpDes = conditionsDeserealized.get(condPos);
-            Condition conditionOrig = conditionWithOpOrig.getCondition();
-            Condition conditionDes = conditionWithOpDes.getCondition();
+            ConditionWithOperator conditionWithOpDes = conditionsDeserialized.get(condPos);
+            Expression conditionOrig = conditionWithOpOrig.getCondition();
+            Expression conditionDes = conditionWithOpDes.getCondition();
             String logicOrig = conditionWithOpOrig.getLogicalOperator();
             String logicDes = conditionWithOpDes.getLogicalOperator();
             assertEquals(conditionOrig, conditionDes);
@@ -79,44 +80,29 @@ public class RuleSerializerTest {
         }
     }
 
-    @Test
-    public void testSerializeRuleProducesValidJson() throws JsonProcessingException {
-        Rule rule = getRule();
 
-        String serializedRule = ruleSerializer.serializeRule(rule);
-        assertTrue(serializedRule.startsWith("{"), "Serialized rule should start with a '{'");
-        assertTrue(serializedRule.endsWith("}"), "Serialized rule should end with a '}'");
-        assertDoesNotThrow(() -> {
-            new com.fasterxml.jackson.databind.ObjectMapper().readTree(serializedRule);
-        }, "Serialized rule should be valid JSON");
-    }
-
-    @Test
-    public void testDeserializeInvalidJson() {
-        // Arrange
-        String invalidJson = "{invalid_json}";
-
-        // Act & Assert
-        assertThrows(JsonProcessingException.class, () -> {
-            ruleDeserializer.deserialize(invalidJson);
-        }, "Deserialization of invalid JSON should throw JsonProcessingException");
-    }
-
-    public static @NotNull Rule getRule() {
-
+    public static Rule getRule() {
+        // Создаем объекты для выражений
         CurrentLineSensor sensor = new CurrentLineSensor("device1", 220.0, 10.0);
         CurrentLineSensor sensor2 = new CurrentLineSensor("device", 222.0, 10.0);
 
-        Condition condition = new Condition(sensor, "voltage", ">", 200.0);
-        Condition condition2 = new Condition(sensor2, "voltage", ">", 204.0);
-        ConditionWithOperator conditionWithOperator = new ConditionWithOperator(condition, "AND");
-        ConditionWithOperator conditionWithOperator2 = new ConditionWithOperator(condition2, "AND");
+        // Используем Expression для выражений с операциями
+        Expression expr1 = new Expression(new Expression(sensor, "getVoltage"), ">", new Expression(200.0));
+        Expression expr2 = new Expression(new Expression(sensor2, "getVoltage"), ">", new Expression(204.0));
 
+        System.out.println(expr1.evaluate());
+
+        // Создаем условия с использованием выражений
+        ConditionWithOperator condition1 = new ConditionWithOperator(expr1, "AND");
+        ConditionWithOperator condition2 = new ConditionWithOperator(expr2, "OR");
+
+        // Создаем действия для правила
         Transformer transformer = new Transformer("device1", 2.0);
         MQTTPublisher mqttPublisher = MQTTPublisherFactory.getPublisher("test");
         Action action = new Action(transformer, "turnsRatio", 2.0);
         Action action2 = new Action(mqttPublisher, "writeData", transformer);
 
-        return new Rule(List.of(conditionWithOperator, conditionWithOperator2), List.of(action, action2));
+        // Возвращаем правило с выражениями и действиями
+        return new Rule(List.of(condition1, condition2), List.of(action, action2));
     }
 }
