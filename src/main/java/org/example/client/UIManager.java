@@ -46,15 +46,6 @@ public class UIManager {
     }
 
 
-
-    public void showThirdScene(List<Object> objects) {
-        Parent secondContent = sceneManager.getThirdScene(objects);
-        updateContent(secondContent);
-        primaryStage.setTitle("third window");
-    }
-
-
-
     private void updateContent(Parent newContent) {
         if (mainLayout.getChildren().size() > 1) {
             mainLayout.getChildren().remove(1);
@@ -72,10 +63,7 @@ public class UIManager {
         MenuItem ruleConstructorItem = new MenuItem("Rule builder");
         ruleConstructorItem.setOnAction(e -> showRuleBuilder(App.getObjects()));
 
-        MenuItem testItem = new MenuItem("Third window");
-        testItem.setOnAction(e -> showThirdScene(App.getObjects()));
-
-        menuWindows.getItems().addAll(mainSceneItem, ruleConstructorItem, testItem);
+        menuWindows.getItems().addAll(mainSceneItem, ruleConstructorItem);
         menuBar.getMenus().add(menuWindows);
 
         return menuBar;
