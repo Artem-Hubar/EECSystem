@@ -15,7 +15,9 @@ public class ExpressionController {
     @FXML
     private HBox expressionsBox;
     private DeviceView deviceView;
+    ChoiceBox<String> choiceBox = new ChoiceBox<>();;
     private DeviceViewController deviceViewController;
+
 
 
     public ExpressionController(Device device, String selectedOperator) {
@@ -26,10 +28,8 @@ public class ExpressionController {
     }
     @FXML
     public void initialize() {
-        System.out.println(8);
         expressionsBox.getChildren().add(deviceView.getView());
         if (isNotEnd()) {
-            ChoiceBox<String> choiceBox = new ChoiceBox<>();
             choiceBox.getItems().addAll("+", "-", "/", "*", "==", ">", "<", ">=", "<=");
             expressionsBox.getChildren().add(choiceBox);
         }

@@ -40,32 +40,11 @@ public class DeviceViewController {
 
     }
 
-    private void writeTree(Parent pane, String s){
-        if (pane == null){
-            return;
-        }
-
-        writeTree(pane.getParent(), s + "-".repeat(pane.toString().length()));
-        System.out.println(s+pane);
-    }
-
     @FXML
     private void OnDelete(){
         if (actionOnDelete != null) {
             actionOnDelete.run();
         }
     }
-
-//    @FXML
-//    private void OnDelete() {
-//        writeTree((Pane) deviceId.getParent(), "-");
-//        Node deviceNode = deviceId.getParent();
-//        Node expressionNode = deviceNode.getParent();
-//        if (expressionNode.getParent() instanceof Pane parentPane) {
-//            parentPane.getChildren().remove(expressionNode);
-//        }
-//    }
-
-
 }
 

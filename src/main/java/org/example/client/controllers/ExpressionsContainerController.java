@@ -53,8 +53,9 @@ public class ExpressionsContainerController {
     private void addDevice(Object object) {
         String selectedOperator = null;
         if (!expressionControllers.isEmpty()) {
-            selectedOperator = expressionControllers.getLast().getSelectedOperator();
+            selectedOperator = expressionControllers.getLast().getChoiceBox().getValue();
         }
+        System.out.println(expressionControllers);
         ExpressionView expressionView = new ExpressionView(object, selectedOperator);
         Parent expressionPane = expressionView.getView();
         ExpressionController expressionController = expressionView.getExpressionModelView();

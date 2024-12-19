@@ -63,6 +63,7 @@ public class ConditionalController {
     private ChoiceBox<String> getChoiceLogicOperand() {
         ChoiceBox<String> choiceBox = new ChoiceBox<>();
         choiceBox.getItems().addAll("AND", "OR");
+        choiceBox.setValue("AND");
         return choiceBox;
     }
 

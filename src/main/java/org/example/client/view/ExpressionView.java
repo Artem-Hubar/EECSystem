@@ -12,8 +12,6 @@ public class ExpressionView {
     private final Parent view;
     private final ExpressionController expressionModelView;
 
-    private String selectedOperator;
-
     public ExpressionView(Object objectModel, String selectedOperator) {
         this.objectModel = objectModel;
         expressionModelView = new ExpressionController((Device) objectModel, selectedOperator);
