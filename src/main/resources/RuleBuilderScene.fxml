@@ -7,28 +7,25 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TitledPane?>
-<?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
 <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="419.0" prefWidth="865.0" HBox.hgrow="ALWAYS" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane fx:id="toolBarPane">
-
-      </Pane>
+      <Pane fx:id="toolBarPane" HBox.hgrow="NEVER" />
       <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="419.0" prefWidth="910.0" spacing="10" HBox.hgrow="ALWAYS">
          <children>
             <Pane VBox.vgrow="NEVER">
                <children>
-                  <Label layoutX="321.0" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Конструктор правил" />
-                  <Button layoutY="13.0" onAction="#onSaveRule" text="Add rule" />
+                  <Label layoutX="353.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Конструктор правил" />
+                  <Button layoutX="10.0" layoutY="13.0" onAction="#onSaveRule" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px;" text="Добавить правило" />
                </children>
             </Pane>
-            <Separator prefWidth="200.0" />
+            <Separator prefWidth="865.0" />
             <Accordion maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" VBox.vgrow="ALWAYS">
                <panes>
-                  <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Conditions">
+                  <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Условия">
                      <content>
                         <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                            <content>
@@ -37,12 +34,12 @@
                         </ScrollPane>
                      </content>
                   </TitledPane>
-                  <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Actions">
+                  <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Действия">
                      <content>
                         <VBox spacing="5" VBox.vgrow="ALWAYS">
                            <children>
-                              <Button onAction="#onAddAction" text="Add actions" />
-                              <Separator prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                              <Button onAction="#onAddAction" style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 14px;" text="Добавить действие" />
+                              <Separator prefWidth="865.0" VBox.vgrow="ALWAYS" />
                               <ScrollPane fitToWidth="true" prefHeight="200.0" prefWidth="200.0">
                                  <content>
                                     <VBox fx:id="actionsContainer" spacing="5" />
@@ -58,6 +55,9 @@
                </VBox.margin>
             </Accordion>
          </children>
+         <padding>
+            <Insets bottom="10" left="10" right="10" top="10" />
+         </padding>
       </VBox>
    </children>
 </HBox>
