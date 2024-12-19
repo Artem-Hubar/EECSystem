@@ -9,12 +9,12 @@ import javafx.scene.layout.VBox;
 import org.example.client.SceneManager;
 import org.example.client.entity.ActionUI;
 import org.example.client.view.ConditionalView;
-import org.example.client.view.ToolBarView;
 import org.example.rule.RuleBuilder;
 import org.example.service.RuleService;
 
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class RuleBuilderSceneController {
@@ -32,7 +32,6 @@ public class RuleBuilderSceneController {
     @FXML
     Pane toolBarPane;
 
-    private ToolBarController toolBarController;
 
     public RuleBuilderSceneController(List<Object> objects) {
         this.objects = objects;
@@ -42,8 +41,8 @@ public class RuleBuilderSceneController {
 
     @FXML
     private void initialize() {
+//        addToolBar();
         addCondition();
-        addToolBar();
     }
 
 
@@ -58,13 +57,7 @@ public class RuleBuilderSceneController {
     }
 
 
-    private void addToolBar() {
-        ToolBarView toolBarView = new ToolBarView(objects);
-        Parent toolBarParent = toolBarView.getView();
-        toolBarController = toolBarView.getToolBarController();
-        toolBarPane.getChildren().add(toolBarParent);
 
-    }
 
     @FXML
     public void onAddAction() {
@@ -114,8 +107,19 @@ public class RuleBuilderSceneController {
         alert.setContentText("Rule successfully added!");
         alert.showAndWait();
 
-        // Очистка контейнеров
-        conditionsContainer.getChildren().clear();
+
+        clearConditional();
         actionsContainer.getChildren().clear();
+    }
+
+    private void clearConditional() {
+        Iterable<ExpressionsContainerController> iterable = conditionControllers.getExpressionsContainerControllers();
+        Iterator<ExpressionsContainerController> iterator = iterable.iterator();
+
+        while (iterator.hasNext()) {
+            ExpressionsContainerController expressionsContainerController = iterator.next();
+            expressionsContainerController.onDeleteThisExpressionsContainer();
+            iterator.remove();
+        }
     }
 }

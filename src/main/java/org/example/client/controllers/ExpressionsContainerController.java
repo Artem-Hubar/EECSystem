@@ -8,6 +8,8 @@ import javafx.scene.Parent;
 
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
+import javafx.scene.input.DragEvent;
+import javafx.scene.input.TransferMode;
 import javafx.scene.layout.HBox;
 
 import javafx.scene.layout.Pane;
@@ -53,7 +55,6 @@ public class ExpressionsContainerController {
         if (!expressionControllers.isEmpty()) {
             selectedOperator = expressionControllers.getLast().getSelectedOperator();
         }
-
         ExpressionView expressionView = new ExpressionView(object, selectedOperator);
         Parent expressionPane = expressionView.getView();
         ExpressionController expressionController = expressionView.getExpressionModelView();
@@ -89,6 +90,4 @@ public class ExpressionsContainerController {
 //        Pane pane = (Pane) vBox;
 //        pane.getChildren().remove(conditionalBox);
 //    }
-
-
 }
