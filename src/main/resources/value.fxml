@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.layout.Pane?>
+
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<Pane focusTraversable="true" prefHeight="100" prefWidth="120"
+      style="-fx-background-color: #f4f4f4; -fx-border-radius: 8; -fx-border-color: #ccc; -fx-border-width: 1;"
+      xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Button layoutX="85" layoutY="5" prefWidth="20" prefHeight="20" text="x"
+                style="-fx-background-color: #e74c3c; -fx-text-fill: white;
+                       -fx-font-size: 10px; -fx-border-radius: 10px; -fx-background-radius: 10px;"
+                onAction="#OnDelete" />
+        <TextField fx:id="textField" layoutX="10" layoutY="35" prefWidth="100" prefHeight="25" />
+    </children>
+</Pane>
+
+

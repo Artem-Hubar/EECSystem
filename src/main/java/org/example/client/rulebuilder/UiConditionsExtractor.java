@@ -9,6 +9,10 @@ import javafx.scene.layout.VBox;
 import org.example.client.controllers.ConditionalController;
 import org.example.client.controllers.ExpressionController;
 import org.example.client.controllers.ExpressionsContainerController;
+import org.example.client.controllers.expression.object.DeviceController;
+import org.example.client.controllers.expression.object.ExpressionObjectController;
+import org.example.client.controllers.expression.object.TextFieldController;
+import org.example.entity.Device;
 import org.example.rule.entity.ConditionWithOperator;
 import org.example.rule.entity.Expression;
 
@@ -23,15 +27,17 @@ public class UiConditionsExtractor {
     public Collection<? extends ConditionWithOperator> extractConditions(ConditionalController conditionsContainer) {
         List<ConditionWithOperator> condition = new ArrayList<>();
         List<ExpressionsContainerController> expressionsContainerControllers = conditionsContainer.getExpressionsContainerControllers();
-        for (ExpressionsContainerController expressionContainer : expressionsContainerControllers){
+        for (ExpressionsContainerController expressionContainer : expressionsContainerControllers) {
             String logicalOperator;
-            if (getLogicalOperator(expressionContainer).isPresent()){
+            if (getLogicalOperator(expressionContainer).isPresent()) {
                 logicalOperator = getLogicalOperator(expressionContainer).get();
-            }else {
+            } else {
                 logicalOperator = "AND";
             }
             List<Object[]> expressionList = getExpressionList(expressionContainer);
-            Expression expression = parseExpression(expressionList);
+            ExpressionParser parser = new ExpressionParser();
+            Expression expression = parser.parseExpressionList(expressionList);
+            System.out.println(expression);
             ConditionWithOperator conditionWithOperator = new ConditionWithOperator(expression, logicalOperator);
             condition.add(conditionWithOperator);
         }
@@ -40,8 +46,8 @@ public class UiConditionsExtractor {
 
     private Optional<String> getLogicalOperator(ExpressionsContainerController containerController) {
         ChoiceBox<String> choiceBox = containerController.getChoiceBox();
-        if (choiceBox != null){
-            return Optional.of(choiceBox.getValue()) ;
+        if (choiceBox != null) {
+            return Optional.of(choiceBox.getValue());
         }
         return Optional.empty();
     }
@@ -49,68 +55,26 @@ public class UiConditionsExtractor {
     private List<Object[]> getExpressionList(ExpressionsContainerController expressionContainer) {
         List<Object[]> expressions = new ArrayList<>();
         List<ExpressionController> expressionControllers = expressionContainer.getExpressionControllers();
-        for (ExpressionController expressionController :expressionControllers){
-            Object targetObject = expressionController.getDevice();
-            String method = getMethod(expressionController);
-            String operand =expressionController.getSelectedOperator();
-            Object[] expression = {targetObject, method, operand};
+        for (ExpressionController expressionController : expressionControllers) {
+            Object targetObject = expressionController.getObject();
+            Object[] expression = new Object[3];
+            if (targetObject instanceof Device device){
+                String method = getMethod(expressionController);
+                String operand = expressionController.getChoiceBox().getValue();
+                expression = new Object[]{targetObject, method, operand};
+            }else if (targetObject instanceof TextField textField){
+                targetObject = Double.parseDouble(textField.getText());
+                expression = new Object[]{targetObject, null, null};
+            }
             expressions.add(expression);
         }
         return expressions;
     }
 
     private String getMethod(ExpressionController expressionController) {
-        return expressionController
-                .getDeviceViewController()
-                .getMethodBox()
-                .getValue();
+        ExpressionObjectController expressionObjectController = expressionController.getExpressionObjectController();
+        return expressionObjectController.getMethodString();
     }
-
-
-    public Expression parseExpression(List<Object[]> expressionList) {
-
-        Expression rootExpression = new Expression();
-
-        rootExpression.setGrouped(true);
-
-
-        for (Object[] expressionData : expressionList) {
-
-            Object targetObject = expressionData[0];
-            String methodName = (String) expressionData[1];
-            String operator = (String) expressionData[2];
-
-
-            Expression currentExpression = new Expression();
-            currentExpression.setTargetObject(targetObject);
-            currentExpression.setMethodName(methodName);
-            currentExpression.setOperator(operator);
-
-
-            addExpressionToTree(rootExpression, currentExpression);
-        }
-
-        return rootExpression;
-    }
-
-    private void addExpressionToTree(Expression root, Expression current) {
-
-        if (root.getLeftOperand() == null) {
-            root.setLeftOperand(current);
-        } else {
-
-            if (root.getRightOperand() == null) {
-                root.setRightOperand(current);
-            } else {
-                Expression newGroup = new Expression();
-                newGroup.setGrouped(true);
-                newGroup.setLeftOperand(root.getRightOperand());
-                newGroup.setRightOperand(current);
-                root.setRightOperand(newGroup);
-            }
-        }
-    }
-
 
 
 

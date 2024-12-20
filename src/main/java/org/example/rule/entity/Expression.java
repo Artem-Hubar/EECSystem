@@ -46,13 +46,11 @@ public class Expression {
     }
 
     public Object evaluate() {
-        // Если выражение является группированным, сначала вычисляем его
         if (isGrouped) {
             return evaluateGroupedExpression();
         }
 
-        // Если это выражение с операндами
-        if (leftOperand != null && rightOperand != null) {
+        if (isExpressionWithOperand()) {
             Object leftValue = leftOperand.evaluate();
             Object rightValue = rightOperand.evaluate();
             return performOperation(leftValue, rightValue);
@@ -62,10 +60,14 @@ public class Expression {
         return getFieldValue();
     }
 
+    private boolean isExpressionWithOperand() {
+        return leftOperand != null && rightOperand != null;
+    }
+
     // Оценка для выражений в скобках (группированных выражений)
     private Object evaluateGroupedExpression()  {
         // Оценка выражения внутри скобок
-        if (leftOperand != null && rightOperand != null) {
+        if (isExpressionWithOperand()) {
             Object leftValue = leftOperand.evaluate();
             Object rightValue = rightOperand.evaluate();
             return performOperation(leftValue, rightValue);
@@ -95,6 +97,7 @@ public class Expression {
 
     // Выполнение арифметической операции между двумя значениями
     private Object performOperation(Object leftValue, Object rightValue) {
+
         if (leftValue instanceof Number && rightValue instanceof Number) {
             switch (operator) {
                 case "+":

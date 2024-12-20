@@ -7,9 +7,9 @@
 
 <VBox fx:id="vBox" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <Button mnemonicParsing="false" onAction="#onAddConditional" text="AddCondition" />
+        <Button mnemonicParsing="false" onAction="#onAddConditional" text="Add condition" />
         <Separator prefWidth="200.0" VBox.vgrow="ALWAYS" />
-        <ScrollPane fitToWidth="true" prefHeight="200" VBox.vgrow="ALWAYS"> <!-- Устанавливаем предпочтительную высоту -->
+        <ScrollPane fitToWidth="true" prefHeight="200" VBox.vgrow="ALWAYS">
             <VBox fx:id="conditionalBox" VBox.vgrow="ALWAYS" />
         </ScrollPane>
     </children>

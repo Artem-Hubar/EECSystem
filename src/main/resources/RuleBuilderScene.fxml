@@ -18,14 +18,14 @@
          <children>
             <Pane VBox.vgrow="NEVER">
                <children>
-                  <Label layoutX="353.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Конструктор правил" />
-                  <Button layoutX="10.0" layoutY="13.0" onAction="#onSaveRule" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px;" text="Добавить правило" />
+                  <Label layoutX="353.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Rule builder" />
+                  <Button layoutX="10.0" layoutY="13.0" onAction="#onSaveRule" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px;" text="Add condition" />
                </children>
             </Pane>
             <Separator prefWidth="865.0" />
             <Accordion maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" VBox.vgrow="ALWAYS">
                <panes>
-                  <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Условия">
+                  <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Conditionals">
                      <content>
                         <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                            <content>
@@ -34,11 +34,11 @@
                         </ScrollPane>
                      </content>
                   </TitledPane>
-                  <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Действия">
+                  <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Actions">
                      <content>
                         <VBox spacing="5" VBox.vgrow="ALWAYS">
                            <children>
-                              <Button onAction="#onAddAction" style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 14px;" text="Добавить действие" />
+                              <Button onAction="#onAddAction" style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 14px;" text="Add action" />
                               <Separator prefWidth="865.0" VBox.vgrow="ALWAYS" />
                               <ScrollPane fitToWidth="true" prefHeight="200.0" prefWidth="200.0">
                                  <content>

@@ -14,6 +14,7 @@ import org.example.service.RuleService;
 
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
@@ -94,7 +95,7 @@ public class RuleBuilderSceneController {
         RuleBuilder ruleBuilder = new RuleBuilder()
                 .fromUi(conditionControllers, actionsContainer);
         RuleService ruleService = new RuleService();
-//        ruleService.saveRule(ruleBuilder.build());
+        ruleService.saveRule(ruleBuilder.build());
 
 
         System.out.println(getConditionalList());
@@ -107,19 +108,11 @@ public class RuleBuilderSceneController {
         alert.setContentText("Rule successfully added!");
         alert.showAndWait();
 
-
         clearConditional();
         actionsContainer.getChildren().clear();
     }
 
     private void clearConditional() {
-        Iterable<ExpressionsContainerController> iterable = conditionControllers.getExpressionsContainerControllers();
-        Iterator<ExpressionsContainerController> iterator = iterable.iterator();
-
-        while (iterator.hasNext()) {
-            ExpressionsContainerController expressionsContainerController = iterator.next();
-            expressionsContainerController.onDeleteThisExpressionsContainer();
-            iterator.remove();
-        }
+        conditionControllers.getExpressionsContainerControllers().forEach(ExpressionsContainerController::onDeleteThisExpressionsContainer);
     }
 }

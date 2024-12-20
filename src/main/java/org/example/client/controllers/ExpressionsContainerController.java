@@ -2,23 +2,19 @@ package org.example.client.controllers;
 
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
-import javafx.scene.input.DragEvent;
-import javafx.scene.input.TransferMode;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 
-import javafx.scene.layout.Pane;
 import lombok.Getter;
 import lombok.Setter;
+import org.example.client.controllers.expression.object.DeviceController;
+import org.example.client.controllers.expression.object.ExpressionObjectController;
 import org.example.client.view.ExpressionView;
-import org.example.entity.Device;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,12 +41,18 @@ public class ExpressionsContainerController {
     }
 
     @FXML
-    public void onAddObject() {
-        Object object = deviceChoiceBox.getValue();
-        addDevice(object);
+    public void onAddValue(){
+        String textField= "textField";
+        addObject(textField);
     }
 
-    private void addDevice(Object object) {
+    @FXML
+    public void onAddObject() {
+        Object object = deviceChoiceBox.getValue();
+        addObject(object);
+    }
+
+    private void addObject(Object object) {
         String selectedOperator = null;
         if (!expressionControllers.isEmpty()) {
             selectedOperator = expressionControllers.getLast().getChoiceBox().getValue();
@@ -59,7 +61,7 @@ public class ExpressionsContainerController {
         ExpressionView expressionView = new ExpressionView(object, selectedOperator);
         Parent expressionPane = expressionView.getView();
         ExpressionController expressionController = expressionView.getExpressionModelView();
-        DeviceViewController deviceViewController = expressionController.getDeviceViewController();
+        ExpressionObjectController deviceViewController = expressionController.getExpressionObjectController();
         deviceViewController.setActionOnDelete(() -> onDeleteChildExpression(expressionPane, expressionController));
         deviceContainer.getChildren().add(expressionPane);
         expressionControllers.add(expressionController);
@@ -82,13 +84,4 @@ public class ExpressionsContainerController {
         this.choiceBox = choiceBox;
     }
 
-//    @FXML
-//    public void onDeleteThisExpressionsContainer() {
-//        Node deviceNode = deviceChoiceBox.getParent();
-//        Node conditionWithOperator = deviceNode.getParent();
-//        Node conditionalBox = conditionWithOperator.getParent();
-//        Node vBox = conditionalBox.getParent();
-//        Pane pane = (Pane) vBox;
-//        pane.getChildren().remove(conditionalBox);
-//    }
 }

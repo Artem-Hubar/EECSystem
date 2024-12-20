@@ -3,9 +3,7 @@ package org.example.client.view;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import lombok.Getter;
-import org.example.client.controllers.DeviceViewController;
 import org.example.client.controllers.ExpressionsContainerController;
-import org.example.entity.Device;
 
 import java.util.List;
 

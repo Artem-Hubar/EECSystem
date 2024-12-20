@@ -10,6 +10,7 @@ import lombok.Data;
 
 public abstract class Device {
     private final StringProperty sensorId = new SimpleStringProperty();
+    private final StringProperty title = new SimpleStringProperty();
 
     @JsonIgnore
     public abstract String toInfluxDBLineProtocol();
@@ -24,5 +25,13 @@ public abstract class Device {
 
     public void setSensorId(String sensorId) {
         this.sensorId.set(sensorId);
+    }
+
+    public String getTitle() {
+        return title.get();
+    }
+
+    public void setTitle(String title){
+        this.title.set(title);
     }
 }

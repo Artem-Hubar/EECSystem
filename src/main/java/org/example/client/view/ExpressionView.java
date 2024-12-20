@@ -14,7 +14,7 @@ public class ExpressionView {
 
     public ExpressionView(Object objectModel, String selectedOperator) {
         this.objectModel = objectModel;
-        expressionModelView = new ExpressionController((Device) objectModel, selectedOperator);
+        expressionModelView = new ExpressionController(objectModel, selectedOperator);
         this.view = loadView();
     }
 

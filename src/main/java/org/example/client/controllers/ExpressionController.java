@@ -1,34 +1,38 @@
 package org.example.client.controllers;
 
 import javafx.fxml.FXML;
-import javafx.scene.Parent;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.layout.HBox;
 import lombok.Getter;
-import org.example.client.view.DeviceView;
+import org.example.client.controllers.expression.object.ExpressionObjectController;
+import org.example.client.factory.ObjectViewFactory;
+import org.example.client.view.expression.object.DeviceView;
+import org.example.client.view.expression.object.ObjectView;
 import org.example.entity.Device;
 
 @Getter
 public class ExpressionController {
-    private final Device device;
+
     private final String selectedOperator;
     @FXML
     private HBox expressionsBox;
-    private DeviceView deviceView;
+    private ObjectView objectView;
     ChoiceBox<String> choiceBox = new ChoiceBox<>();;
-    private DeviceViewController deviceViewController;
+    private final ExpressionObjectController expressionObjectController;
 
+    public Object getObject(){
+        return expressionObjectController.getObject();
+    }
 
-
-    public ExpressionController(Device device, String selectedOperator) {
-        this.device = device;
+    public ExpressionController(Object object, String selectedOperator) {
         this.selectedOperator = selectedOperator;
-        deviceView = new DeviceView(device);
-        deviceViewController = deviceView.getDeviceViewController();
+        ObjectViewFactory objectViewFactory = new ObjectViewFactory();
+        objectView = objectViewFactory.getObjectView(object);
+        expressionObjectController = objectView.getExpressionObjectController();
     }
     @FXML
     public void initialize() {
-        expressionsBox.getChildren().add(deviceView.getView());
+        expressionsBox.getChildren().add(objectView.getView());
         if (isNotEnd()) {
             choiceBox.getItems().addAll("+", "-", "/", "*", "==", ">", "<", ">=", "<=");
             expressionsBox.getChildren().add(choiceBox);
