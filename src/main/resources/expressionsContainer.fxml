@@ -8,14 +8,12 @@
 
 <VBox fx:id="conditionWithOperator" prefHeight="141.0" prefWidth="378.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <HBox prefHeight="35.0" prefWidth="378.0" spacing="10">
+        <HBox fx:id="controlElement" prefHeight="35.0" prefWidth="378.0" spacing="10">
             <ComboBox fx:id="deviceChoiceBox" prefHeight="29.0" prefWidth="120.0" style="-fx-font-size: 14px;" />
             <Button mnemonicParsing="false" onAction="#onAddObject" text="AddObject"
                     style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px;" />
             <Button mnemonicParsing="false" onAction="#onAddValue" text="AddValue"
                     style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px;" />
-            <Button mnemonicParsing="false" onAction="#onDeleteThisExpressionsContainer" text="Delete"
-                    style="-fx-background-color: #F44336; -fx-text-fill: white; -fx-font-size: 14px;" />
         </HBox>
         <ScrollPane fitToWidth="true" fitToHeight="true" prefWidth="200.0">
             <HBox fx:id="deviceContainer" alignment="TOP_CENTER" prefHeight="100.0" prefWidth="378.0"/>

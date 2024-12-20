@@ -1,6 +1,7 @@
 package org.example.rule;
 
 import javafx.scene.layout.VBox;
+import org.example.client.controllers.ActionController;
 import org.example.client.controllers.ConditionalController;
 import org.example.client.rulebuilder.UiActionsExtractor;
 import org.example.client.rulebuilder.UiConditionsExtractor;
@@ -26,7 +27,7 @@ public class RuleBuilder {
 
     // Добавление действия
     public RuleBuilder addAction(Action action) {
-        System.out.println("Добавление действия: объект=" + action.getTargetObject() + ", поле=" + action.getFieldName() + ", значение=" + action.getNewValue());
+        System.out.println("Добавление действия: объект=" + action.getTargetObject() + ", поле=" + action.getFieldName() + ", значение=" + action.getExpression().evaluate());
         actions.add(action);
         return this;
     }
@@ -37,16 +38,16 @@ public class RuleBuilder {
         return new Rule(conditionsWithOperators, actions);
     }
 
-    public RuleBuilder fromUi(ConditionalController conditionalControllers, VBox actionsContainer) {
+    public RuleBuilder fromUi(ConditionalController conditionalControllers, List<ActionController> actionControllers) {
         List<ConditionWithOperator> conditionsFromUi = getConditionsFromUi(conditionalControllers);
         System.out.println("conditionsFromUi " +conditionsFromUi);
-        List<Action> actionsFromUi = getActionsFromUi(actionsContainer);
+        List<Action> actionsFromUi = getActionsFromUi(actionControllers);
         conditionsFromUi.forEach(this::addCondition);
         actionsFromUi.forEach(this::addAction);
         return this;
     }
 
-    private List<Action> getActionsFromUi(VBox actionsContainer) {
+    private List<Action> getActionsFromUi(List<ActionController> actionsContainer) {
         UiActionsExtractor uiActionsExtractor = new UiActionsExtractor();
         return uiActionsExtractor.extractActions(actionsContainer);
     }

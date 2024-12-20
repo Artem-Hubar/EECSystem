@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox spacing="5" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets bottom="5" left="5" right="5" top="5" />
+    </padding>
+    <children>
+        <Button onAction="#handleDeleteButtonAction" text="Delete" />
+        <ComboBox fx:id="actionObjectSelector" promptText="Choice object">
+            <!-- Items will be populated from the controller -->
+        </ComboBox>
+        <ComboBox fx:id="actionFieldSelector" promptText="Choice method">
+            <!-- Items will be populated dynamically -->
+        </ComboBox>
+        <VBox fx:id="expressionsContainer" HBox.hgrow="ALWAYS">
+            <!-- Additional children can be added here -->
+        </VBox>
+    </children>
+</HBox>

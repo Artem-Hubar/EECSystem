@@ -13,7 +13,7 @@ public class DefaultActionExecutor implements ActionExecutor {
     public void execute(Action action)  {
         Object targetObject = action.getTargetObject();
         String fieldName = action.getFieldName();
-        Object newValue = action.getNewValue();
+        Object newValue = action.getExpression().evaluate();
 
         Class<?> clazz = targetObject.getClass();
         try {

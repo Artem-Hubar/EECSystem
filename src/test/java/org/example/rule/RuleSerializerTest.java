@@ -99,8 +99,8 @@ public class RuleSerializerTest {
         // Создаем действия для правила
         Transformer transformer = new Transformer("device1", 2.0);
         MQTTPublisher mqttPublisher = MQTTPublisherFactory.getPublisher("test");
-        Action action = new Action(transformer, "turnsRatio", 2.0);
-        Action action2 = new Action(mqttPublisher, "writeData", transformer);
+        Action action = new Action(transformer, "turnsRatio", new Expression(2.0));
+        Action action2 = new Action(mqttPublisher, "writeData", new Expression(transformer));
 
         // Возвращаем правило с выражениями и действиями
         return new Rule(List.of(condition1, condition2), List.of(action, action2));

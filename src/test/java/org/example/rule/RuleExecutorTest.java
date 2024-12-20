@@ -3,6 +3,7 @@ package org.example.rule;
 import junit.framework.TestCase;
 import org.example.entity.Transformer;
 import org.example.rule.entity.Action;
+import org.example.rule.entity.Expression;
 import org.example.rule.entity.Rule;
 import org.example.rule.executor.ActionExecutor;
 import org.example.rule.executor.DefaultActionExecutor;
@@ -17,8 +18,8 @@ public class RuleExecutorTest extends TestCase {
     public void testActionExecutor(){
         Transformer transformer = new Transformer("device1", 2.0);
         MQTTPublisher mqttPublisher = MQTTPublisherFactory.getPublisher("test");
-        Action action = new Action(transformer, "setTurnsRation", 3.0);
-        Action action2 = new Action(mqttPublisher, "writeData", transformer);
+        Action action = new Action(transformer, "setTurnsRation", new Expression(3.0));
+        Action action2 = new Action(mqttPublisher, "writeData", new Expression(transformer));
         ActionExecutor actionExecutor = new DefaultActionExecutor();
         actionExecutor.execute(action);
         System.out.println(transformer);

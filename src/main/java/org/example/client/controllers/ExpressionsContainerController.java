@@ -4,14 +4,13 @@ package org.example.client.controllers;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 
+import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.example.client.controllers.expression.object.DeviceController;
 import org.example.client.controllers.expression.object.ExpressionObjectController;
 import org.example.client.view.ExpressionView;
 
@@ -29,6 +28,8 @@ public class ExpressionsContainerController {
     @Setter
     private Runnable actionOnDelete;
     private ChoiceBox<String> choiceBox;
+    @FXML
+    HBox controlElement;
 
 
     public ExpressionsContainerController(List<Object> objects) {
@@ -70,14 +71,22 @@ public class ExpressionsContainerController {
     public void onDeleteChildExpression(Parent expressionParent, ExpressionController expressionController) {
         deviceContainer.getChildren().remove(expressionParent);
         expressionControllers.remove(expressionController);
-        System.out.println(expressionControllers);
     }
+
 
     @FXML
     public void onDeleteThisExpressionsContainer() {
         if (actionOnDelete != null) {
             actionOnDelete.run();
         }
+    }
+
+    public void addRemoveButton(){
+        Button onDeleteThisExpressionsContainerButton = new Button("Delete");
+        onDeleteThisExpressionsContainerButton.setMnemonicParsing(false); // Отключаем обработку мнемоник
+        onDeleteThisExpressionsContainerButton.setStyle("-fx-background-color: #F44336; -fx-text-fill: white; -fx-font-size: 14px;"); // Стили
+        onDeleteThisExpressionsContainerButton.setOnAction(_ ->onDeleteThisExpressionsContainer());
+        controlElement.getChildren().add(onDeleteThisExpressionsContainerButton);
     }
 
     public void setChoiceLogic(ChoiceBox<String> choiceBox) {

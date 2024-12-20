@@ -39,8 +39,9 @@ public class ConditionalController {
 
     private void addConditional() {
         ExpressionsContainerView expressionsContainerView = new ExpressionsContainerView(objects);
-        Parent expressionScene = expressionsContainerView.getView();
         ExpressionsContainerController expressionsContainerController = expressionsContainerView.getExpressionsContainerController();
+        expressionsContainerController.addRemoveButton();
+        Parent expressionScene = expressionsContainerView.getView();
         VBox conditionalItem = new VBox();
         conditionalItem.setId("itisVbox");
         if (!expressionsContainerControllers.isEmpty()){
