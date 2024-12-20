@@ -1,6 +1,6 @@
 package org.example.ClientUI;
 
-import org.example.client.rulebuilder.ExpressionParser;
+import org.example.client.controllers.parser.ExpressionParser;
 import org.example.rule.entity.Expression;
 import org.junit.jupiter.api.Test;
 
