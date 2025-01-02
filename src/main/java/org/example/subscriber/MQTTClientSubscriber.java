@@ -45,7 +45,7 @@ public class MQTTClientSubscriber {
         client.connect(options);
         for (Topic topic: topics){
             client.subscribe(topic.getTitle());
-            System.out.println("Subscribe topic: " + topic);
+//            System.out.println("Subscribe topic: " + topic);
         }
     }
 

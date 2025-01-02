@@ -12,14 +12,14 @@ import java.util.List;
 public class SceneManager {
     public Parent getThirdScene(List<Object> objects) {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/expressionsContainer.fxml"));
-        ExpressionsContainerController controller = new ExpressionsContainerController(objects);
+        ExpressionsContainerController controller = new ExpressionsContainerController();
         loader.setController(controller);
         return getLoad(loader);
     }
 
     public Parent getConditionalScene(List<Object> objects){
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/ConditionalScene.fxml"));
-        ConditionalController controller = new ConditionalController(objects);
+        ConditionalController controller = new ConditionalController();
         loader.setController(controller);
         return getLoad(loader);
     }
@@ -38,7 +38,7 @@ public class SceneManager {
     }
     public Parent getRuleBuilder(List<Object> objects) {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/RuleBuilderScene.fxml"));
-        RuleBuilderSceneController controller = new RuleBuilderSceneController(objects);
+        RuleBuilderSceneController controller = new RuleBuilderSceneController();
         loader.setController(controller);
         return getLoad(loader);
     }

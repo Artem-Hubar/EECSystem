@@ -1,10 +1,10 @@
 package org.example.client.controllers;
 
 import javafx.fxml.FXML;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.layout.VBox;
+import lombok.Setter;
 import org.example.client.SceneManager;
 import org.example.client.view.ActionView;
 import org.example.client.view.ConditionalView;
@@ -20,32 +20,53 @@ public class RuleBuilderSceneController {
     private VBox conditionsContainer;
     @FXML
     private VBox actionsContainer;
-    private final List<Object> objects;
+
     private ConditionalController conditionControllers;
     private final List<ActionController> actionControllers = new ArrayList<>();
+    @Setter
+    private ConditionalView conditionalView;
+    private final List<ActionView> actionViews = new ArrayList<>();
 
-    public RuleBuilderSceneController(List<Object> objects) {
-        this.objects = objects;
+    public RuleBuilderSceneController() {
+
     }
 
     @FXML
     private void initialize() {
-        addCondition();
+        if (conditionalView != null){
+            addConditionalView(conditionalView);
+        }else {
+            addCondition();
+        }
+        if (actionViews !=null){
+            for (ActionView actionView : actionViews){
+                addAction(actionView);
+            }
+        }
     }
 
     @FXML
     public void addCondition() {
         SceneManager sceneManager = new SceneManager();
-        ConditionalView conditionalView = new ConditionalView(objects);
+        ConditionalView conditionalView = new ConditionalView();
+        addConditionalView(conditionalView);
+    }
+
+    private void addConditionalView(ConditionalView conditionalView) {
         Parent conditionalScene = conditionalView.getView();
         ConditionalController conditionalModelView = conditionalView.getConditionalView();
         conditionsContainer.getChildren().add(conditionalScene);
-        conditionControllers =conditionalModelView ;
+        conditionControllers = conditionalModelView ;
     }
+
 
     @FXML
     public void onAddAction() {
-        ActionView actionView = new ActionView(objects);
+        ActionView actionView = new ActionView();
+        addAction(actionView);
+    }
+
+    private void addAction(ActionView actionView) {
         Parent actionScene = actionView.getView();
         ActionController actionController = actionView.getController();
         actionsContainer.getChildren().add(actionScene);
@@ -59,18 +80,12 @@ public class RuleBuilderSceneController {
         actionControllers.remove(actionController);
     }
 
-
-
     @FXML
     public void onSaveRule() {
-
         RuleBuilder ruleBuilder = new RuleBuilder()
                 .fromUi(conditionControllers, actionControllers);
         RuleService ruleService = new RuleService();
         ruleService.saveRule(ruleBuilder.build());
-
-
-
         System.out.println("Rule successfully added!");
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -85,5 +100,11 @@ public class RuleBuilderSceneController {
 
     private void clearConditional() {
         conditionControllers.getExpressionsContainerControllers().forEach(ExpressionsContainerController::onDeleteThisExpressionsContainer);
+    }
+
+
+    public void onAddActionController(ActionController actionController) {
+        ActionView actionView = new ActionView(actionController);
+        actionViews.add(actionView);
     }
 }

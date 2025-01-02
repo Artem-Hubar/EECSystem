@@ -67,6 +67,10 @@ public class DeviceController extends ExpressionObjectController {
         return devicePath[devicePath.length-1];
     }
 
+    public void setMethod(String methodString) {
+        this.methodBox.setValue(methodString);
+    }
+
     @Override
     public String getMethodString() {
         return methodBox.getValue();

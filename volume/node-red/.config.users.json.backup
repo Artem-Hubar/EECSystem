@@ -24,9 +24,21 @@
         },
         "debug": {
             "clearType": "all",
-            "filteredNodes": [],
-            "filter": "filterAll"
+            "filteredNodes": [
+                "6cc24b9c45883a71",
+                "b859b501a8b4db6c",
+                "0f65d2708b5b4186",
+                "fcfc2ca915ab4288",
+                "58522b291f743b57",
+                "0cfc0125373ebf3a",
+                "9b900c05d41abd92",
+                "06e37a093aab5c3f",
+                "b990833ccfbdc733",
+                "ab16fed8086ffdb2",
+                "5e88df6036251bf6"
+            ],
+            "filter": "filterSelected"
         },
-        "menu-menu-item-palette": false
+        "menu-menu-item-palette": true
     }
 }

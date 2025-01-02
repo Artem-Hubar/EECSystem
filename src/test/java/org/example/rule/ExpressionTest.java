@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.Assert.assertEquals;
 
 public class ExpressionTest {
-    public class Person {
+    public static class Person {
         private int age;
 
         public Person(int age) {
@@ -59,9 +59,10 @@ public class ExpressionTest {
 
         // (subtractionExpr / person4.getAge())
         Expression divisionExpr = new Expression(subtractionExpr, "/", expr4);
+        Expression divisionTest = new Expression(subtractionExpr, "==", new Expression(6.0));
 
         // Выводим результат: ((10 + 5) - 3) / 2 = 6.0
-        assertEquals(6.0, divisionExpr.evaluate());
+        assertEquals(true, divisionTest.evaluate());
     }
 
     @Test

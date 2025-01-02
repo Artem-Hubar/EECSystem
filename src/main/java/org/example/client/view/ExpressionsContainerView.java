@@ -9,13 +9,18 @@ import java.util.List;
 
 @Getter
 public class ExpressionsContainerView {
-    private final List<Object> objects;
+    private  List<Object> objects;
     private final Parent view; // Графический интерфейс устройства
     private final ExpressionsContainerController expressionsContainerController;
 
     public ExpressionsContainerView(List<Object> objects) {
         this.objects = objects;
-        expressionsContainerController = new ExpressionsContainerController(objects);
+        expressionsContainerController = new ExpressionsContainerController();
+        this.view = loadView();
+    }
+
+    public ExpressionsContainerView(ExpressionsContainerController expressionsContainerController) {
+        this. expressionsContainerController = expressionsContainerController;
         this.view = loadView();
     }
 

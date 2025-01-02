@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ScrollPane?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="org.example.client.controllers.MapController">
+    <children>
+        <VBox fx:id="listBox" layoutX="20" layoutY="20" spacing="10">
+        </VBox>
+
+        <!-- Оборачиваем Pane в ScrollPane -->
+        <ScrollPane fx:id="scrollPane"  layoutX="300" layoutY="20"  fitToWidth="true" fitToHeight="true" hbarPolicy="ALWAYS" vbarPolicy="ALWAYS" prefWidth="1600" prefHeight="800">
+        <content>
+            <!-- Панель, в которой будут элементы и которой будем управлять (перемещение и масштабирование) -->
+            <AnchorPane fx:id="dropPane" prefWidth="2000" prefHeight="2000">
+                <!-- Здесь будут размещаться устройства -->
+            </AnchorPane>
+        </content>
+    </ScrollPane>
+    </children>
+</AnchorPane>

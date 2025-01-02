@@ -1,18 +1,11 @@
 package org.example.service;
 
-import com.influxdb.client.QueryApi;
-import com.influxdb.client.domain.WritePrecision;
-import com.influxdb.query.FluxRecord;
-import com.influxdb.query.FluxTable;
-import org.example.entity.CurrentLineSensor;
 import org.example.entity.Device;
-import org.example.entity.Transformer;
+import org.example.entity.DeviceType;
 import org.example.service.inflexdb.InflexDBRepository;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+import java.util.Optional;
 
 public class InflexDBService{
 
@@ -24,6 +17,10 @@ public class InflexDBService{
 
     public void writeData(Device device) {
        inflexDBRepository.writeData(device);
+    }
+
+    public Optional<Device> getDeviceById(DeviceType deviceType, String deviceId){
+        return inflexDBRepository.getDeviceById(deviceType, deviceId);
     }
 
     public List<Device> getAllDevices() {

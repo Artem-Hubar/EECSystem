@@ -10,6 +10,7 @@ import java.util.List;
 public class Rule {
     @JsonIgnore
     private long id;
+    private String description;
     private List<ConditionWithOperator> conditionsWithOperators;
     private List<Action> actions;
     @JsonIgnore

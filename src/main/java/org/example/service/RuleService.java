@@ -30,6 +30,7 @@ public class RuleService {
         RuleDeserializer deserializer = new RuleDeserializer();
         Rule rule = deserializer.deserialize(ruleData.getData());
         rule.setId(ruleData.getId());
+        rule.setDescription(ruleData.getDescription());
         rule.setTimeStamp(ruleData.getCreatedAt());
         return rule;
     }

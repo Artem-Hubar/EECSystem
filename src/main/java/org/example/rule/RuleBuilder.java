@@ -1,10 +1,9 @@
 package org.example.rule;
 
-import javafx.scene.layout.VBox;
 import org.example.client.controllers.ActionController;
 import org.example.client.controllers.ConditionalController;
-import org.example.client.rulebuilder.UiActionsExtractor;
-import org.example.client.rulebuilder.UiConditionsExtractor;
+import org.example.client.ruleparser.UiActionsExtractor;
+import org.example.client.ruleparser.UiConditionsExtractor;
 import org.example.rule.entity.Action;
 import org.example.rule.entity.ConditionWithOperator;
 import org.example.rule.entity.Rule;
@@ -48,6 +47,7 @@ public class RuleBuilder {
     }
 
     private List<Action> getActionsFromUi(List<ActionController> actionsContainer) {
+        System.out.println(actionsContainer);
         UiActionsExtractor uiActionsExtractor = new UiActionsExtractor();
         return uiActionsExtractor.extractActions(actionsContainer);
     }

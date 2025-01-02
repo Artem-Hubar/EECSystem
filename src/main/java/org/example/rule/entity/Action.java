@@ -16,7 +16,6 @@ public class Action {
     @JsonDeserialize(using = TargetObjectDeserializer.class)
     private Object targetObject;
     private String fieldName;
-    @JsonDeserialize(using = TargetObjectDeserializer.class)
     private Expression expression;
 
 

@@ -37,9 +37,9 @@ public class MQTTPublisher {
             message.setRetained(true);
             String topic = device.getMqttTopic();
             client.publish(topic, message);
-            System.out.println("Message published to topic " + topic);
+//            System.out.println("Message published to topic " + topic);
             client.disconnect();
-            System.out.println("Disconnected from broker");
+//            System.out.println("Disconnected from broker");
 
         } catch (MqttException e) {
             System.err.println("Error: " + e.getMessage());

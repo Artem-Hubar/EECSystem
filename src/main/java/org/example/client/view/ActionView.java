@@ -12,8 +12,13 @@ public class ActionView {
     private final Parent view;
     private final ActionController controller;
 
-    public ActionView(List<Object> objects) {
-        controller = new ActionController(objects);
+    public ActionView() {
+        controller = new ActionController();
+        this.view = loadView();
+    }
+
+    public ActionView(ActionController actionController) {
+        controller = actionController;
         this.view = loadView();
     }
 

@@ -8,13 +8,18 @@ import org.example.client.controllers.ConditionalController;
 import java.util.List;
 @Getter
 public class ConditionalView {
-    private final List<Object> objects;
+
     private final Parent view; // Графический интерфейс устройства
     private final ConditionalController conditionalView;
 
-    public ConditionalView(List<Object> objects) {
-        this.objects = objects;
-        conditionalView = new ConditionalController(objects);
+    public ConditionalView() {
+
+        conditionalView = new ConditionalController();
+        this.view = loadView();
+    }
+
+    public ConditionalView(ConditionalController controller) {
+        conditionalView = controller;
         this.view = loadView();
     }
 

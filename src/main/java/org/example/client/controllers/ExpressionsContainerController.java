@@ -1,6 +1,8 @@
 package org.example.client.controllers;
 
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 
@@ -12,7 +14,9 @@ import javafx.scene.layout.HBox;
 import lombok.Getter;
 import lombok.Setter;
 import org.example.client.controllers.expression.object.ExpressionObjectController;
+import org.example.client.service.ObjectService;
 import org.example.client.view.ExpressionView;
+import org.example.entity.Device;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +24,10 @@ import java.util.List;
 @Getter
 public class ExpressionsContainerController {
     private final List<Object> objects;
-    private final List<ExpressionController> expressionControllers = new ArrayList<>();
+
+
+    @Setter
+    private List<ExpressionController> expressionControllers = new ArrayList<>();
     @FXML
     private HBox deviceContainer;
     @FXML
@@ -28,23 +35,38 @@ public class ExpressionsContainerController {
     @Setter
     private Runnable actionOnDelete;
     private ChoiceBox<String> choiceBox;
+    private final ObservableList<Object> objectsObservable = FXCollections.observableArrayList();
     @FXML
     HBox controlElement;
 
 
-    public ExpressionsContainerController(List<Object> objects) {
-        this.objects = objects;
+
+    public ExpressionsContainerController() {
+        ObjectService objectService = ObjectService.getInstance();
+        this.objects = objectService.getObjects();
     }
 
     @FXML
     public void initialize() {
-        deviceChoiceBox.getItems().addAll(objects);
+        deviceChoiceBox.setItems(objectsObservable);
+        objectsObservable.addAll(objects);
+        if (expressionControllers != null){
+            for (ExpressionController expressionController : expressionControllers) {
+                ExpressionView expressionView = new ExpressionView(expressionController);
+                Parent expressionPane = expressionView.getView();
+                ExpressionObjectController deviceViewController = expressionController.getExpressionObjectController();
+                deviceViewController.setActionOnDelete(() -> onDeleteChildExpression(expressionPane, expressionController));
+                deviceContainer.getChildren().add(expressionPane);
+            }
+        }
     }
 
     @FXML
     public void onAddValue(){
         String textField= "textField";
         addObject(textField);
+        Device device = (Device) objects.getFirst();
+        device.updateDevice();
     }
 
     @FXML
@@ -53,13 +75,17 @@ public class ExpressionsContainerController {
         addObject(object);
     }
 
+
     private void addObject(Object object) {
         String selectedOperator = null;
-        if (!expressionControllers.isEmpty()) {
-            selectedOperator = expressionControllers.getLast().getChoiceBox().getValue();
+        if (!this.expressionControllers.isEmpty()) {
+            selectedOperator = this.expressionControllers.getLast().getChoiceBox().getValue();
         }
-        System.out.println(expressionControllers);
         ExpressionView expressionView = new ExpressionView(object, selectedOperator);
+        fillContainer(expressionView);
+    }
+
+    private void fillContainer(ExpressionView expressionView) {
         Parent expressionPane = expressionView.getView();
         ExpressionController expressionController = expressionView.getExpressionModelView();
         ExpressionObjectController deviceViewController = expressionController.getExpressionObjectController();

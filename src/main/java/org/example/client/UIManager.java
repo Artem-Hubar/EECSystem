@@ -8,6 +8,9 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import org.example.App;
+import org.example.client.view.MapView;
+import org.example.client.view.RuleSceneView;
+import org.example.client.view.RulesSceneView;
 
 
 import java.util.List;
@@ -28,7 +31,7 @@ public class UIManager {
         MenuBar menuBar = createMenuBar();
         mainLayout.getChildren().add(menuBar);
 
-        Scene scene = new Scene(mainLayout, 1200, 800);
+        Scene scene = new Scene(mainLayout);
         primaryStage.setScene(scene);
         primaryStage.setTitle("EECSystem");
         primaryStage.show();
@@ -43,6 +46,18 @@ public class UIManager {
     public void showRuleBuilder(List<Object> objects) {
         Parent secondContent = sceneManager.getRuleBuilder(objects);
         updateContent(secondContent);
+    }
+
+    public void  showRules(){
+        RulesSceneView rulesSceneView= new RulesSceneView();
+        Parent rulesScene = rulesSceneView.getView();
+        updateContent(rulesScene);
+    }
+
+    public void showMap(List<Object> objects){
+        MapView MapView = new MapView(objects);
+        Parent MapContent = MapView.getView();
+        updateContent(MapContent);
     }
 
 
@@ -63,7 +78,13 @@ public class UIManager {
         MenuItem ruleConstructorItem = new MenuItem("Rule builder");
         ruleConstructorItem.setOnAction(e -> showRuleBuilder(App.getObjects()));
 
-        menuWindows.getItems().addAll(mainSceneItem, ruleConstructorItem);
+        MenuItem mapItem = new MenuItem("Device Map");
+        mapItem.setOnAction(e -> showMap(App.getObjects()));
+
+        MenuItem rulesItem = new MenuItem("Rules");
+        rulesItem.setOnAction(e->showRules());
+
+        menuWindows.getItems().addAll(mapItem, rulesItem, ruleConstructorItem);
         menuBar.getMenus().add(menuWindows);
 
         return menuBar;

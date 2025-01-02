@@ -43,7 +43,7 @@ public class RuleBuilderTest extends TestCase {
         ConditionWithOperator conditionWithOperator3 = new ConditionWithOperator(condition3Expr, "OR");
         ConditionWithOperator conditionWithOperator4 = new ConditionWithOperator(condition4Expr, "AND");
 
-        Action action = new Action(mqttPublisher, "writeData", "4");
+        Action action = new Action(mqttPublisher, "writeData", new Expression(4));
 
 
         Rule rule = builder

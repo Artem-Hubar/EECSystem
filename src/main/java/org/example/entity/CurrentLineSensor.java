@@ -2,7 +2,6 @@ package org.example.entity;
 
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
-import lombok.ToString;
 
 
 import java.time.Instant;
@@ -13,40 +12,18 @@ public class CurrentLineSensor extends Device {
     private final DoubleProperty current = new SimpleDoubleProperty();
 
     public CurrentLineSensor() {
+        deviceType = DeviceType.CURRENT_LINE_SENSOR;
     }
 
     public CurrentLineSensor(String deviceId, Double voltage, Double current) {
         setSensorId(deviceId);
-        this.current.set(current);
+        setCurrent(current);
         this.voltage.set(voltage);
-    }
-
-    @Override
-    public String toInfluxDBLineProtocol() {
-        String measurement = "current_line_sensor";
-        String tags = "device=" + super.getSensorId();
-        String fields = "voltage=" + getVoltage() + ",current=" + getCurrent();
-        String timestamp = String.valueOf(Instant.now().getEpochSecond());
-        return measurement + "," + tags + " " + fields + " " + timestamp;
-    }
-
-    @Override
-    public String getMqttPayload() {
-        return "{\"voltage\":" + getVoltage() + ",\"current\":" + getCurrent() + "}";
-    }
-
-
-    @Override
-    public String getMqttTopic() {
-        return "client/current_line_sensor/" + super.getSensorId();
+        deviceType = DeviceType.CURRENT_LINE_SENSOR;
     }
 
     public double getCurrent() {
         return current.get();
-    }
-
-    public DoubleProperty currentProperty() {
-        return current;
     }
 
     public void setCurrent(double current) {
@@ -57,12 +34,17 @@ public class CurrentLineSensor extends Device {
         return voltage.get();
     }
 
-    public DoubleProperty voltageProperty() {
-        return voltage;
-    }
-
     public void setVoltage(double voltage) {
         this.voltage.set(voltage);
+    }
+
+    @Override
+    public String toString() {
+        return "CurrentLineSensor{" +
+                "idDevice=" + getSensorId() +
+                "current=" + getCurrent() +
+                ", voltage=" + getVoltage() +
+                '}';
     }
 
     @Override
@@ -70,16 +52,9 @@ public class CurrentLineSensor extends Device {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CurrentLineSensor that = (CurrentLineSensor) o;
-        return Objects.equals(getVoltage(), that.getVoltage()) && Objects.equals(getCurrent(), that.getCurrent());
-    }
-
-    @Override
-    public String toString() {
-        return "CurrentLineSensor{" +
-                "idDevice=" + getSensorId() +
-                "current=" + current +
-                ", voltage=" + voltage +
-                '}';
+        return Objects.equals(getVoltage(), that.getVoltage()) &&
+                Objects.equals(getCurrent(), that.getCurrent()) &&
+                Objects.equals(getSensorId(), that.getSensorId());
     }
 
     @Override

@@ -1,7 +1,9 @@
 package org.example.rule;
 
 import junit.framework.TestCase;
-import org.example.entity.Transformer;
+import org.example.entity.Device;
+import org.example.entity.DeviceType;
+import org.example.factory.DeviceFactory;
 import org.example.rule.entity.Action;
 import org.example.rule.entity.Expression;
 import org.example.rule.entity.Rule;
@@ -16,7 +18,7 @@ import java.util.List;
 
 public class RuleExecutorTest extends TestCase {
     public void testActionExecutor(){
-        Transformer transformer = new Transformer("device1", 2.0);
+        Device transformer = DeviceFactory.getDevice(DeviceType.TRANSPORTER).get();
         MQTTPublisher mqttPublisher = MQTTPublisherFactory.getPublisher("test");
         Action action = new Action(transformer, "setTurnsRation", new Expression(3.0));
         Action action2 = new Action(mqttPublisher, "writeData", new Expression(transformer));
@@ -28,7 +30,7 @@ public class RuleExecutorTest extends TestCase {
     public void testRuleExecutorThread(){
         RuleService ruleService = new RuleService();
         List<Rule> ruleList= ruleService.getAllRule();
-        System.out.println(ruleList);
+//        System.out.println(ruleList);
         for (Rule rule : ruleList){
             Thread thread = new RuleExecutorThread(rule);
             thread.start();

@@ -8,14 +8,14 @@ import org.example.entity.Device;
 public class ExpressionObjectListParser {
     public Object[] getExpression(Object targetObject, ExpressionController expressionController){
         Object[] expression = new Object[3];
+        String operand = expressionController.getChoiceBox().getValue();
         if (isDevice(targetObject)){
             String method = getMethod(expressionController);
-            String operand = expressionController.getChoiceBox().getValue();
             expression = new Object[]{targetObject, method, operand};
         }else if (isTextField(targetObject)){
             TextField textField = (TextField) targetObject;
             targetObject = Double.parseDouble(textField.getText());
-            expression = new Object[]{targetObject, null, null};
+            expression = new Object[]{targetObject, null, operand};
         }
         return expression;
     }

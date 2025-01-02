@@ -15,7 +15,8 @@ public class App extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        objects = ObjectService.loadObjects();
+        ObjectService objectService = ObjectService.getInstance();
+        objects = objectService.getObjects();
         UIManager uiManager = new UIManager(primaryStage);
         uiManager.init();
     }

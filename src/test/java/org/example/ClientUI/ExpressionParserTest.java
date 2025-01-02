@@ -1,7 +1,13 @@
 package org.example.ClientUI;
 
 import org.example.client.controllers.parser.ExpressionParser;
+import org.example.entity.DeviceType;
+import org.example.rule.entity.Action;
+import org.example.rule.entity.ConditionWithOperator;
 import org.example.rule.entity.Expression;
+import org.example.rule.entity.Rule;
+import org.example.service.RuleService;
+import org.example.service.inflexdb.InflexDBRepository;
 import org.junit.jupiter.api.Test;
 
 
@@ -46,10 +52,27 @@ public class ExpressionParserTest {
         // Строим выражение
         ExpressionParser parser = new ExpressionParser();
         Expression parsedExpression = parser.parseExpressionList(expressionList);
-
         // Вычисляем результат
         Object result = parsedExpression.evaluate();
         System.out.println("Result: " + result); // ((10 + 5) - 3) / 2 = 6.0
         assertEquals(true, result);
+    }
+    @Test
+    public void testComplex(){
+        RuleService ruleService = new RuleService();
+        List<Rule> ruleList= ruleService.getAllRule();
+
+        Rule rule = ruleList.get(0);
+
+        Expression conditionExpression = rule.getActions().getLast().getExpression();
+        Expression one = conditionExpression.getLeftOperand();
+        Expression two = one.getLeftOperand();
+
+        System.out.println(conditionExpression);
+        System.out.println(conditionExpression.evaluate());
+        System.out.println(String.format("%s %s %s = %s",((Expression)conditionExpression.getLeftOperand()).evaluate(),  conditionExpression.getOperator(),conditionExpression.getRightOperand().getTargetObject(),conditionExpression.evaluate()));
+
+        System.out.println();
+
     }
 }

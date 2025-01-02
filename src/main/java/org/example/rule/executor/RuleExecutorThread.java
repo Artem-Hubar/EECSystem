@@ -23,7 +23,7 @@ public class RuleExecutorThread extends Thread{
                 throw new RuntimeException(e);
             }
             RuleService ruleService =new RuleService();
-            System.out.println(rule);
+//            System.out.println(rule);
             rule = ruleService.getRuleDataById(rule.getId());
         }
 

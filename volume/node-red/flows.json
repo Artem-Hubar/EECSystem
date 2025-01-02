@@ -1,6 +1,6 @@
 [
     {
-        "id": "ed6fc9b850d374ff",
+        "id": "4ecc5a6d78dc7d19",
         "type": "tab",
         "label": "Поток 1",
         "disabled": false,
@@ -8,9 +8,9 @@
         "env": []
     },
     {
-        "id": "1d60f77e2f32593d",
+        "id": "152dd80ce5fa3b38",
         "type": "group",
-        "z": "ed6fc9b850d374ff",
+        "z": "4ecc5a6d78dc7d19",
         "name": "Цех 1",
         "style": {
             "label": true,
@@ -18,24 +18,23 @@
             "color": "#000000"
         },
         "nodes": [
-            "fa5e7da91dbafed2",
-            "2ec4518f850c8c39",
-            "587f45b77529eae0",
-            "55968e0848533750",
-            "d94c04ce11127202",
-            "c38900d4ecaa42cf",
-            "7aa44d4855b16267",
-            "201e278336a2a40b"
+            "6458568c4d943ba5",
+            "847cf27c9242be73",
+            "acbdc0bc461e2e18",
+            "d8c43569370ae3d4",
+            "44ceb0c1c5cefa28",
+            "376acaaa03b457c7",
+            "6cc24b9c45883a71"
         ],
-        "x": 918,
-        "y": 1213,
-        "w": 1328,
-        "h": 294
+        "x": 808,
+        "y": 1289,
+        "w": 1222,
+        "h": 252
     },
     {
-        "id": "dc5a4ca141aca5d9",
+        "id": "4c73254a5714ff61",
         "type": "group",
-        "z": "ed6fc9b850d374ff",
+        "z": "4ecc5a6d78dc7d19",
         "name": "Цех 2",
         "style": {
             "label": true,
@@ -43,24 +42,24 @@
             "color": "#000000"
         },
         "nodes": [
-            "a7bff8dbbc10e1ee",
-            "543daa9296356b77",
-            "140f80d37077c2e5",
-            "38368fc655a747d7",
-            "d92d810ec03d2994",
-            "8d6324e4b84c3c21",
-            "e508b7ba44c26253",
-            "c424c808617f5be2"
+            "5fd018fc30ae0a54",
+            "43978036aa333027",
+            "e7d1137d5d8eb086",
+            "a28b9560cd880bdf",
+            "038fe1b2bbfd5bd0",
+            "d15b52302f8cb383",
+            "0165464672a9d82a",
+            "fcfc2ca915ab4288"
         ],
-        "x": 908,
+        "x": 778,
         "y": 1527,
-        "w": 1338,
-        "h": 220
+        "w": 1394,
+        "h": 254
     },
     {
-        "id": "3b359d0aad2cca26",
+        "id": "dddd31ebb4f7bdbd",
         "type": "group",
-        "z": "ed6fc9b850d374ff",
+        "z": "4ecc5a6d78dc7d19",
         "name": "Цех 3",
         "style": {
             "label": true,
@@ -68,25 +67,25 @@
             "color": "#000000"
         },
         "nodes": [
-            "e5d2efe201e71691",
-            "a9c807796e660481",
-            "9cda28550342dbf0",
-            "dc676fdb3abf8f7e",
-            "60d6ceed67416d95",
-            "f01ffa43f38001a4",
-            "3821a06871a1cf90",
-            "4b5f3d55970b8983",
-            "628a3f0f8ba0748f"
+            "f1a5c271cb54d033",
+            "4ede2af662683738",
+            "155dc63f9a71d1e6",
+            "f5ce94d3bf9483bd",
+            "fdecac9978d5caa3",
+            "dbd42d618d06effd",
+            "d6a698e62c477598",
+            "ac809a118d271bcc",
+            "0f65d2708b5b4186"
         ],
-        "x": 908,
-        "y": 1778,
-        "w": 1438,
-        "h": 249
+        "x": 758,
+        "y": 1798,
+        "w": 1578,
+        "h": 269
     },
     {
-        "id": "b89a0935f6fe7b0a",
+        "id": "ef000d8d85811f39",
         "type": "group",
-        "z": "ed6fc9b850d374ff",
+        "z": "4ecc5a6d78dc7d19",
         "name": "Timer",
         "style": {
             "label": true,
@@ -95,9 +94,9 @@
             "color": "#000000"
         },
         "nodes": [
-            "f6dc9a60ad3987b5",
-            "8ec30c1b65ed8457",
-            "7319b8fb2699fda4"
+            "dff6f773184e3202",
+            "a5d4c07af654613a",
+            "06e37a093aab5c3f"
         ],
         "x": 274,
         "y": 1079,
@@ -105,127 +104,76 @@
         "h": 82
     },
     {
-        "id": "55968e0848533750",
+        "id": "f58bf73a5c020fcf",
         "type": "group",
-        "z": "ed6fc9b850d374ff",
-        "g": "1d60f77e2f32593d",
-        "name": "",
-        "style": {
-            "stroke": "none",
-            "label": true
-        },
-        "nodes": [],
-        "x": 1918,
-        "y": 1313,
-        "w": 40,
-        "h": 40
-    },
-    {
-        "id": "140f80d37077c2e5",
-        "type": "group",
-        "z": "ed6fc9b850d374ff",
-        "g": "dc5a4ca141aca5d9",
-        "name": "",
-        "style": {
-            "stroke": "none",
-            "label": true
-        },
-        "nodes": [],
-        "x": 1208,
-        "y": 1553,
-        "w": 40,
-        "h": 40
-    },
-    {
-        "id": "38368fc655a747d7",
-        "type": "group",
-        "z": "ed6fc9b850d374ff",
-        "g": "dc5a4ca141aca5d9",
-        "name": "Consumer",
+        "z": "4ecc5a6d78dc7d19",
+        "name": "Debug",
         "style": {
             "stroke": "#000000",
             "label": true,
-            "color": "#000000",
-            "label-position": "n"
+            "color": "#000000"
         },
         "nodes": [
-            "2b369c1741cc9ef6",
-            "48b909505b2bfae8",
-            "fb1c98c8da522669",
-            "0b1328f40a1516f9"
+            "58522b291f743b57",
+            "e8ec7d6ac36e6191",
+            "65aeaeabf6d4f33b",
+            "0cfc0125373ebf3a",
+            "a7bab7ce62d53fb7",
+            "dc10840f83e48c64",
+            "9b900c05d41abd92",
+            "fee218f9a0b03866",
+            "e8c3feb7edf60222"
         ],
-        "x": 1564,
+        "x": 434,
+        "y": 419,
+        "w": 632,
+        "h": 202
+    },
+    {
+        "id": "c1b91bf79743e34c",
+        "type": "group",
+        "z": "4ecc5a6d78dc7d19",
+        "name": "Source",
+        "style": {
+            "stroke": "#000000",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "fe2a847ee1e6491f",
+            "9914d7181d69ead1"
+        ],
+        "x": 204,
         "y": 1579,
         "w": 182,
-        "h": 142
+        "h": 82
     },
     {
-        "id": "9cda28550342dbf0",
+        "id": "c277d7fcb8b535c8",
         "type": "group",
-        "z": "ed6fc9b850d374ff",
-        "g": "3b359d0aad2cca26",
-        "name": "",
-        "style": {
-            "stroke": "none",
-            "label": true
-        },
-        "nodes": [],
-        "x": 1194,
-        "y": 1804,
-        "w": 40,
-        "h": 40
-    },
-    {
-        "id": "8d6324e4b84c3c21",
-        "type": "group",
-        "z": "ed6fc9b850d374ff",
-        "g": "dc5a4ca141aca5d9",
-        "name": "Consumer",
+        "z": "4ecc5a6d78dc7d19",
+        "name": "SwitchBoard",
         "style": {
             "stroke": "#000000",
             "label": true,
-            "color": "#000000",
-            "label-position": "n"
+            "color": "#000000"
         },
         "nodes": [
-            "bb64550542faf8c9",
-            "6d40defa905a4c24",
-            "36bc783664bc5319",
-            "56de72dee2125192"
+            "1745e21516cd7d5c",
+            "aa7706c0b3d17e64",
+            "43ebc31c82bbcf60",
+            "4c19bfad5858224f",
+            "b7f3faaa051b3ac2"
         ],
-        "x": 1344,
-        "y": 1579,
-        "w": 182,
-        "h": 142
+        "x": 614,
+        "y": -1,
+        "w": 162,
+        "h": 162
     },
     {
-        "id": "d94c04ce11127202",
+        "id": "9aa7b60a047228f2",
         "type": "group",
-        "z": "ed6fc9b850d374ff",
-        "g": "1d60f77e2f32593d",
-        "name": "Consumer",
-        "style": {
-            "stroke": "#000000",
-            "label": true,
-            "color": "#000000",
-            "label-position": "n"
-        },
-        "nodes": [
-            "410ee238c1d9f347",
-            "5358ce8276693dd9",
-            "8231dcf80c6ca09a",
-            "c196e93651cf910d"
-        ],
-        "x": 1694,
-        "y": 1339,
-        "w": 182,
-        "h": 142
-    },
-    {
-        "id": "c38900d4ecaa42cf",
-        "type": "group",
-        "z": "ed6fc9b850d374ff",
-        "g": "1d60f77e2f32593d",
+        "z": "4ecc5a6d78dc7d19",
         "name": "Transformer",
         "style": {
             "stroke": "#000000",
@@ -234,22 +182,54 @@
             "color": "#000000"
         },
         "nodes": [
-            "13e68fddacb57d16",
-            "75b592483e14f61c",
-            "c25b13a2126a541f",
-            "3",
-            "b2b951f277f4734f"
+            "9e8157062f9d303a",
+            "412195e4984f780b",
+            "866dbef3b0e5becd",
+            "c4d3b94c618b4e34",
+            "18f267b059a29f58"
         ],
-        "x": 1354,
-        "y": 1239,
-        "w": 292,
-        "h": 182
+        "x": 994,
+        "y": 138,
+        "w": 242,
+        "h": 143
     },
     {
-        "id": "60d6ceed67416d95",
+        "id": "6458568c4d943ba5",
         "type": "group",
-        "z": "ed6fc9b850d374ff",
-        "g": "3b359d0aad2cca26",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "152dd80ce5fa3b38",
+        "name": "",
+        "style": {
+            "stroke": "none",
+            "label": true
+        },
+        "nodes": [],
+        "x": 1964,
+        "y": 1315,
+        "w": 40,
+        "h": 40
+    },
+    {
+        "id": "5fd018fc30ae0a54",
+        "type": "group",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "4c73254a5714ff61",
+        "name": "",
+        "style": {
+            "stroke": "none",
+            "label": true
+        },
+        "nodes": [],
+        "x": 1278,
+        "y": 1553,
+        "w": 40,
+        "h": 40
+    },
+    {
+        "id": "43978036aa333027",
+        "type": "group",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "4c73254a5714ff61",
         "name": "Consumer",
         "style": {
             "stroke": "#000000",
@@ -258,162 +238,401 @@
             "label-position": "n"
         },
         "nodes": [
-            "006d2159453d3533",
-            "30271801c18339d7",
-            "100940c2d95fb2b4",
-            "c75694c09fd54100"
+            "34b9edca645c719b",
+            "92f79cc03d5c8573",
+            "cc54339541d8cf3a",
+            "02d5d171ad6bb0c8"
         ],
-        "x": 1374,
-        "y": 1859,
-        "w": 182,
-        "h": 142
-    },
-    {
-        "id": "f01ffa43f38001a4",
-        "type": "group",
-        "z": "ed6fc9b850d374ff",
-        "g": "3b359d0aad2cca26",
-        "name": "Consumer",
-        "style": {
-            "stroke": "#000000",
-            "label": true,
-            "color": "#000000",
-            "label-position": "n"
-        },
-        "nodes": [
-            "0253e0acea643727",
-            "31c4945f256e5ddb",
-            "da55bcf17e243f42",
-            "0f5cc417cc08d9be"
-        ],
-        "x": 1594,
-        "y": 1859,
-        "w": 182,
-        "h": 142
-    },
-    {
-        "id": "3821a06871a1cf90",
-        "type": "group",
-        "z": "ed6fc9b850d374ff",
-        "g": "3b359d0aad2cca26",
-        "name": "Consumer",
-        "style": {
-            "stroke": "#000000",
-            "label": true,
-            "color": "#000000",
-            "label-position": "n"
-        },
-        "nodes": [
-            "fb6b6821f8fc65e5",
-            "c41fbb91bc8e880a",
-            "2b634e503e9abf41",
-            "25429cb187bfeffa"
-        ],
-        "x": 1814,
-        "y": 1859,
-        "w": 182,
-        "h": 142
-    },
-    {
-        "id": "628a3f0f8ba0748f",
-        "type": "group",
-        "z": "ed6fc9b850d374ff",
-        "g": "3b359d0aad2cca26",
-        "name": "РЩ",
-        "style": {
-            "stroke": "#000000",
-            "label": true,
-            "color": "#000000"
-        },
-        "nodes": [
-            "c7eb2dea3371c873",
-            "08bd37463ab1899c",
-            "87ddce3618d3f4e2",
-            "31ca889f5b44e7e1",
-            "4bd60787793c461e",
-            "8378de078689c619",
-            "690ef4e684a6bd33"
-        ],
-        "x": 934,
-        "y": 1859,
-        "w": 192,
-        "h": 142
-    },
-    {
-        "id": "201e278336a2a40b",
-        "type": "group",
-        "z": "ed6fc9b850d374ff",
-        "g": "1d60f77e2f32593d",
-        "name": "РЩ",
-        "style": {
-            "stroke": "#000000",
-            "label": true,
-            "color": "#000000"
-        },
-        "nodes": [
-            "e91d62efa5b8e092",
-            "9705f1a56879f512",
-            "e80a6f9cd4a8fa7a",
-            "6eef64f6b9f89dde",
-            "fc773309f830ab31",
-            "f8ee96304d8ee4b0",
-            "3175c361a41c7051"
-        ],
-        "x": 944,
-        "y": 1339,
-        "w": 192,
-        "h": 142
-    },
-    {
-        "id": "c424c808617f5be2",
-        "type": "group",
-        "z": "ed6fc9b850d374ff",
-        "g": "dc5a4ca141aca5d9",
-        "name": "РЩ",
-        "style": {
-            "stroke": "#000000",
-            "label": true,
-            "color": "#000000"
-        },
-        "nodes": [
-            "5480dc6b15e084d4",
-            "e6cc48740b1cf28e",
-            "62ca22bb0dcf7e86",
-            "2177c81d5fe32716",
-            "a820249c46dcdec7",
-            "6705a400ab98dbb8",
-            "db59d1050f2f58ce"
-        ],
-        "x": 934,
+        "x": 1644,
         "y": 1579,
-        "w": 172,
+        "w": 202,
         "h": 142
     },
     {
-        "id": "7c6c200b84302d46",
+        "id": "f1a5c271cb54d033",
         "type": "group",
-        "z": "ed6fc9b850d374ff",
-        "name": "Debug",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "dddd31ebb4f7bdbd",
+        "name": "",
+        "style": {
+            "stroke": "none",
+            "label": true
+        },
+        "nodes": [],
+        "x": 1214,
+        "y": 1824,
+        "w": 40,
+        "h": 40
+    },
+    {
+        "id": "e7d1137d5d8eb086",
+        "type": "group",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "4c73254a5714ff61",
+        "name": "Consumer",
+        "style": {
+            "stroke": "#000000",
+            "label": true,
+            "color": "#000000",
+            "label-position": "n"
+        },
+        "nodes": [
+            "611a935c645b5cb7",
+            "bfcb06a1e4ba7263",
+            "f462dcbd3e85dd6b",
+            "488ae95a9237448c"
+        ],
+        "x": 1414,
+        "y": 1579,
+        "w": 202,
+        "h": 142
+    },
+    {
+        "id": "847cf27c9242be73",
+        "type": "group",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "152dd80ce5fa3b38",
+        "name": "Consumer",
+        "style": {
+            "stroke": "#000000",
+            "label": true,
+            "color": "#000000",
+            "label-position": "n"
+        },
+        "nodes": [
+            "2a8c51370e1a5a40",
+            "af7d9b8f06cb8231",
+            "3a9004702003372e",
+            "a31e167e68ad9870"
+        ],
+        "x": 1458,
+        "y": 1345,
+        "w": 182,
+        "h": 142
+    },
+    {
+        "id": "4ede2af662683738",
+        "type": "group",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "dddd31ebb4f7bdbd",
+        "name": "Consumer",
+        "style": {
+            "stroke": "#000000",
+            "label": true,
+            "color": "#000000",
+            "label-position": "n"
+        },
+        "nodes": [
+            "e43a4287733c3096",
+            "e2b4f125a13c558b",
+            "e1d450f2a290d997",
+            "26d9bbc5fa8fe5ac"
+        ],
+        "x": 1394,
+        "y": 1879,
+        "w": 182,
+        "h": 142
+    },
+    {
+        "id": "155dc63f9a71d1e6",
+        "type": "group",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "dddd31ebb4f7bdbd",
+        "name": "Consumer",
+        "style": {
+            "stroke": "#000000",
+            "label": true,
+            "color": "#000000",
+            "label-position": "n"
+        },
+        "nodes": [
+            "d7fdf80856645c57",
+            "405f851d270f8658",
+            "ea362b1ccd9ad8d6",
+            "c693121018a47f70"
+        ],
+        "x": 1614,
+        "y": 1879,
+        "w": 182,
+        "h": 142
+    },
+    {
+        "id": "f5ce94d3bf9483bd",
+        "type": "group",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "dddd31ebb4f7bdbd",
+        "name": "Consumer",
+        "style": {
+            "stroke": "#000000",
+            "label": true,
+            "color": "#000000",
+            "label-position": "n"
+        },
+        "nodes": [
+            "fc8778119b95e21e",
+            "5204d01aeebba87d",
+            "2c454ee7af58a25e",
+            "0b63102d2af79cc8"
+        ],
+        "x": 1834,
+        "y": 1879,
+        "w": 182,
+        "h": 142
+    },
+    {
+        "id": "fdecac9978d5caa3",
+        "type": "group",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "dddd31ebb4f7bdbd",
+        "name": "ЗР",
         "style": {
             "stroke": "#000000",
             "label": true,
             "color": "#000000"
         },
         "nodes": [
-            "4c3a7395e37e9090",
-            "d0ed9851a302930f",
-            "2eccab7687e83c06",
-            "d43a649e7b2b577f",
-            "3ae51475441c82de",
-            "88d5f091a1cbf40e",
-            "a4bcbc9030efa1bc",
-            "0acf6de25e37d93a",
-            "6bb3486b1212e0bc"
+            "ede59fdde78e58e4",
+            "0c446c0fc379543e",
+            "15f8b62e69838e88",
+            "3b172041fedd3bcd",
+            "b4f804f16eb618cf",
+            "faef4f1c76b1002e"
         ],
-        "x": 434,
-        "y": 419,
-        "w": 632,
-        "h": 202
+        "x": 1018,
+        "y": 1873,
+        "w": 172,
+        "h": 128
+    },
+    {
+        "id": "acbdc0bc461e2e18",
+        "type": "group",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "152dd80ce5fa3b38",
+        "name": "ЗР",
+        "style": {
+            "stroke": "#000000",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "d8bea028b8f73f80",
+            "2e09bd27505b851e",
+            "aead0d1777a973b9",
+            "cab229ed12878713",
+            "cbfbbd63dc4fd5ef",
+            "4fa701904285f335"
+        ],
+        "x": 1024,
+        "y": 1339,
+        "w": 189,
+        "h": 120
+    },
+    {
+        "id": "a28b9560cd880bdf",
+        "type": "group",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "4c73254a5714ff61",
+        "name": "ЗР",
+        "style": {
+            "stroke": "#000000",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "794c284d50c0e25b",
+            "fec53ebc806cb6eb",
+            "4239e1b9e53d2b04",
+            "1dfaada9b25d46de",
+            "7cfea03df0f7726c",
+            "7db9e02dfaf633e5"
+        ],
+        "x": 1024,
+        "y": 1579,
+        "w": 182,
+        "h": 122
+    },
+    {
+        "id": "038fe1b2bbfd5bd0",
+        "type": "group",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "4c73254a5714ff61",
+        "name": "Generator",
+        "style": {
+            "stroke": "#000000",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "86743c739f808861",
+            "2abec83e9f018a22"
+        ],
+        "x": 1234,
+        "y": 1659,
+        "w": 112,
+        "h": 82
+    },
+    {
+        "id": "d8c43569370ae3d4",
+        "type": "group",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "152dd80ce5fa3b38",
+        "name": "Generator",
+        "style": {
+            "stroke": "#000000",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "da30e5d7a3a1b590",
+            "742a10b62efd311d"
+        ],
+        "x": 1254,
+        "y": 1399,
+        "w": 112,
+        "h": 82
+    },
+    {
+        "id": "dbd42d618d06effd",
+        "type": "group",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "dddd31ebb4f7bdbd",
+        "name": "Generator",
+        "style": {
+            "stroke": "#000000",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "aa8bfc8edda6f7cf",
+            "8153e1bf2fda1f14"
+        ],
+        "x": 1234,
+        "y": 1959,
+        "w": 112,
+        "h": 82
+    },
+    {
+        "id": "d15b52302f8cb383",
+        "type": "group",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "4c73254a5714ff61",
+        "name": "",
+        "style": {
+            "stroke": "none",
+            "label": true
+        },
+        "nodes": [
+            "ab16fed8086ffdb2",
+            "f4a7c39e94a695af"
+        ],
+        "x": 1914,
+        "y": 1579,
+        "w": 232,
+        "h": 82
+    },
+    {
+        "id": "44ceb0c1c5cefa28",
+        "type": "group",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "152dd80ce5fa3b38",
+        "name": "",
+        "style": {
+            "stroke": "none",
+            "label": true
+        },
+        "nodes": [
+            "ed9aca1747359d76",
+            "b990833ccfbdc733"
+        ],
+        "x": 1692,
+        "y": 1348,
+        "w": 242,
+        "h": 82
+    },
+    {
+        "id": "d6a698e62c477598",
+        "type": "group",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "dddd31ebb4f7bdbd",
+        "name": "",
+        "style": {
+            "stroke": "none",
+            "label": true
+        },
+        "nodes": [
+            "1c9a5b25617b3ab4",
+            "5e88df6036251bf6"
+        ],
+        "x": 2066,
+        "y": 1879,
+        "w": 244,
+        "h": 82
+    },
+    {
+        "id": "0165464672a9d82a",
+        "type": "group",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "4c73254a5714ff61",
+        "name": "РЩ",
+        "style": {
+            "label": true,
+            "stroke": "#000000",
+            "color": "#000000"
+        },
+        "nodes": [
+            "3b5d0a72eab60592",
+            "cea77d418e1e2df4",
+            "c59c5ba6150bf181",
+            "8fdaf7a7c9e6d475"
+        ],
+        "x": 804,
+        "y": 1579,
+        "w": 202,
+        "h": 122
+    },
+    {
+        "id": "ac809a118d271bcc",
+        "type": "group",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "dddd31ebb4f7bdbd",
+        "name": "РЩ",
+        "style": {
+            "label": true,
+            "stroke": "#000000",
+            "color": "#000000"
+        },
+        "nodes": [
+            "ac93592c2cebea41",
+            "395754e207ae9558",
+            "3623e22bc7f1bf90",
+            "db0f7460f6ac81f3"
+        ],
+        "x": 784,
+        "y": 1879,
+        "w": 212,
+        "h": 122
+    },
+    {
+        "id": "376acaaa03b457c7",
+        "type": "group",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "152dd80ce5fa3b38",
+        "name": "РЩ",
+        "style": {
+            "label": true,
+            "stroke": "#000000",
+            "color": "#000000"
+        },
+        "nodes": [
+            "42c3452f81cc2c2b",
+            "b864117d9c45b2b4",
+            "8b305b4cf3ed1110",
+            "d303c488eba5b141"
+        ],
+        "x": 834,
+        "y": 1339,
+        "w": 162,
+        "h": 122
     },
     {
         "id": "9247c215d6f5dddb",
@@ -447,33 +666,10 @@
         "sessionExpiry": ""
     },
     {
-        "id": "c25b13a2126a541f",
-        "type": "function",
-        "z": "ed6fc9b850d374ff",
-        "g": "c38900d4ecaa42cf",
-        "name": "Transformer",
-        "func": "// Проверяем, что в msg.payload есть input_data и voltage\nif (msg.payload && msg.payload.input_data && msg.payload.input_data.voltage !== undefined && msg.payload.input_data.current !== undefined && msg.payload.transformer !== undefined) {\n    var voltage = msg.payload.input_data.voltage;\n    var current = msg.payload.input_data.current;\n    var turns_ratio = msg.payload.transformer;  // Коэффициент трансформации\n\n    // Применение коэффициента трансформации\n    var new_voltage = voltage / turns_ratio;\n    var new_current = current * turns_ratio;\n\n    // Обновляем msg.payload с новыми значениями\n    msg.payload = { voltage: new_voltage, current: new_current };\n\n    return msg; // Возвращаем сообщение с обновленным payload\n} else {\n    // Если каких-либо данных нет, не отправляем сообщение дальше\n    return null;\n}\n",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1525,
-        "y": 1380,
-        "wires": [
-            [
-                "b2b951f277f4734f",
-                "8231dcf80c6ca09a"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "fa5e7da91dbafed2",
+        "id": "b990833ccfbdc733",
         "type": "debug",
-        "z": "ed6fc9b850d374ff",
-        "g": "1d60f77e2f32593d",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "44ceb0c1c5cefa28",
         "name": "CurrentLine1",
         "active": true,
         "tosidebar": true,
@@ -483,45 +679,14 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2130,
-        "y": 1380,
+        "x": 1818,
+        "y": 1389,
         "wires": []
     },
     {
-        "id": "3",
-        "type": "join",
-        "z": "ed6fc9b850d374ff",
-        "g": "c38900d4ecaa42cf",
-        "name": "Join",
-        "mode": "custom",
-        "build": "object",
-        "property": "payload",
-        "propertyType": "msg",
-        "key": "topic",
-        "joiner": "\\n",
-        "joinerType": "str",
-        "useparts": false,
-        "accumulate": true,
-        "timeout": "1",
-        "count": "2",
-        "reduceRight": false,
-        "reduceExp": "",
-        "reduceInit": "",
-        "reduceInitType": "",
-        "reduceFixup": "",
-        "x": 1495,
-        "y": 1380,
-        "wires": [
-            [
-                "c25b13a2126a541f"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "ad6cc7925839a40e",
+        "id": "427759766a10996b",
         "type": "mqtt in",
-        "z": "ed6fc9b850d374ff",
+        "z": "4ecc5a6d78dc7d19",
         "d": true,
         "name": "TransporterDataListener",
         "topic": "client/transformer/devise1/turns_ratio",
@@ -539,133 +704,12 @@
         ]
     },
     {
-        "id": "13e68fddacb57d16",
-        "type": "mqtt in",
-        "z": "ed6fc9b850d374ff",
-        "g": "c38900d4ecaa42cf",
-        "name": "TransporterDataListener",
-        "topic": "client/transformer/device1/data",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "9247c215d6f5dddb",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 1395,
-        "y": 1280,
-        "wires": [
-            [
-                "75b592483e14f61c"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "75b592483e14f61c",
-        "type": "function",
-        "z": "ed6fc9b850d374ff",
-        "g": "c38900d4ecaa42cf",
-        "name": "function",
-        "func": "var turns_ratio = msg.payload[\"turnsRation\"];  // Коэффициент трансформации\nmsg.payload = parseInt(turns_ratio);\nmsg.topic = \"transformer\"\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1485,
-        "y": 1280,
-        "wires": [
-            [
-                "3"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "cb2d47b7afe4e580",
-        "type": "inject",
-        "z": "ed6fc9b850d374ff",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "test",
-                "v": "{\"voltage\":380,\"current\":15}",
-                "vt": "json"
-            }
-        ],
-        "repeat": "5",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "input_data",
-        "payload": "[1, 2, 3]",
-        "payloadType": "json",
-        "x": 360,
-        "y": 1600,
-        "wires": [
-            [
-                "4ebf6e1f9327fbaa",
-                "ba77df1a13f469b8"
-            ]
-        ]
-    },
-    {
-        "id": "ba77df1a13f469b8",
-        "type": "switch",
-        "z": "ed6fc9b850d374ff",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "cont",
-                "v": "1",
-                "vt": "num"
-            },
-            {
-                "t": "cont",
-                "v": "2",
-                "vt": "str"
-            },
-            {
-                "t": "cont",
-                "v": "3",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 3,
-        "x": 730,
-        "y": 1600,
-        "wires": [
-            [
-                "e80a6f9cd4a8fa7a"
-            ],
-            [
-                "62ca22bb0dcf7e86"
-            ],
-            [
-                "87ddce3618d3f4e2"
-            ]
-        ]
-    },
-    {
-        "id": "3175c361a41c7051",
+        "id": "4fa701904285f335",
         "type": "mqtt out",
-        "z": "ed6fc9b850d374ff",
-        "g": "201e278336a2a40b",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "acbdc0bc461e2e18",
         "name": "sensor",
-        "topic": "client/currentsensor/devise1/current",
+        "topic": "client/generator/devise1/current",
         "qos": "1",
         "retain": "false",
         "respTopic": "",
@@ -674,16 +718,16 @@
         "correl": "",
         "expiry": "",
         "broker": "9247c215d6f5dddb",
-        "x": 1095,
-        "y": 1440,
+        "x": 1172,
+        "y": 1418,
         "wires": [],
         "l": false
     },
     {
-        "id": "db59d1050f2f58ce",
+        "id": "7db9e02dfaf633e5",
         "type": "mqtt out",
-        "z": "ed6fc9b850d374ff",
-        "g": "c424c808617f5be2",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "a28b9560cd880bdf",
         "name": "sensor",
         "topic": "client/currentsensor/devise2/current",
         "qos": "2",
@@ -694,16 +738,16 @@
         "correl": "",
         "expiry": "",
         "broker": "9247c215d6f5dddb",
-        "x": 1065,
+        "x": 1165,
         "y": 1660,
         "wires": [],
         "l": false
     },
     {
-        "id": "4bd60787793c461e",
+        "id": "3b172041fedd3bcd",
         "type": "mqtt out",
-        "z": "ed6fc9b850d374ff",
-        "g": "628a3f0f8ba0748f",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "fdecac9978d5caa3",
         "name": "sensor",
         "topic": "client/currentsensor/devise3/current",
         "qos": "2",
@@ -714,178 +758,15 @@
         "correl": "",
         "expiry": "",
         "broker": "9247c215d6f5dddb",
-        "x": 1085,
-        "y": 1940,
+        "x": 1149,
+        "y": 1960,
         "wires": [],
         "l": false
     },
     {
-        "id": "f8ee96304d8ee4b0",
-        "type": "change",
-        "z": "ed6fc9b850d374ff",
-        "g": "201e278336a2a40b",
-        "name": "function",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "test",
-                "tot": "msg"
-            },
-            {
-                "t": "delete",
-                "p": "test",
-                "pt": "msg"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "input_data",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1045,
-        "y": 1380,
-        "wires": [
-            [
-                "3175c361a41c7051",
-                "3"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "6705a400ab98dbb8",
-        "type": "change",
-        "z": "ed6fc9b850d374ff",
-        "g": "c424c808617f5be2",
-        "name": "function",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "test",
-                "tot": "msg"
-            },
-            {
-                "t": "delete",
-                "p": "test",
-                "pt": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1035,
-        "y": 1620,
-        "wires": [
-            [
-                "db59d1050f2f58ce",
-                "36bc783664bc5319"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "31ca889f5b44e7e1",
-        "type": "change",
-        "z": "ed6fc9b850d374ff",
-        "g": "628a3f0f8ba0748f",
-        "name": "function",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "test",
-                "tot": "msg"
-            },
-            {
-                "t": "delete",
-                "p": "test",
-                "pt": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1035,
-        "y": 1900,
-        "wires": [
-            [
-                "4bd60787793c461e",
-                "100940c2d95fb2b4"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "0b548126e6b076c4",
-        "type": "mqtt out",
-        "z": "ed6fc9b850d374ff",
-        "name": "sensor",
-        "topic": "client/currentsensor/devise/current",
-        "qos": "2",
-        "retain": "false",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "9247c215d6f5dddb",
-        "x": 570,
-        "y": 1660,
-        "wires": []
-    },
-    {
-        "id": "4ebf6e1f9327fbaa",
-        "type": "change",
-        "z": "ed6fc9b850d374ff",
-        "name": "function",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "test",
-                "tot": "msg"
-            },
-            {
-                "t": "delete",
-                "p": "test",
-                "pt": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 505,
-        "y": 1660,
-        "wires": [
-            [
-                "0b548126e6b076c4"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "1e7bcc3e77a38514",
+        "id": "0087863e5cb0f752",
         "type": "mqtt in",
-        "z": "ed6fc9b850d374ff",
+        "z": "4ecc5a6d78dc7d19",
         "name": "TransporterDataListener",
         "topic": "client/currentsensor/devise/data",
         "qos": "2",
@@ -902,118 +783,10 @@
         ]
     },
     {
-        "id": "b2b951f277f4734f",
-        "type": "mqtt out",
-        "z": "ed6fc9b850d374ff",
-        "g": "c38900d4ecaa42cf",
-        "name": "sensor",
-        "topic": "client/currentsensor/devise4/current",
-        "qos": "1",
-        "retain": "false",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "9247c215d6f5dddb",
-        "x": 1605,
-        "y": 1280,
-        "wires": [],
-        "l": false
-    },
-    {
-        "id": "2ec4518f850c8c39",
-        "type": "mqtt in",
-        "z": "ed6fc9b850d374ff",
-        "g": "1d60f77e2f32593d",
-        "name": "Generator",
-        "topic": "client/generetor/device1/data",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "9247c215d6f5dddb",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 1240,
-        "y": 1440,
-        "wires": [
-            [
-                "587f45b77529eae0"
-            ]
-        ]
-    },
-    {
-        "id": "587f45b77529eae0",
-        "type": "function",
-        "z": "ed6fc9b850d374ff",
-        "g": "1d60f77e2f32593d",
-        "name": "function 1",
-        "func": "if (msg.payload && msg.payload.isWorking) {\n    if (msg.payload.input_data) {         \n        msg.payload = msg.payload.input_data;\n        msg.topic = \"input_data\";\n        return msg;\n    }\n}\nreturn null;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1315,
-        "y": 1440,
-        "wires": [
-            [
-                "3"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "a7bff8dbbc10e1ee",
-        "type": "mqtt in",
-        "z": "ed6fc9b850d374ff",
-        "g": "dc5a4ca141aca5d9",
-        "name": "Generator",
-        "topic": "client/generetor/device2/data",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "9247c215d6f5dddb",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 1220,
-        "y": 1680,
-        "wires": [
-            [
-                "543daa9296356b77"
-            ]
-        ]
-    },
-    {
-        "id": "543daa9296356b77",
-        "type": "function",
-        "z": "ed6fc9b850d374ff",
-        "g": "dc5a4ca141aca5d9",
-        "name": "function 2",
-        "func": "if (msg.payload && msg.payload.isWorking) {\n    if (msg.payload.input_data) {         \n        msg.payload = msg.payload.input_data;\n        msg.topic = \"input_data\";\n        return msg;\n    }\n}\nreturn null;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1285,
-        "y": 1680,
-        "wires": [
-            [
-                "36bc783664bc5319"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "2b369c1741cc9ef6",
+        "id": "34b9edca645c719b",
         "type": "change",
-        "z": "ed6fc9b850d374ff",
-        "g": "38368fc655a747d7",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "43978036aa333027",
         "name": "function",
         "rules": [
             {
@@ -1029,22 +802,22 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1675,
+        "x": 1755,
         "y": 1680,
         "wires": [
             [
-                "48b909505b2bfae8"
+                "92f79cc03d5c8573"
             ]
         ],
         "l": false
     },
     {
-        "id": "48b909505b2bfae8",
+        "id": "92f79cc03d5c8573",
         "type": "mqtt out",
-        "z": "ed6fc9b850d374ff",
-        "g": "38368fc655a747d7",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "43978036aa333027",
         "name": "sensor",
-        "topic": "client/consumersensor/device2/data",
+        "topic": "client/currentsensor/consumer2/data",
         "qos": "2",
         "retain": "",
         "respTopic": "",
@@ -1053,39 +826,39 @@
         "correl": "",
         "expiry": "",
         "broker": "9247c215d6f5dddb",
-        "x": 1705,
+        "x": 1805,
         "y": 1680,
         "wires": [],
         "l": false
     },
     {
-        "id": "fb1c98c8da522669",
+        "id": "cc54339541d8cf3a",
         "type": "function",
-        "z": "ed6fc9b850d374ff",
-        "g": "38368fc655a747d7",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "43978036aa333027",
         "name": "Consumer",
-        "func": "let source = msg.payload;\nlet coefficients = global.get(\"coefficients\")\nlet index = global.get(\"index\")\nlet currentCoefficients = coefficients[index];\nlet consumption_ratio = Math.random() * currentCoefficients[1];\nlet staticCurrentСonsumption = source[\"current\"]*0.1;\nlet consumedCurrent = source[\"current\"] * consumption_ratio + staticCurrentСonsumption;\nlet outPutCurrent = source[\"current\"] - consumedCurrent;\nmsg.payload[\"output\"] = {\"voltage\":source[\"voltage\"], \"current\":outPutCurrent}\nmsg.payload[\"consumed\"] = { \"voltage\": source[\"voltage\"], \"current\": consumedCurrent}\nreturn msg;",
+        "func": "let source = msg.payload;\nlet coefficients = global.get(\"coefficients\")\nlet index = global.get(\"index\")\nlet currentCoefficients = coefficients[index];\nlet consumedCurrent = 5 * currentCoefficients[1];\nlet outPutCurrent = source[\"current\"] - consumedCurrent;\nmsg.payload[\"output\"] = {\"voltage\":source[\"voltage\"], \"current\":outPutCurrent}\nmsg.payload[\"consumed\"] = { \"voltage\": source[\"voltage\"], \"current\": consumedCurrent}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1605,
+        "x": 1685,
         "y": 1620,
         "wires": [
             [
-                "2b369c1741cc9ef6",
-                "0b1328f40a1516f9"
+                "34b9edca645c719b",
+                "02d5d171ad6bb0c8"
             ]
         ],
         "l": false
     },
     {
-        "id": "0b1328f40a1516f9",
+        "id": "02d5d171ad6bb0c8",
         "type": "change",
-        "z": "ed6fc9b850d374ff",
-        "g": "38368fc655a747d7",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "43978036aa333027",
         "name": "",
         "rules": [
             {
@@ -1101,64 +874,20 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1635,
+        "x": 1715,
         "y": 1620,
         "wires": [
             [
-                "e508b7ba44c26253"
+                "f4a7c39e94a695af"
             ]
         ],
         "l": false
     },
     {
-        "id": "e5d2efe201e71691",
-        "type": "mqtt in",
-        "z": "ed6fc9b850d374ff",
-        "g": "3b359d0aad2cca26",
-        "name": "Generator",
-        "topic": "client/generetor/device3/data",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "9247c215d6f5dddb",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 1240,
-        "y": 1960,
-        "wires": [
-            [
-                "a9c807796e660481"
-            ]
-        ]
-    },
-    {
-        "id": "a9c807796e660481",
-        "type": "function",
-        "z": "ed6fc9b850d374ff",
-        "g": "3b359d0aad2cca26",
-        "name": "function 3",
-        "func": "if (msg.payload && msg.payload.isWorking) {\n    if (msg.payload.input_data) {         \n        msg.payload = msg.payload.input_data;\n        msg.topic = \"input_data\";\n        return msg;\n    }\n}\nreturn null;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1315,
-        "y": 1960,
-        "wires": [
-            [
-                "100940c2d95fb2b4"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "dc676fdb3abf8f7e",
+        "id": "5e88df6036251bf6",
         "type": "debug",
-        "z": "ed6fc9b850d374ff",
-        "g": "3b359d0aad2cca26",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "d6a698e62c477598",
         "name": "CurrentLine3",
         "active": true,
         "tosidebar": true,
@@ -1168,15 +897,15 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2230,
-        "y": 1900,
+        "x": 2194,
+        "y": 1920,
         "wires": []
     },
     {
-        "id": "d92d810ec03d2994",
+        "id": "ab16fed8086ffdb2",
         "type": "debug",
-        "z": "ed6fc9b850d374ff",
-        "g": "dc5a4ca141aca5d9",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "d15b52302f8cb383",
         "name": "CurrentLine2",
         "active": true,
         "tosidebar": true,
@@ -1186,15 +915,15 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2130,
+        "x": 2030,
         "y": 1620,
         "wires": []
     },
     {
-        "id": "bb64550542faf8c9",
+        "id": "611a935c645b5cb7",
         "type": "change",
-        "z": "ed6fc9b850d374ff",
-        "g": "8d6324e4b84c3c21",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "e7d1137d5d8eb086",
         "name": "function",
         "rules": [
             {
@@ -1210,63 +939,63 @@
         "from": "",
         "to": "",
         "reg": false,
+        "x": 1525,
+        "y": 1680,
+        "wires": [
+            [
+                "bfcb06a1e4ba7263"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "bfcb06a1e4ba7263",
+        "type": "mqtt out",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "e7d1137d5d8eb086",
+        "name": "sensor",
+        "topic": "client/currentsensor/consumer3/data",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9247c215d6f5dddb",
+        "x": 1575,
+        "y": 1680,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "f462dcbd3e85dd6b",
+        "type": "function",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "e7d1137d5d8eb086",
+        "name": "Consumer",
+        "func": "let source = msg.payload;\nlet coefficients = global.get(\"coefficients\")\nlet index = global.get(\"index\")\nlet currentCoefficients = coefficients[index];\nlet consumedCurrent = 5 * currentCoefficients[1];\nlet outPutCurrent = source[\"current\"] - consumedCurrent;\nmsg.payload[\"output\"] = {\"voltage\":source[\"voltage\"], \"current\":outPutCurrent}\nmsg.payload[\"consumed\"] = { \"voltage\": source[\"voltage\"], \"current\": consumedCurrent}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 1455,
-        "y": 1680,
-        "wires": [
-            [
-                "6d40defa905a4c24"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "6d40defa905a4c24",
-        "type": "mqtt out",
-        "z": "ed6fc9b850d374ff",
-        "g": "8d6324e4b84c3c21",
-        "name": "sensor",
-        "topic": "client/consumersensor/device3/data",
-        "qos": "2",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "9247c215d6f5dddb",
-        "x": 1485,
-        "y": 1680,
-        "wires": [],
-        "l": false
-    },
-    {
-        "id": "36bc783664bc5319",
-        "type": "function",
-        "z": "ed6fc9b850d374ff",
-        "g": "8d6324e4b84c3c21",
-        "name": "Consumer",
-        "func": "let source = msg.payload;\nlet coefficients = global.get(\"coefficients\")\nlet index = global.get(\"index\")\nlet currentCoefficients = coefficients[index];\nlet consumption_ratio = Math.random() * currentCoefficients[1];\nlet staticCurrentСonsumption = source[\"current\"]*0.1;\nlet consumedCurrent = source[\"current\"] * consumption_ratio + staticCurrentСonsumption;\nlet outPutCurrent = source[\"current\"] - consumedCurrent;\nmsg.payload[\"output\"] = {\"voltage\":source[\"voltage\"], \"current\":outPutCurrent}\nmsg.payload[\"consumed\"] = { \"voltage\": source[\"voltage\"], \"current\": consumedCurrent}\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1385,
         "y": 1620,
         "wires": [
             [
-                "bb64550542faf8c9",
-                "56de72dee2125192"
+                "611a935c645b5cb7",
+                "488ae95a9237448c"
             ]
         ],
         "l": false
     },
     {
-        "id": "56de72dee2125192",
+        "id": "488ae95a9237448c",
         "type": "change",
-        "z": "ed6fc9b850d374ff",
-        "g": "8d6324e4b84c3c21",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "e7d1137d5d8eb086",
         "name": "",
         "rules": [
             {
@@ -1274,136 +1003,6 @@
                 "p": "payload",
                 "pt": "msg",
                 "to": "payload[\"output\"]",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1415,
-        "y": 1620,
-        "wires": [
-            [
-                "fb1c98c8da522669"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "410ee238c1d9f347",
-        "type": "change",
-        "z": "ed6fc9b850d374ff",
-        "g": "d94c04ce11127202",
-        "name": "function",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload[\"consumed\"]",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1805,
-        "y": 1440,
-        "wires": [
-            [
-                "5358ce8276693dd9"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "5358ce8276693dd9",
-        "type": "mqtt out",
-        "z": "ed6fc9b850d374ff",
-        "g": "d94c04ce11127202",
-        "name": "sensor",
-        "topic": "client/consumersensor/device1/data",
-        "qos": "2",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "9247c215d6f5dddb",
-        "x": 1835,
-        "y": 1440,
-        "wires": [],
-        "l": false
-    },
-    {
-        "id": "8231dcf80c6ca09a",
-        "type": "function",
-        "z": "ed6fc9b850d374ff",
-        "g": "d94c04ce11127202",
-        "name": "Consumer",
-        "func": "let source = msg.payload;\nlet coefficients = global.get(\"coefficients\")\nlet index = global.get(\"index\")\nlet currentCoefficients = coefficients[index];\nlet consumption_ratio = Math.random() * currentCoefficients[0];\n\nlet staticCurrentСonsumption = source[\"current\"]*0.1;\nlet consumedCurrent = source[\"current\"] * consumption_ratio + staticCurrentСonsumption;\nlet outPutCurrent = source[\"current\"] - consumedCurrent;\nmsg.payload[\"output\"] = {\"voltage\":source[\"voltage\"], \"current\":outPutCurrent}\nmsg.payload[\"consumed\"] = { \"voltage\": source[\"voltage\"], \"current\": consumedCurrent}\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1735,
-        "y": 1380,
-        "wires": [
-            [
-                "410ee238c1d9f347",
-                "c196e93651cf910d"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "c196e93651cf910d",
-        "type": "change",
-        "z": "ed6fc9b850d374ff",
-        "g": "d94c04ce11127202",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload[\"output\"]",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1765,
-        "y": 1380,
-        "wires": [
-            [
-                "7aa44d4855b16267"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "006d2159453d3533",
-        "type": "change",
-        "z": "ed6fc9b850d374ff",
-        "g": "60d6ceed67416d95",
-        "name": "function",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload[\"consumed\"]",
                 "tot": "msg"
             }
         ],
@@ -1413,91 +1012,19 @@
         "to": "",
         "reg": false,
         "x": 1485,
-        "y": 1960,
+        "y": 1620,
         "wires": [
             [
-                "30271801c18339d7"
+                "cc54339541d8cf3a"
             ]
         ],
         "l": false
     },
     {
-        "id": "30271801c18339d7",
-        "type": "mqtt out",
-        "z": "ed6fc9b850d374ff",
-        "g": "60d6ceed67416d95",
-        "name": "sensor",
-        "topic": "client/consumersensor/device4/data",
-        "qos": "2",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "9247c215d6f5dddb",
-        "x": 1515,
-        "y": 1960,
-        "wires": [],
-        "l": false
-    },
-    {
-        "id": "100940c2d95fb2b4",
-        "type": "function",
-        "z": "ed6fc9b850d374ff",
-        "g": "60d6ceed67416d95",
-        "name": "Consumer",
-        "func": "let source = msg.payload;\nlet coefficients = global.get(\"coefficients\")\nlet index = global.get(\"index\")\nlet currentCoefficients = coefficients[index];\nlet consumption_ratio = Math.random() * currentCoefficients[2];\nlet staticCurrentСonsumption = source[\"current\"]*0.1;\nlet consumedCurrent = source[\"current\"] * consumption_ratio + staticCurrentСonsumption;\nlet outPutCurrent = source[\"current\"] - consumedCurrent;\nmsg.payload[\"output\"] = {\"voltage\":source[\"voltage\"], \"current\":outPutCurrent}\nmsg.payload[\"consumed\"] = { \"voltage\": source[\"voltage\"], \"current\": consumedCurrent}\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1415,
-        "y": 1900,
-        "wires": [
-            [
-                "006d2159453d3533",
-                "c75694c09fd54100"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "c75694c09fd54100",
+        "id": "2a8c51370e1a5a40",
         "type": "change",
-        "z": "ed6fc9b850d374ff",
-        "g": "60d6ceed67416d95",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload[\"output\"]",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1445,
-        "y": 1900,
-        "wires": [
-            [
-                "da55bcf17e243f42"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "0253e0acea643727",
-        "type": "change",
-        "z": "ed6fc9b850d374ff",
-        "g": "f01ffa43f38001a4",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "847cf27c9242be73",
         "name": "function",
         "rules": [
             {
@@ -1513,22 +1040,22 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1705,
-        "y": 1960,
+        "x": 1569,
+        "y": 1446,
         "wires": [
             [
-                "31c4945f256e5ddb"
+                "af7d9b8f06cb8231"
             ]
         ],
         "l": false
     },
     {
-        "id": "31c4945f256e5ddb",
+        "id": "af7d9b8f06cb8231",
         "type": "mqtt out",
-        "z": "ed6fc9b850d374ff",
-        "g": "f01ffa43f38001a4",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "847cf27c9242be73",
         "name": "sensor",
-        "topic": "client/consumersensor/device5/data",
+        "topic": "client/currentsensor/consumer1/data",
         "qos": "2",
         "retain": "",
         "respTopic": "",
@@ -1537,39 +1064,39 @@
         "correl": "",
         "expiry": "",
         "broker": "9247c215d6f5dddb",
-        "x": 1735,
-        "y": 1960,
+        "x": 1599,
+        "y": 1446,
         "wires": [],
         "l": false
     },
     {
-        "id": "da55bcf17e243f42",
+        "id": "3a9004702003372e",
         "type": "function",
-        "z": "ed6fc9b850d374ff",
-        "g": "f01ffa43f38001a4",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "847cf27c9242be73",
         "name": "Consumer",
-        "func": "let source = msg.payload;\nlet coefficients = global.get(\"coefficients\")\nlet index = global.get(\"index\")\nlet currentCoefficients = coefficients[index];\nlet consumption_ratio = Math.random() * currentCoefficients[2];\nlet staticCurrentСonsumption = source[\"current\"]*0.1;\nlet consumedCurrent = source[\"current\"] * consumption_ratio + staticCurrentСonsumption;\nlet outPutCurrent = source[\"current\"] - consumedCurrent;\nmsg.payload[\"output\"] = {\"voltage\":source[\"voltage\"], \"current\":outPutCurrent}\nmsg.payload[\"consumed\"] = { \"voltage\": source[\"voltage\"], \"current\": consumedCurrent}\nreturn msg;",
+        "func": "let source = msg.payload;\nlet coefficients = global.get(\"coefficients\")\nlet index = global.get(\"index\")\nlet currentCoefficients = coefficients[index];\nlet consumedCurrent = 10 * currentCoefficients[0];\nlet outPutCurrent = source[\"current\"] - consumedCurrent;\nmsg.payload[\"output\"] = {\"voltage\":source[\"voltage\"], \"current\":outPutCurrent}\nmsg.payload[\"consumed\"] = { \"voltage\": source[\"voltage\"], \"current\": consumedCurrent}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1635,
-        "y": 1900,
+        "x": 1499,
+        "y": 1386,
         "wires": [
             [
-                "0253e0acea643727",
-                "0f5cc417cc08d9be"
+                "2a8c51370e1a5a40",
+                "a31e167e68ad9870"
             ]
         ],
         "l": false
     },
     {
-        "id": "0f5cc417cc08d9be",
+        "id": "a31e167e68ad9870",
         "type": "change",
-        "z": "ed6fc9b850d374ff",
-        "g": "f01ffa43f38001a4",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "847cf27c9242be73",
         "name": "",
         "rules": [
             {
@@ -1585,20 +1112,20 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1665,
-        "y": 1900,
+        "x": 1529,
+        "y": 1386,
         "wires": [
             [
-                "2b634e503e9abf41"
+                "ed9aca1747359d76"
             ]
         ],
         "l": false
     },
     {
-        "id": "fb6b6821f8fc65e5",
+        "id": "e43a4287733c3096",
         "type": "change",
-        "z": "ed6fc9b850d374ff",
-        "g": "3821a06871a1cf90",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "4ede2af662683738",
         "name": "function",
         "rules": [
             {
@@ -1614,22 +1141,22 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1925,
-        "y": 1960,
+        "x": 1505,
+        "y": 1980,
         "wires": [
             [
-                "c41fbb91bc8e880a"
+                "e2b4f125a13c558b"
             ]
         ],
         "l": false
     },
     {
-        "id": "c41fbb91bc8e880a",
+        "id": "e2b4f125a13c558b",
         "type": "mqtt out",
-        "z": "ed6fc9b850d374ff",
-        "g": "3821a06871a1cf90",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "4ede2af662683738",
         "name": "sensor",
-        "topic": "client/consumersensor/device6/data",
+        "topic": "client/currentsensor/consumer4/data",
         "qos": "2",
         "retain": "",
         "respTopic": "",
@@ -1638,39 +1165,39 @@
         "correl": "",
         "expiry": "",
         "broker": "9247c215d6f5dddb",
-        "x": 1955,
-        "y": 1960,
+        "x": 1535,
+        "y": 1980,
         "wires": [],
         "l": false
     },
     {
-        "id": "2b634e503e9abf41",
+        "id": "e1d450f2a290d997",
         "type": "function",
-        "z": "ed6fc9b850d374ff",
-        "g": "3821a06871a1cf90",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "4ede2af662683738",
         "name": "Consumer",
-        "func": "let source = msg.payload;\nlet coefficients = global.get(\"coefficients\")\nlet index = global.get(\"index\")\nlet currentCoefficients = coefficients[index];\nlet consumption_ratio = Math.random() * currentCoefficients[2];\nlet staticCurrentСonsumption = source[\"current\"]*0.1;\nlet consumedCurrent = source[\"current\"] * consumption_ratio + staticCurrentСonsumption;\nlet outPutCurrent = source[\"current\"] - consumedCurrent;\nmsg.payload[\"output\"] = {\"voltage\":source[\"voltage\"], \"current\":outPutCurrent}\nmsg.payload[\"consumed\"] = { \"voltage\": source[\"voltage\"], \"current\": consumedCurrent}\nreturn msg;",
+        "func": "let source = msg.payload;\nlet coefficients = global.get(\"coefficients\")\nlet index = global.get(\"index\")\nlet currentCoefficients = coefficients[index];\nlet consumedCurrent = 3.3 * currentCoefficients[2];\nlet outPutCurrent = source[\"current\"] - consumedCurrent;\nmsg.payload[\"output\"] = {\"voltage\":source[\"voltage\"], \"current\":outPutCurrent}\nmsg.payload[\"consumed\"] = { \"voltage\": source[\"voltage\"], \"current\": consumedCurrent}\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1855,
-        "y": 1900,
+        "x": 1435,
+        "y": 1920,
         "wires": [
             [
-                "fb6b6821f8fc65e5",
-                "25429cb187bfeffa"
+                "e43a4287733c3096",
+                "26d9bbc5fa8fe5ac"
             ]
         ],
         "l": false
     },
     {
-        "id": "25429cb187bfeffa",
+        "id": "26d9bbc5fa8fe5ac",
         "type": "change",
-        "z": "ed6fc9b850d374ff",
-        "g": "3821a06871a1cf90",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "4ede2af662683738",
         "name": "",
         "rules": [
             {
@@ -1686,20 +1213,222 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1885,
-        "y": 1900,
+        "x": 1465,
+        "y": 1920,
         "wires": [
             [
-                "4b5f3d55970b8983"
+                "ea362b1ccd9ad8d6"
             ]
         ],
         "l": false
     },
     {
-        "id": "f6dc9a60ad3987b5",
+        "id": "d7fdf80856645c57",
+        "type": "change",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "155dc63f9a71d1e6",
+        "name": "function",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[\"consumed\"]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1725,
+        "y": 1980,
+        "wires": [
+            [
+                "405f851d270f8658"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "405f851d270f8658",
+        "type": "mqtt out",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "155dc63f9a71d1e6",
+        "name": "sensor",
+        "topic": "client/currentsensor/consumer5/data",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9247c215d6f5dddb",
+        "x": 1755,
+        "y": 1980,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "ea362b1ccd9ad8d6",
+        "type": "function",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "155dc63f9a71d1e6",
+        "name": "Consumer",
+        "func": "let source = msg.payload;\nlet coefficients = global.get(\"coefficients\")\nlet index = global.get(\"index\")\nlet currentCoefficients = coefficients[index];\nlet consumedCurrent = 3.3 * currentCoefficients[2];\nlet outPutCurrent = source[\"current\"] - consumedCurrent;\nmsg.payload[\"output\"] = { \"voltage\": source[\"voltage\"], \"current\": outPutCurrent }\nmsg.payload[\"consumed\"] = { \"voltage\": source[\"voltage\"], \"current\": consumedCurrent }\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1655,
+        "y": 1920,
+        "wires": [
+            [
+                "d7fdf80856645c57",
+                "c693121018a47f70"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "c693121018a47f70",
+        "type": "change",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "155dc63f9a71d1e6",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[\"output\"]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1685,
+        "y": 1920,
+        "wires": [
+            [
+                "2c454ee7af58a25e"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "fc8778119b95e21e",
+        "type": "change",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "f5ce94d3bf9483bd",
+        "name": "function",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[\"consumed\"]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1945,
+        "y": 1980,
+        "wires": [
+            [
+                "5204d01aeebba87d"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "5204d01aeebba87d",
+        "type": "mqtt out",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "f5ce94d3bf9483bd",
+        "name": "sensor",
+        "topic": "client/currentsensor/consumer6/data",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9247c215d6f5dddb",
+        "x": 1975,
+        "y": 1980,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "2c454ee7af58a25e",
+        "type": "function",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "f5ce94d3bf9483bd",
+        "name": "Consumer",
+        "func": "let source = msg.payload;\nlet coefficients = global.get(\"coefficients\")\nlet index = global.get(\"index\")\nlet currentCoefficients = coefficients[index];\nlet consumedCurrent = 3.3 * currentCoefficients[2];\nlet outPutCurrent = source[\"current\"] - consumedCurrent;\nmsg.payload[\"output\"] = {\"voltage\":source[\"voltage\"], \"current\":outPutCurrent}\nmsg.payload[\"consumed\"] = { \"voltage\": source[\"voltage\"], \"current\": consumedCurrent}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1875,
+        "y": 1920,
+        "wires": [
+            [
+                "fc8778119b95e21e",
+                "0b63102d2af79cc8"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "0b63102d2af79cc8",
+        "type": "change",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "f5ce94d3bf9483bd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[\"output\"]",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1905,
+        "y": 1920,
+        "wires": [
+            [
+                "1c9a5b25617b3ab4"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "dff6f773184e3202",
         "type": "inject",
-        "z": "ed6fc9b850d374ff",
-        "g": "b89a0935f6fe7b0a",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "ef000d8d85811f39",
         "name": "",
         "props": [
             {
@@ -1710,7 +1439,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "4",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
@@ -1721,39 +1450,39 @@
         "y": 1120,
         "wires": [
             [
-                "8ec30c1b65ed8457"
+                "a5d4c07af654613a"
             ]
         ],
         "l": false
     },
     {
-        "id": "8ec30c1b65ed8457",
+        "id": "a5d4c07af654613a",
         "type": "function",
-        "z": "ed6fc9b850d374ff",
-        "g": "b89a0935f6fe7b0a",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "ef000d8d85811f39",
         "name": "function 4",
-        "func": "let index = global.get(\"index\");\nindex = (index + 1) % 3;\nglobal.set(\"index\", index);\nlet source = 10\nlet coefficients = global.get(\"coefficients\")\nlet currentCoefficients = coefficients[index];\n\n// Рассчитываем значения для каждой линии\nlet line1ConsumptionRatio =  currentCoefficients[0];\nlet staticConsumptionLine1 = source * 0.1;\nlet consumedLine1 = source * line1ConsumptionRatio + staticConsumptionLine1;\nlet outPutLine1 = source - consumedLine1;\n\nlet line2ConsumptionRatio =  currentCoefficients[1];\nlet staticConsumptionLine2 = source * 0.1;\nlet consumedLine2 = source * line2ConsumptionRatio + staticConsumptionLine2;\nlet outPutLine2 = source - consumedLine2;\n\nlet line3ConsumptionRatio =  currentCoefficients[2];\nlet staticConsumptionLine3 = source * 0.1;\nlet consumedLine3 = source * line3ConsumptionRatio + staticConsumptionLine3;\nlet outPutLine3 = source - consumedLine3;\n\n// Формируем итоговый payload\nmsg.payload = {\n    line1: line1ConsumptionRatio,\n    line2: line2ConsumptionRatio,\n    line3: line3ConsumptionRatio\n};\nreturn msg;",
+        "func": "let index = global.get(\"index\");\n\n// Убедимся, что индекс всегда в пределах массива коэффициентов\nlet totalCoefficients = global.get(\"coefficients\");\n\nindex = (index + 1) % totalCoefficients.length;\nglobal.set(\"index\", index);\n\nlet source = 10;\nlet coefficients = global.get(\"coefficients\");\nlet currentCoefficients = coefficients[index];\n\n// Проверка коэффициентов\nif (currentCoefficients.length !== 3) {\n    throw new Error(\"Коэффициенты должны быть в виде массива из трех элементов.\");\n}\n\n// Рассчитываем значения для каждой линии\nlet line1ConsumptionRatio = currentCoefficients[0];\nlet staticConsumptionLine1 = source * 0.1;\nlet consumedLine1 = source * line1ConsumptionRatio + staticConsumptionLine1;\nlet outPutLine1 = source - consumedLine1;\n\nlet line2ConsumptionRatio = currentCoefficients[1];\nlet staticConsumptionLine2 = source * 0.1;\nlet consumedLine2 = source * line2ConsumptionRatio + staticConsumptionLine2;\nlet outPutLine2 = source - consumedLine2;\n\nlet line3ConsumptionRatio = currentCoefficients[2];\nlet staticConsumptionLine3 = source * 0.1;\nlet consumedLine3 = source * line3ConsumptionRatio + staticConsumptionLine3;\nlet outPutLine3 = source - consumedLine3;\n\n// Формируем итоговый payload\nmsg.payload = {\n    line1: line1ConsumptionRatio,\n    line2: line2ConsumptionRatio,\n    line3: line3ConsumptionRatio\n};\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
-        "initialize": "// Установка значения\nglobal.set(\"coefficients\", [[0.4, 0.1, 0.1], [0.1, 0.4, 0.1], [0.1, 0.1, 0.6]]);\nglobal.set(\"index\", 0); // Начальный индекс\n",
+        "initialize": "// Установка значения\nglobal.set(\"coefficients\", [\n    [1, 2.5, 6],        // Начальное состояние\n    [1.5, 2.5, 5.5],\n    [2, 2.5, 5],\n    [2.5, 2.5, 4.5],\n    [3, 2.5, 4],\n    [3.5, 3, 3.5],\n    [4, 3, 3],\n    [4.5, 3.5, 2.5],\n    [5, 3, 2.5],\n    [5.5, 2.5, 2],\n    [6, 2.5, 1],        // Максимальное значение на третьем ряду\n    [5.5, 3, 1.5],\n    [5, 3.5, 2],\n    [4.5, 3.5, 2.5],\n    [4, 4, 2.5],\n    [3.5, 4, 3],\n    [3, 4.5, 3.5],\n    [2.5, 5, 3.5],\n    [2, 5.5, 4],\n    [1.5, 5.5, 4.5],\n    [1, 6, 5],        // Максимальное значение возвращается к начальной ситуации\n    [1, 5.5, 5.5],\n    [1.5, 5, 6],\n    [2, 4.5, 6],\n    [2.5, 4, 6]\n]);\nglobal.set(\"index\", 0); // Начальный индекс\n",
         "finalize": "",
         "libs": [],
         "x": 375,
         "y": 1120,
         "wires": [
             [
-                "7319b8fb2699fda4"
+                "06e37a093aab5c3f"
             ]
         ],
         "l": false
     },
     {
-        "id": "7319b8fb2699fda4",
+        "id": "06e37a093aab5c3f",
         "type": "debug",
-        "z": "ed6fc9b850d374ff",
-        "g": "b89a0935f6fe7b0a",
-        "name": "debug 5",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "ef000d8d85811f39",
+        "name": "timer",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -1768,10 +1497,10 @@
         "l": false
     },
     {
-        "id": "4b5f3d55970b8983",
+        "id": "1c9a5b25617b3ab4",
         "type": "function",
-        "z": "ed6fc9b850d374ff",
-        "g": "3b359d0aad2cca26",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "d6a698e62c477598",
         "name": "CurrentLine3",
         "func": "if(msg.payload[\"current\"]<3){\n    global.set(\"isThirdLineCongestion\", true)\n    node.error(\"Перевантаження!\", msg);\n    return null;\n}\nreturn msg;\n",
         "outputs": 1,
@@ -1780,20 +1509,20 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2155,
-        "y": 1900,
+        "x": 2107,
+        "y": 1920,
         "wires": [
             [
-                "dc676fdb3abf8f7e"
+                "5e88df6036251bf6"
             ]
         ],
         "l": false
     },
     {
-        "id": "c7eb2dea3371c873",
+        "id": "ede59fdde78e58e4",
         "type": "function",
-        "z": "ed6fc9b850d374ff",
-        "g": "628a3f0f8ba0748f",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "fdecac9978d5caa3",
         "name": "function 7",
         "func": "global.set(\"isThirdLineCongestion\", false)\nglobal.set(\"lineThirdTransaction\", false)\nreturn null;",
         "outputs": 1,
@@ -1802,7 +1531,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1035,
+        "x": 1109,
         "y": 1960,
         "wires": [
             []
@@ -1810,10 +1539,10 @@
         "l": false
     },
     {
-        "id": "08bd37463ab1899c",
+        "id": "0c446c0fc379543e",
         "type": "switch",
-        "z": "ed6fc9b850d374ff",
-        "g": "628a3f0f8ba0748f",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "fdecac9978d5caa3",
         "name": "",
         "property": "payload",
         "propertyType": "msg",
@@ -1830,23 +1559,24 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1005,
-        "y": 1900,
+        "x": 1089,
+        "y": 1914,
         "wires": [
             [
-                "690ef4e684a6bd33"
+                "faef4f1c76b1002e"
             ],
             [
-                "31ca889f5b44e7e1"
+                "3b172041fedd3bcd",
+                "e1d450f2a290d997"
             ]
         ],
         "l": false
     },
     {
-        "id": "87ddce3618d3f4e2",
+        "id": "15f8b62e69838e88",
         "type": "function",
-        "z": "ed6fc9b850d374ff",
-        "g": "628a3f0f8ba0748f",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "fdecac9978d5caa3",
         "name": "function 8",
         "func": "if (global.get(\"isThirdLineCongestion\")){\n    msg.payload = \"LineCongestion\"\n    return msg\n}else{\nreturn msg;\n}\n",
         "outputs": 1,
@@ -1855,20 +1585,20 @@
         "initialize": "// Добавленный здесь код будет исполняться\n// однократно при развертывании узла.\nglobal.set(\"lineThirdTransaction\", false)\nglobal.set(\"isThirdLineCongestion\", false)",
         "finalize": "",
         "libs": [],
-        "x": 975,
-        "y": 1900,
+        "x": 1059,
+        "y": 1914,
         "wires": [
             [
-                "08bd37463ab1899c"
+                "0c446c0fc379543e"
             ]
         ],
         "l": false
     },
     {
-        "id": "e508b7ba44c26253",
+        "id": "f4a7c39e94a695af",
         "type": "function",
-        "z": "ed6fc9b850d374ff",
-        "g": "dc5a4ca141aca5d9",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "d15b52302f8cb383",
         "name": "CurrentLine2",
         "func": "if(msg.payload[\"current\"]<3){\n    global.set(\"isSecondLineCongestion\", true)\n    node.error(\"Перевантаження!\", msg);\n    return null;\n}\nreturn msg;\n",
         "outputs": 1,
@@ -1877,20 +1607,20 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2055,
+        "x": 1955,
         "y": 1620,
         "wires": [
             [
-                "d92d810ec03d2994"
+                "ab16fed8086ffdb2"
             ]
         ],
         "l": false
     },
     {
-        "id": "7aa44d4855b16267",
+        "id": "ed9aca1747359d76",
         "type": "function",
-        "z": "ed6fc9b850d374ff",
-        "g": "1d60f77e2f32593d",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "44ceb0c1c5cefa28",
         "name": "CurrentLine1",
         "func": "if(msg.payload[\"current\"]<3){\n    global.set(\"isFirstLineCongestion\", true)\n    node.error(\"Перевантаження!\", msg);\n    return null;\n}\nreturn msg;\n",
         "outputs": 1,
@@ -1899,43 +1629,20 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2045,
-        "y": 1380,
+        "x": 1733,
+        "y": 1389,
         "wires": [
             [
-                "fa5e7da91dbafed2"
+                "b990833ccfbdc733"
             ]
         ],
         "l": false
     },
     {
-        "id": "3a72e4edb3faddd7",
-        "type": "trigger",
-        "z": "ed6fc9b850d374ff",
-        "name": "",
-        "op1": "1",
-        "op2": "0",
-        "op1type": "str",
-        "op2type": "str",
-        "duration": "250",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "ms",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 280,
-        "y": 1880,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "8378de078689c619",
+        "id": "b4f804f16eb618cf",
         "type": "delay",
-        "z": "ed6fc9b850d374ff",
-        "g": "628a3f0f8ba0748f",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "fdecac9978d5caa3",
         "name": "",
         "pauseType": "delay",
         "timeout": "15",
@@ -1949,20 +1656,20 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1015,
+        "x": 1089,
         "y": 1960,
         "wires": [
             [
-                "c7eb2dea3371c873"
+                "ede59fdde78e58e4"
             ]
         ],
         "l": false
     },
     {
-        "id": "690ef4e684a6bd33",
+        "id": "faef4f1c76b1002e",
         "type": "function",
-        "z": "ed6fc9b850d374ff",
-        "g": "628a3f0f8ba0748f",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "fdecac9978d5caa3",
         "name": "function 11",
         "func": "if (global.get(\"lineThirdTransaction\")){\n    return null;\n}\nglobal.set(\"lineThirdTransaction\", true)\nreturn msg;",
         "outputs": 1,
@@ -1971,36 +1678,20 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 985,
+        "x": 1059,
         "y": 1960,
         "wires": [
             [
-                "8378de078689c619"
+                "b4f804f16eb618cf"
             ]
         ],
         "l": false
     },
     {
-        "id": "fc5260c2d5a28aef",
-        "type": "debug",
-        "z": "ed6fc9b850d374ff",
-        "name": "debug 7",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1380,
-        "y": 2200,
-        "wires": []
-    },
-    {
-        "id": "e91d62efa5b8e092",
+        "id": "d8bea028b8f73f80",
         "type": "function",
-        "z": "ed6fc9b850d374ff",
-        "g": "201e278336a2a40b",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "acbdc0bc461e2e18",
         "name": "function 13",
         "func": "global.set(\"isFirstLineCongestion\", false)\nglobal.set(\"lineFirstTransaction\", false)\nreturn null;",
         "outputs": 1,
@@ -2009,18 +1700,18 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1035,
-        "y": 1440,
+        "x": 1132,
+        "y": 1418,
         "wires": [
             []
         ],
         "l": false
     },
     {
-        "id": "9705f1a56879f512",
+        "id": "2e09bd27505b851e",
         "type": "switch",
-        "z": "ed6fc9b850d374ff",
-        "g": "201e278336a2a40b",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "acbdc0bc461e2e18",
         "name": "",
         "property": "payload",
         "propertyType": "msg",
@@ -2037,23 +1728,24 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1015,
+        "x": 1105,
         "y": 1380,
         "wires": [
             [
-                "fc773309f830ab31"
+                "cbfbbd63dc4fd5ef"
             ],
             [
-                "f8ee96304d8ee4b0"
+                "4fa701904285f335",
+                "3a9004702003372e"
             ]
         ],
         "l": false
     },
     {
-        "id": "e80a6f9cd4a8fa7a",
+        "id": "aead0d1777a973b9",
         "type": "function",
-        "z": "ed6fc9b850d374ff",
-        "g": "201e278336a2a40b",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "acbdc0bc461e2e18",
         "name": "function 14",
         "func": "if (global.get(\"isFirstLineCongestion\")){\n    msg.payload = \"LineCongestion\"\n    return msg\n}else{\nreturn msg;\n}\n",
         "outputs": 1,
@@ -2062,20 +1754,20 @@
         "initialize": "// Добавленный здесь код будет исполняться\n// однократно при развертывании узла.\nglobal.set(\"lineFirstTransaction\", false)\nglobal.set(\"isFirstLineCongestion\", false)",
         "finalize": "",
         "libs": [],
-        "x": 985,
+        "x": 1065,
         "y": 1380,
         "wires": [
             [
-                "9705f1a56879f512"
+                "2e09bd27505b851e"
             ]
         ],
         "l": false
     },
     {
-        "id": "6eef64f6b9f89dde",
+        "id": "cab229ed12878713",
         "type": "delay",
-        "z": "ed6fc9b850d374ff",
-        "g": "201e278336a2a40b",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "acbdc0bc461e2e18",
         "name": "",
         "pauseType": "delay",
         "timeout": "15",
@@ -2089,20 +1781,20 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1015,
-        "y": 1440,
+        "x": 1102,
+        "y": 1418,
         "wires": [
             [
-                "e91d62efa5b8e092"
+                "d8bea028b8f73f80"
             ]
         ],
         "l": false
     },
     {
-        "id": "fc773309f830ab31",
+        "id": "cbfbbd63dc4fd5ef",
         "type": "function",
-        "z": "ed6fc9b850d374ff",
-        "g": "201e278336a2a40b",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "acbdc0bc461e2e18",
         "name": "function 15",
         "func": "if (global.get(\"lineFirstTransaction\")){\n    return null;\n}\nglobal.set(\"lineFirstTransaction\", true)\nreturn msg;",
         "outputs": 1,
@@ -2111,20 +1803,20 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 985,
-        "y": 1440,
+        "x": 1072,
+        "y": 1418,
         "wires": [
             [
-                "6eef64f6b9f89dde"
+                "cab229ed12878713"
             ]
         ],
         "l": false
     },
     {
-        "id": "5480dc6b15e084d4",
+        "id": "794c284d50c0e25b",
         "type": "function",
-        "z": "ed6fc9b850d374ff",
-        "g": "c424c808617f5be2",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "a28b9560cd880bdf",
         "name": "function 16",
         "func": "global.set(\"isSecondLineCongestion\", false)\nglobal.set(\"lineSecondTransaction\", false)\nreturn null;",
         "outputs": 1,
@@ -2133,18 +1825,18 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1025,
-        "y": 1680,
+        "x": 1115,
+        "y": 1660,
         "wires": [
             []
         ],
         "l": false
     },
     {
-        "id": "e6cc48740b1cf28e",
+        "id": "fec53ebc806cb6eb",
         "type": "switch",
-        "z": "ed6fc9b850d374ff",
-        "g": "c424c808617f5be2",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "a28b9560cd880bdf",
         "name": "",
         "property": "payload",
         "propertyType": "msg",
@@ -2161,23 +1853,24 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1005,
+        "x": 1095,
         "y": 1620,
         "wires": [
             [
-                "a820249c46dcdec7"
+                "7cfea03df0f7726c"
             ],
             [
-                "6705a400ab98dbb8"
+                "7db9e02dfaf633e5",
+                "f462dcbd3e85dd6b"
             ]
         ],
         "l": false
     },
     {
-        "id": "62ca22bb0dcf7e86",
+        "id": "4239e1b9e53d2b04",
         "type": "function",
-        "z": "ed6fc9b850d374ff",
-        "g": "c424c808617f5be2",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "a28b9560cd880bdf",
         "name": "function 17",
         "func": "if (global.get(\"isSecondLineCongestion\")){\n    msg.payload = \"LineCongestion\"\n    return msg\n}else{\nreturn msg;\n}\n",
         "outputs": 1,
@@ -2186,20 +1879,20 @@
         "initialize": "// Добавленный здесь код будет исполняться\n// однократно при развертывании узла.\nglobal.set(\"lineSecondTransaction\", false)\nglobal.set(\"isSecondLineCongestion\", false)",
         "finalize": "",
         "libs": [],
-        "x": 975,
+        "x": 1065,
         "y": 1620,
         "wires": [
             [
-                "e6cc48740b1cf28e"
+                "fec53ebc806cb6eb"
             ]
         ],
         "l": false
     },
     {
-        "id": "2177c81d5fe32716",
+        "id": "1dfaada9b25d46de",
         "type": "delay",
-        "z": "ed6fc9b850d374ff",
-        "g": "c424c808617f5be2",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "a28b9560cd880bdf",
         "name": "",
         "pauseType": "delay",
         "timeout": "15",
@@ -2213,20 +1906,20 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1005,
-        "y": 1680,
+        "x": 1095,
+        "y": 1660,
         "wires": [
             [
-                "5480dc6b15e084d4"
+                "794c284d50c0e25b"
             ]
         ],
         "l": false
     },
     {
-        "id": "a820249c46dcdec7",
+        "id": "7cfea03df0f7726c",
         "type": "function",
-        "z": "ed6fc9b850d374ff",
-        "g": "c424c808617f5be2",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "a28b9560cd880bdf",
         "name": "function 18",
         "func": "if (global.get(\"lineSecondTransaction\")){\n    return null;\n}\nglobal.set(\"lineSecondTransaction\", true)\nreturn msg;",
         "outputs": 1,
@@ -2235,20 +1928,20 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 975,
-        "y": 1680,
+        "x": 1065,
+        "y": 1660,
         "wires": [
             [
-                "2177c81d5fe32716"
+                "1dfaada9b25d46de"
             ]
         ],
         "l": false
     },
     {
-        "id": "4c3a7395e37e9090",
+        "id": "58522b291f743b57",
         "type": "debug",
-        "z": "ed6fc9b850d374ff",
-        "g": "7c6c200b84302d46",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "f58bf73a5c020fcf",
         "name": "isFirstLineCongestion",
         "active": true,
         "tosidebar": true,
@@ -2263,10 +1956,10 @@
         "wires": []
     },
     {
-        "id": "d0ed9851a302930f",
+        "id": "e8ec7d6ac36e6191",
         "type": "inject",
-        "z": "ed6fc9b850d374ff",
-        "g": "7c6c200b84302d46",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "f58bf73a5c020fcf",
         "name": "",
         "props": [
             {
@@ -2284,15 +1977,15 @@
         "y": 460,
         "wires": [
             [
-                "2eccab7687e83c06"
+                "65aeaeabf6d4f33b"
             ]
         ]
     },
     {
-        "id": "2eccab7687e83c06",
+        "id": "65aeaeabf6d4f33b",
         "type": "function",
-        "z": "ed6fc9b850d374ff",
-        "g": "7c6c200b84302d46",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "f58bf73a5c020fcf",
         "name": "function 12",
         "func": "msg.payload = global.get(\"isFirstLineCongestion\")\nreturn msg;",
         "outputs": 1,
@@ -2305,15 +1998,15 @@
         "y": 460,
         "wires": [
             [
-                "4c3a7395e37e9090"
+                "58522b291f743b57"
             ]
         ]
     },
     {
-        "id": "d43a649e7b2b577f",
+        "id": "0cfc0125373ebf3a",
         "type": "debug",
-        "z": "ed6fc9b850d374ff",
-        "g": "7c6c200b84302d46",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "f58bf73a5c020fcf",
         "name": "isSecondLineCongestion",
         "active": true,
         "tosidebar": true,
@@ -2328,10 +2021,10 @@
         "wires": []
     },
     {
-        "id": "3ae51475441c82de",
+        "id": "a7bab7ce62d53fb7",
         "type": "inject",
-        "z": "ed6fc9b850d374ff",
-        "g": "7c6c200b84302d46",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "f58bf73a5c020fcf",
         "name": "",
         "props": [
             {
@@ -2349,15 +2042,15 @@
         "y": 520,
         "wires": [
             [
-                "88d5f091a1cbf40e"
+                "dc10840f83e48c64"
             ]
         ]
     },
     {
-        "id": "88d5f091a1cbf40e",
+        "id": "dc10840f83e48c64",
         "type": "function",
-        "z": "ed6fc9b850d374ff",
-        "g": "7c6c200b84302d46",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "f58bf73a5c020fcf",
         "name": "function 19",
         "func": "msg.payload = global.get(\"isSecondLineCongestion\")\nreturn msg;",
         "outputs": 1,
@@ -2370,15 +2063,15 @@
         "y": 520,
         "wires": [
             [
-                "d43a649e7b2b577f"
+                "0cfc0125373ebf3a"
             ]
         ]
     },
     {
-        "id": "a4bcbc9030efa1bc",
+        "id": "9b900c05d41abd92",
         "type": "debug",
-        "z": "ed6fc9b850d374ff",
-        "g": "7c6c200b84302d46",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "f58bf73a5c020fcf",
         "name": "isThirdLineCongestion",
         "active": true,
         "tosidebar": true,
@@ -2393,10 +2086,10 @@
         "wires": []
     },
     {
-        "id": "0acf6de25e37d93a",
+        "id": "fee218f9a0b03866",
         "type": "inject",
-        "z": "ed6fc9b850d374ff",
-        "g": "7c6c200b84302d46",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "f58bf73a5c020fcf",
         "name": "",
         "props": [
             {
@@ -2414,15 +2107,15 @@
         "y": 580,
         "wires": [
             [
-                "6bb3486b1212e0bc"
+                "e8c3feb7edf60222"
             ]
         ]
     },
     {
-        "id": "6bb3486b1212e0bc",
+        "id": "e8c3feb7edf60222",
         "type": "function",
-        "z": "ed6fc9b850d374ff",
-        "g": "7c6c200b84302d46",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "f58bf73a5c020fcf",
         "name": "function 20",
         "func": "msg.payload = global.get(\"isThirdLineCongestion\")\nreturn msg;",
         "outputs": 1,
@@ -2435,8 +2128,803 @@
         "y": 580,
         "wires": [
             [
-                "a4bcbc9030efa1bc"
+                "9b900c05d41abd92"
             ]
         ]
+    },
+    {
+        "id": "86743c739f808861",
+        "type": "function",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "038fe1b2bbfd5bd0",
+        "name": "function 21",
+        "func": "if (msg.payload) {\n    // Парсим isWorking как булево значение\n    const isWorking = msg.payload.isWorking === \"true\";\n\n    if (isWorking) {\n        const voltage = parseFloat(msg.payload.voltage);\n        const current = parseFloat(msg.payload.current);\n        // Проверяем наличие input_data\n        msg.payload = {\n            input_data: { voltage, current }\n        };\n\n        // Устанавливаем тему сообщения\n        msg.topic = \"input_data\";\n        return msg;\n        \n    }\n}\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1305,
+        "y": 1700,
+        "wires": [
+            [
+                "f462dcbd3e85dd6b"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "2abec83e9f018a22",
+        "type": "mqtt in",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "038fe1b2bbfd5bd0",
+        "name": "Generator",
+        "topic": "client/generator/device2/data",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "9247c215d6f5dddb",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1275,
+        "y": 1700,
+        "wires": [
+            [
+                "86743c739f808861"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "da30e5d7a3a1b590",
+        "type": "function",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "d8c43569370ae3d4",
+        "name": "function 22",
+        "func": "if (msg.payload) {\n    // Парсим isWorking как булево значение\n    const isWorking = msg.payload.isWorking === \"true\";\n\n    if (isWorking) {\n        const voltage = parseFloat(msg.payload.voltage);\n        const current = parseFloat(msg.payload.current);\n        // Проверяем наличие input_data\n        msg.payload = {\n            input_data: { voltage, current }\n        };\n\n        // Устанавливаем тему сообщения\n        msg.topic = \"input_data\";\n        return msg;\n        \n    }\n}\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1325,
+        "y": 1440,
+        "wires": [
+            [
+                "3a9004702003372e"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "742a10b62efd311d",
+        "type": "mqtt in",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "d8c43569370ae3d4",
+        "name": "Generator",
+        "topic": "client/generator/device2/data",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "9247c215d6f5dddb",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1295,
+        "y": 1440,
+        "wires": [
+            [
+                "da30e5d7a3a1b590"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "aa8bfc8edda6f7cf",
+        "type": "function",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "dbd42d618d06effd",
+        "name": "function 23",
+        "func": "if (msg.payload) {\n    // Парсим isWorking как булево значение\n    const isWorking = msg.payload.isWorking === \"true\";\n\n    if (isWorking) {\n        const voltage = parseFloat(msg.payload.voltage);\n        const current = parseFloat(msg.payload.current);\n        // Проверяем наличие input_data\n        msg.payload = {\n            input_data: { voltage, current }\n        };\n\n        // Устанавливаем тему сообщения\n        msg.topic = \"input_data\";\n        return msg;\n        \n    }\n}\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1305,
+        "y": 2000,
+        "wires": [
+            [
+                "e1d450f2a290d997"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "8153e1bf2fda1f14",
+        "type": "mqtt in",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "dbd42d618d06effd",
+        "name": "Generator",
+        "topic": "client/generator/device3/data",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "9247c215d6f5dddb",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1275,
+        "y": 2000,
+        "wires": [
+            [
+                "aa8bfc8edda6f7cf"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "fe2a847ee1e6491f",
+        "type": "function",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "c1b91bf79743e34c",
+        "name": "function 25",
+        "func": "let baseSource = global.get(\"baseCurrent\");\nlet currentBanch1 = global.get(\"currentBanch1\");\nlet currentBanch2 = global.get(\"currentBanch2\");\nlet currentBanch3 = global.get(\"currentBanch3\");\nlet deffrentCurrent = baseSource - (currentBanch1 + currentBanch2 + currentBanch3);\nif (deffrentCurrent < 20) {\n    node.error(\"Перегрузка!\", msg);\n    return null;\n}\n\nmsg.payload = {\n    \"voltage\":global.get(\"sourceVoltage\"),\n     \"current\": deffrentCurrent\n     }\n     msg.topic = \"input_data\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// Добавленный здесь код будет исполняться\n// однократно при развертывании узла.\nglobal.set(\"sourceVoltage\", 380);\nglobal.set(\"sourceCurrent\", 170);\nglobal.set(\"baseCurrent\", 300);\nglobal.set(\"currentBanch1\", 50);\n global.set(\"currentBanch2\",50);\n global.set(\"currentBanch3\",50);",
+        "finalize": "",
+        "libs": [],
+        "x": 345,
+        "y": 1620,
+        "wires": [
+            [
+                "97b95aeffae6d476",
+                "b864117d9c45b2b4",
+                "c59c5ba6150bf181",
+                "395754e207ae9558",
+                "cb6b19cfeee30670"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "9914d7181d69ead1",
+        "type": "inject",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "c1b91bf79743e34c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 265,
+        "y": 1620,
+        "wires": [
+            [
+                "fe2a847ee1e6491f"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "97b95aeffae6d476",
+        "type": "mqtt out",
+        "z": "4ecc5a6d78dc7d19",
+        "name": "sensor",
+        "topic": "client/currentsensor/devise/current",
+        "qos": "2",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9247c215d6f5dddb",
+        "x": 410,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "1745e21516cd7d5c",
+        "type": "function",
+        "z": "4ecc5a6d78dc7d19",
+        "d": true,
+        "g": "c277d7fcb8b535c8",
+        "name": "function 24",
+        "func": "// Получаем исходные данные из глобальной области\nlet sourceVoltage = global.get(\"sourceVoltage\");\nlet sourceCurrent = global.get(\"sourceCurrent\");\n\n// Инициализируем текущие значения для веток\nlet currentBanch1, currentBanch2, currentBanch3;\n\n// Проверяем, есть ли данные serverData\nif (msg.payload && msg.payload.data) {\n    currentBanch1 = msg.payload.data.banch1?.current ?? 50;\n    currentBanch2 = msg.payload.data.banch2?.current ?? 50;\n    currentBanch3 = msg.payload.data.banch3?.current ?? 50;\n} else {\n    // Устанавливаем значения по умолчанию\n    currentBanch1 = 50;\n    currentBanch2 = 50;\n    currentBanch3 = 50;\n}\n\n// Рассчитываем разницу токов\nlet deffrentCurrent = global.get(\"baseCurrent\") - (currentBanch1 + currentBanch2 + currentBanch3);\n\n// Проверяем на превышение порога\nif (deffrentCurrent < 20) {\n    node.error(\"Перегрузка!\", msg);\n    return null;\n}\n\n// Обновляем глобальную переменную\nglobal.set(\"sourceCurrent\", deffrentCurrent);\n\n// Формируем новое сообщение\nmsg.payload = {\n    banch1: { voltage: 220, current: currentBanch1 },\n    banch2: { voltage: 220, current: currentBanch2 },\n    banch3: { voltage: 220, current: currentBanch3 },\n};\nmsg.topic = \"input_data\"\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 655,
+        "y": 80,
+        "wires": [
+            [
+                "b7f3faaa051b3ac2",
+                "43ebc31c82bbcf60",
+                "4c19bfad5858224f"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "aa7706c0b3d17e64",
+        "type": "mqtt in",
+        "z": "4ecc5a6d78dc7d19",
+        "d": true,
+        "g": "c277d7fcb8b535c8",
+        "name": "",
+        "topic": "client/switchboard/device/data",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 655,
+        "y": 40,
+        "wires": [
+            [
+                "1745e21516cd7d5c"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "43ebc31c82bbcf60",
+        "type": "function",
+        "z": "4ecc5a6d78dc7d19",
+        "d": true,
+        "g": "c277d7fcb8b535c8",
+        "name": "function 27",
+        "func": "msg.payload = msg.payload.banch2;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 735,
+        "y": 80,
+        "wires": [
+            []
+        ],
+        "l": false
+    },
+    {
+        "id": "4c19bfad5858224f",
+        "type": "function",
+        "z": "4ecc5a6d78dc7d19",
+        "d": true,
+        "g": "c277d7fcb8b535c8",
+        "name": "function 28",
+        "func": "msg.payload = msg.payload.banch2;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 735,
+        "y": 120,
+        "wires": [
+            []
+        ],
+        "l": false
+    },
+    {
+        "id": "b7f3faaa051b3ac2",
+        "type": "function",
+        "z": "4ecc5a6d78dc7d19",
+        "d": true,
+        "g": "c277d7fcb8b535c8",
+        "name": "function 26",
+        "func": "msg.payload = msg.payload.banch1;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 735,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "l": false
+    },
+    {
+        "id": "3b5d0a72eab60592",
+        "type": "mqtt in",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "0165464672a9d82a",
+        "name": "",
+        "topic": "client/switchboard/device2/data",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "9247c215d6f5dddb",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 845,
+        "y": 1660,
+        "wires": [
+            [
+                "cea77d418e1e2df4"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "ac93592c2cebea41",
+        "type": "mqtt in",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "ac809a118d271bcc",
+        "name": "",
+        "topic": "client/switchboard/device3/data",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "9247c215d6f5dddb",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 825,
+        "y": 1960,
+        "wires": [
+            [
+                "3623e22bc7f1bf90"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "42c3452f81cc2c2b",
+        "type": "mqtt in",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "376acaaa03b457c7",
+        "name": "",
+        "topic": "client/switchboard/device1/data",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "9247c215d6f5dddb",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 875,
+        "y": 1420,
+        "wires": [
+            [
+                "8b305b4cf3ed1110"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "cea77d418e1e2df4",
+        "type": "function",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "0165464672a9d82a",
+        "name": "function 32",
+        "func": "var current = msg.payload[\"current\"];\nmsg.payload = parseInt(current);\nmsg.topic = \"data\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 895,
+        "y": 1660,
+        "wires": [
+            [
+                "c59c5ba6150bf181"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "b864117d9c45b2b4",
+        "type": "function",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "376acaaa03b457c7",
+        "name": "function 33",
+        "func": "let savedData = context.get('savedData');\n\nif (\n    (msg.payload && msg.payload.input_data && msg.payload.input_data.voltage !== undefined && msg.payload.input_data.current !== undefined) ||\n    (msg.payload && msg.payload.voltage !== undefined && msg.payload.current !== undefined)\n) {\n    let sourceVoltage = global.get(\"sourceVoltage\") || 220; // Значение по умолчанию для напряжения\n    let sourceCurrent = global.get(\"sourceCurrent\");\n   \n\n\n    let currentBanch;\n    if (savedData !== undefined) {\n        currentBanch = savedData;\n    \n    } else {\n    \n        currentBanch = 50;\n       \n    }\n\n    global.set(\"currentBanch1\", currentBanch);\n\n\n\n    msg.payload = {\n        voltage: sourceVoltage,\n        current: currentBanch\n    };\n    msg.topic = \"input_data\";\n    return msg;\n}\n\n\nif (msg.topic === \"data\" && msg.payload !== undefined) {\n    context.set('savedData', msg.payload);\n\n    return null; \n}\n\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 935,
+        "y": 1380,
+        "wires": [
+            [
+                "aead0d1777a973b9",
+                "d303c488eba5b141"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "8b305b4cf3ed1110",
+        "type": "function",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "376acaaa03b457c7",
+        "name": "function 34",
+        "func": "var current = msg.payload[\"current\"];\nmsg.payload = parseInt(current);\nmsg.topic = \"data\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 915,
+        "y": 1420,
+        "wires": [
+            [
+                "b864117d9c45b2b4",
+                "6cc24b9c45883a71"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "395754e207ae9558",
+        "type": "function",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "ac809a118d271bcc",
+        "name": "function 35",
+        "func": "let savedData = context.get('savedData');\n\nif (\n    (msg.payload && msg.payload.input_data && msg.payload.input_data.voltage !== undefined && msg.payload.input_data.current !== undefined) ||\n    (msg.payload && msg.payload.voltage !== undefined && msg.payload.current !== undefined)\n) {\n    let sourceVoltage = global.get(\"sourceVoltage\") || 220; // Значение по умолчанию для напряжения\n    let sourceCurrent = global.get(\"sourceCurrent\");\n   \n\n\n    let currentBanch;\n    if (savedData !== undefined) {\n        currentBanch = savedData;\n    \n    } else {\n    \n        currentBanch = 50;\n       \n    }\n\n    global.set(\"currentBanch3\", currentBanch);\n    msg.payload = {\n        voltage: sourceVoltage,\n        current: currentBanch\n    };\n    msg.topic = \"input_data\";\n    return msg;\n}\n\n\nif (msg.topic === \"data\" && msg.payload !== undefined) {\n    context.set('savedData', msg.payload);\n\n    return null; \n}\n\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 935,
+        "y": 1920,
+        "wires": [
+            [
+                "15f8b62e69838e88",
+                "db0f7460f6ac81f3"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "3623e22bc7f1bf90",
+        "type": "function",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "ac809a118d271bcc",
+        "name": "function 36",
+        "func": "var current = msg.payload[\"current\"];\nmsg.payload = parseInt(current);\nmsg.topic = \"data\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 865,
+        "y": 1960,
+        "wires": [
+            [
+                "395754e207ae9558",
+                "0f65d2708b5b4186"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "b859b501a8b4db6c",
+        "type": "debug",
+        "z": "4ecc5a6d78dc7d19",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1640,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "c59c5ba6150bf181",
+        "type": "function",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "0165464672a9d82a",
+        "name": "function 37",
+        "func": "let savedData = context.get('savedData');\n\nif (\n    (msg.payload && msg.payload.input_data && msg.payload.input_data.voltage !== undefined && msg.payload.input_data.current !== undefined) ||\n    (msg.payload && msg.payload.voltage !== undefined && msg.payload.current !== undefined)\n) {\n    let sourceVoltage = global.get(\"sourceVoltage\") || 220; // Значение по умолчанию для напряжения\n    let sourceCurrent = global.get(\"sourceCurrent\");\n\n\n\n    let currentBanch;\n    if (savedData !== undefined) {\n        currentBanch = savedData;\n\n    } else {\n\n        currentBanch = 50;\n\n    }\n\n    global.set(\"currentBanch2\", currentBanch);\n\n\n    msg.payload = {\n        voltage: sourceVoltage,\n        current: currentBanch\n    };\n    msg.topic = \"input_data\";\n    return msg;\n}\n\n\nif (msg.topic === \"data\" && msg.payload !== undefined) {\n    context.set('savedData', msg.payload);\n\n    return null;\n}\n\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 915,
+        "y": 1620,
+        "wires": [
+            [
+                "4239e1b9e53d2b04",
+                "8fdaf7a7c9e6d475"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "9e8157062f9d303a",
+        "type": "mqtt in",
+        "z": "4ecc5a6d78dc7d19",
+        "d": true,
+        "g": "9aa7b60a047228f2",
+        "name": "TransporterDataListener",
+        "topic": "client/transformer/device1/data",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "9247c215d6f5dddb",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1035,
+        "y": 240,
+        "wires": [
+            [
+                "412195e4984f780b"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "412195e4984f780b",
+        "type": "function",
+        "z": "4ecc5a6d78dc7d19",
+        "d": true,
+        "g": "9aa7b60a047228f2",
+        "name": "function",
+        "func": "var turns_ratio = msg.payload[\"turnsRation\"];  // Коэффициент трансформации\nmsg.payload = parseInt(turns_ratio);\nmsg.topic = \"transformer\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1105,
+        "y": 240,
+        "wires": [
+            [
+                "c4d3b94c618b4e34"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "866dbef3b0e5becd",
+        "type": "function",
+        "z": "4ecc5a6d78dc7d19",
+        "d": true,
+        "g": "9aa7b60a047228f2",
+        "name": "Transformer",
+        "func": "// Проверяем, что в msg.payload есть input_data и voltage\nif (msg.payload && msg.payload.input_data && msg.payload.input_data.voltage !== undefined && msg.payload.input_data.current !== undefined && msg.payload.transformer !== undefined) {\n    var voltage = msg.payload.input_data.voltage;\n    var current = msg.payload.input_data.current;\n    var turns_ratio = msg.payload.transformer;  // Коэффициент трансформации\n\n    // Применение коэффициента трансформации\n    var new_voltage = voltage / turns_ratio;\n    var new_current = current * turns_ratio;\n\n    // Обновляем msg.payload с новыми значениями\n    msg.payload = { voltage: new_voltage, current: new_current };\n\n    return msg; // Возвращаем сообщение с обновленным payload\n} else {\n    // Если каких-либо данных нет, не отправляем сообщение дальше\n    return null;\n}\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1156,
+        "y": 181,
+        "wires": [
+            [
+                "18f267b059a29f58"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "c4d3b94c618b4e34",
+        "type": "join",
+        "z": "4ecc5a6d78dc7d19",
+        "d": true,
+        "g": "9aa7b60a047228f2",
+        "name": "Join",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": true,
+        "timeout": "1",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 1070,
+        "y": 179,
+        "wires": [
+            [
+                "866dbef3b0e5becd"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "18f267b059a29f58",
+        "type": "mqtt out",
+        "z": "4ecc5a6d78dc7d19",
+        "d": true,
+        "g": "9aa7b60a047228f2",
+        "name": "sensor",
+        "topic": "client/currentsensor/devise4/current",
+        "qos": "1",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9247c215d6f5dddb",
+        "x": 1195,
+        "y": 240,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "d303c488eba5b141",
+        "type": "mqtt out",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "376acaaa03b457c7",
+        "name": "",
+        "topic": "client/currentsensor/sw1/data",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9247c215d6f5dddb",
+        "x": 955,
+        "y": 1420,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "8fdaf7a7c9e6d475",
+        "type": "mqtt out",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "0165464672a9d82a",
+        "name": "",
+        "topic": "client/currentsensor/sw2/data",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9247c215d6f5dddb",
+        "x": 965,
+        "y": 1660,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "db0f7460f6ac81f3",
+        "type": "mqtt out",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "ac809a118d271bcc",
+        "name": "",
+        "topic": "client/currentsensor/sw3/data",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9247c215d6f5dddb",
+        "x": 955,
+        "y": 1960,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "cb6b19cfeee30670",
+        "type": "debug",
+        "z": "4ecc5a6d78dc7d19",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "0f65d2708b5b4186",
+        "type": "debug",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "dddd31ebb4f7bdbd",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 2020,
+        "wires": []
+    },
+    {
+        "id": "fcfc2ca915ab4288",
+        "type": "debug",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "4c73254a5714ff61",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "6cc24b9c45883a71",
+        "type": "debug",
+        "z": "4ecc5a6d78dc7d19",
+        "g": "152dd80ce5fa3b38",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 1500,
+        "wires": []
     }
 ]

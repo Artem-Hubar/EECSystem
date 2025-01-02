@@ -34,12 +34,12 @@ public class UpdatedSubscribedTopic {
             String topicTitle = topic.getTitle();
             if (isTopicTooOld(topic)) {
                 client.unsubscribe(topicTitle);
-                removeInitTopicItem(initTopics, topic, topicTitle);
+//                removeInitTopicItem(initTopics, topic, topicTitle);
             }
 
             if (!oldTopicsString.contains(topicTitle)) {
                 client.subscribe(topicTitle);
-                System.out.println("Subscribed new topic: " + topicTitle);
+//                System.out.println("Subscribed new topic: " + topicTitle);
                 addInitTopicItem(initTopics, topic);
             }
         }

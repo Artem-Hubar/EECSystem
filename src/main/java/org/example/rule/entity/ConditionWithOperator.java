@@ -1,11 +1,12 @@
 package org.example.rule.entity;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.ToString;
 
 import java.util.Objects;
 
-@Getter
+@Data
 @ToString
 public class ConditionWithOperator {
     private Expression condition;

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.client.controllers.FullDeviceController"
+      spacing="5" alignment="TOP_LEFT" style="-fx-padding: 10; -fx-background-insets: 5; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-width: 1; -fx-border-color: #cccccc;">
+    <children>
+        <Label fx:id="deviceId" text="Device Details" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 0 0 5 0;"/>
+        <VBox fx:id="deviceDetailsBox" spacing="3" alignment="TOP_LEFT" style="-fx-padding: 5;">
+            <!-- Динамически заполняемые поля будут добавляться сюда -->
+        </VBox>
+    </children>
+</VBox>

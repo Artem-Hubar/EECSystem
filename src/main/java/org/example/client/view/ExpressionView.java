@@ -4,17 +4,22 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import lombok.Getter;
 import org.example.client.controllers.ExpressionController;
-import org.example.entity.Device;
 
 @Getter
 public class ExpressionView {
-    private final Object objectModel;
+
+    private Object objectModel;
     private final Parent view;
     private final ExpressionController expressionModelView;
 
-    public ExpressionView(Object objectModel, String selectedOperator) {
+    public ExpressionView(Object objectModel, String lastOperator) {
         this.objectModel = objectModel;
-        expressionModelView = new ExpressionController(objectModel, selectedOperator);
+        expressionModelView = new ExpressionController(objectModel, lastOperator);
+        this.view = loadView();
+    }
+
+    public ExpressionView(ExpressionController expressionModelView) {
+        this.expressionModelView = expressionModelView;
         this.view = loadView();
     }
 

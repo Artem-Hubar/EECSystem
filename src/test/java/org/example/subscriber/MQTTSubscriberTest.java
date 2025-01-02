@@ -3,11 +3,12 @@ package org.example.subscriber;
 import junit.framework.TestCase;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttException;
+import org.example.entity.DeviceType;
 import org.example.entity.Topic;
 import org.example.service.TopicService;
 import org.example.subscriber.service.mqtt.MQTTClientFactory;
-import org.example.subscriber.handler.CurrentLineDataHandler;
-import org.example.subscriber.handler.TransformerDataHandler;
+import org.example.subscriber.parser.CurrentLineDataParser;
+import org.example.subscriber.parser.TransformerDataParser;
 import org.example.subscriber.strategy.DeviceDataListener;
 import org.example.subscriber.strategy.TopicSubscriber;
 
@@ -31,9 +32,9 @@ public class MQTTSubscriberTest extends TestCase {
 
 
     private void deviceDataListener() {
-        DeviceDataHandlerFactory handlerFactory = new DeviceDataHandlerFactory();
-        handlerFactory.registerHandler("transformer", new TransformerDataHandler());
-        handlerFactory.registerHandler("currentsensor", new CurrentLineDataHandler());
+        DeviceDataParserFactory parserFactory = new DeviceDataParserFactory();
+        parserFactory.registerParser(DeviceType.TRANSPORTER, new TransformerDataParser());
+        parserFactory.registerParser(DeviceType.CURRENT_LINE_SENSOR, new CurrentLineDataParser());
         TopicService topicService = new TopicService();
         Set<Topic> topics = new HashSet<>(topicService.getAllTopics());
         while (topics.isEmpty()){
@@ -44,7 +45,7 @@ public class MQTTSubscriberTest extends TestCase {
             }
             topics = new HashSet<>(topicService.getAllTopics());
         }
-        DeviceDataListener subscriberBehaviour = new DeviceDataListener(handlerFactory, topics);
+        DeviceDataListener subscriberBehaviour = new DeviceDataListener(parserFactory, topics);
         String idClient = "DeviceSubscriberClient";
 
         Thread thread = new Thread(new SubscriberThread(idClient, subscriberBehaviour, topics));

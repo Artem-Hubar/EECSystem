@@ -4,10 +4,11 @@ import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.example.entity.Device;
+import org.example.entity.DeviceType;
 import org.example.entity.Topic;
 import org.example.service.InflexDBService;
-import org.example.subscriber.DeviceDataHandler;
-import org.example.subscriber.DeviceDataHandlerFactory;
+import org.example.subscriber.DeviceDataParser;
+import org.example.subscriber.DeviceDataParserFactory;
 import org.example.subscriber.SubscriberBehaviour;
 
 import java.util.Optional;
@@ -15,30 +16,29 @@ import java.util.Set;
 
 public class DeviceDataListener extends SubscriberBehaviour {
 
-    private final DeviceDataHandlerFactory handlerFactory;
+    private final DeviceDataParserFactory parserFactory;
     private final Set<Topic> initTopics;
 
 
-    public DeviceDataListener(DeviceDataHandlerFactory handlerFactory, Set<Topic> initTopics) {
-        this.handlerFactory = handlerFactory;
+    public DeviceDataListener(DeviceDataParserFactory parserFactory, Set<Topic> initTopics) {
+        this.parserFactory = parserFactory;
         this.initTopics = initTopics;
     }
 
     @Override
     public void execute(MqttClient client, String topic, MqttMessage message) {
         String[] topicParts = topic.split("/");
-        System.out.println(topic);
 
         if (isTopicNotEmpty(topicParts)) {
             proceedData(topic, message, topicParts);
-            updateSubscribedTopic(client);
+//            updateSubscribedTopic(client);
         }
     }
 
     private void proceedData(String topic, MqttMessage message, String[] topicParts) {
-        String deviceType = topicParts[1];
-        DeviceDataHandler handler = handlerFactory.getHandler(deviceType);
-        Optional<Device> device = handleData(topic, message, handler, deviceType);
+        DeviceType deviceType = DeviceType.fromType(topicParts[1]);
+        DeviceDataParser parser = parserFactory.getParser(deviceType);
+        Optional<Device> device = handleData(topic, message, parser, deviceType);
         if (device.isPresent()) {
             writeToDataBase(device.get());
         }
@@ -58,13 +58,14 @@ public class DeviceDataListener extends SubscriberBehaviour {
         inflexDBService.writeData(device);
     }
 
-    private Optional<Device> handleData(String topic, MqttMessage message, DeviceDataHandler handler, String deviceType) {
+    private Optional<Device> handleData(String topic, MqttMessage message, DeviceDataParser parser, DeviceType deviceType) {
         Optional<Device> device = Optional.empty();
-        if (isHandlerNotNull(handler)) {
+        if (isParserNotNull(parser)) {
+//            System.out.println(message);
             String[] topicParts = topic.split("/");
-            device = handler.handleData(topicParts, new String(message.getPayload()));
+            device = parser.parserData(topicParts, new String(message.getPayload()));
         } else {
-            System.err.println("DeviceDataHandler '" + deviceType + "' not found.");
+            System.err.println("DeviceDataParser '" + deviceType + "' not found.");
         }
         return device;
     }
@@ -73,7 +74,7 @@ public class DeviceDataListener extends SubscriberBehaviour {
         return topicParts.length > 1;
     }
 
-    private boolean isHandlerNotNull(DeviceDataHandler handler) {
-        return handler != null;
+    private boolean isParserNotNull(DeviceDataParser parser) {
+        return parser != null;
     }
 }

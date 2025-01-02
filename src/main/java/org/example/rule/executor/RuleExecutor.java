@@ -14,14 +14,12 @@ public class RuleExecutor {
 
     public void execute() {
         List<Action> actions = rule.getActions();
-        System.out.println("Выполнение правила...");
         if (conditionsMet(0, true)) {
-            System.out.println("Все условия выполнены. Выполняем действия.");
+            System.out.println(rule.getDescription());
             for (Action action : actions) {
                 performAction(action);
             }
         } else {
-            System.out.println("Условия не выполнены. Действия не будут выполнены.");
         }
     }
 
@@ -33,7 +31,6 @@ public class RuleExecutor {
 
         ConditionWithOperator current = conditionsWithOperators.get(index);
         boolean conditionResult = evaluateCondition(current.getCondition());
-        System.out.println("Результат условия " + current.getCondition() + ": " + conditionResult);
 
         String logicalOperator = current.getLogicalOperator();
         boolean newResult;
@@ -46,15 +43,14 @@ public class RuleExecutor {
         } else {
             throw new IllegalStateException("Неизвестный логический оператор: " + logicalOperator);
         }
-        System.out.println("accumulated: " + accumulatedResult + " conditionalResult "+conditionResult + " newResult "+newResult);
 
         return conditionsMet(index + 1, newResult);
     }
 
     private boolean evaluateCondition(Expression condition) {
-        System.out.println("Проверка условия: " + condition);
         try {
-            return (Boolean) condition.evaluate();
+            Object object = condition.evaluate();
+            return (Boolean) object ;
         }catch (Exception e){
             throw new NoSuchElementException(e);
         }

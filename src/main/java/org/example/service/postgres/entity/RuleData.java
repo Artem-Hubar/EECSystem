@@ -15,7 +15,8 @@ public class RuleData {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;  // Уникальный идентификатор записи
-
+    @Column(name = "description", columnDefinition = "text")
+    private String description;
     @Column(name = "data", columnDefinition = "text", nullable = false)
     private String data;
 
