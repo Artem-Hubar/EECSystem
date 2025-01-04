@@ -2,9 +2,8 @@ package org.example.client.ruleparser;
 
 import org.example.client.controllers.ActionController;
 import org.example.client.controllers.ConditionalController;
-import org.example.client.controllers.RuleBuilderSceneController;
+import org.example.client.controllers.RuleContainerController;
 import org.example.client.view.ConditionalView;
-import org.example.client.view.RuleSceneView;
 import org.example.rule.entity.Action;
 import org.example.rule.entity.ConditionWithOperator;
 import org.example.rule.entity.Rule;
@@ -12,8 +11,8 @@ import org.example.rule.entity.Rule;
 import java.util.List;
 
 public class RuleSceneControllerParser {
-    public RuleBuilderSceneController getRuleSceneController(Rule rule){
-        RuleBuilderSceneController ruleBuilderSceneController = new RuleBuilderSceneController();
+    public RuleContainerController getRuleSceneController(Rule rule){
+        RuleContainerController ruleBuilderSceneController = new RuleContainerController();
         ConditionalController controller = getConditionController(rule);
         ConditionalView conditionalView = new ConditionalView(controller);
         ActionControllerParser actionControllerParser = new ActionControllerParser();

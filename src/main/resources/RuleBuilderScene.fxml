@@ -19,41 +19,11 @@
             <Pane VBox.vgrow="NEVER">
                <children>
                   <Label layoutX="353.0" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Rule builder" />
-                  <Button layoutX="10.0" layoutY="13.0" onAction="#onSaveRule" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px;" text="Add condition" />
+                  <Button layoutX="10.0" layoutY="13.0" onAction="#onSaveRule" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px;" text="Save" />
                </children>
             </Pane>
             <Separator prefWidth="865.0" />
-            <Accordion maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" VBox.vgrow="ALWAYS">
-               <panes>
-                  <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Conditionals">
-                     <content>
-                        <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
-                           <content>
-                              <VBox fx:id="conditionsContainer" spacing="5" />
-                           </content>
-                        </ScrollPane>
-                     </content>
-                  </TitledPane>
-                  <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Actions">
-                     <content>
-                        <VBox spacing="5" VBox.vgrow="ALWAYS">
-                           <children>
-                              <Button onAction="#onAddAction" style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 14px;" text="Add action" />
-                              <Separator prefWidth="865.0" VBox.vgrow="ALWAYS" />
-                              <ScrollPane fitToWidth="true" prefHeight="200.0" prefWidth="200.0">
-                                 <content>
-                                    <VBox fx:id="actionsContainer" spacing="5" />
-                                 </content>
-                              </ScrollPane>
-                           </children>
-                        </VBox>
-                     </content>
-                  </TitledPane>
-               </panes>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-            </Accordion>
+            <VBox fx:id="ruleContainer" VBox.vgrow="ALWAYS"/>
          </children>
          <padding>
             <Insets bottom="10" left="10" right="10" top="10" />

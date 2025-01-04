@@ -3,11 +3,7 @@ package org.example.client.view;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import lombok.Data;
-import org.example.client.controllers.FullDeviceController;
 import org.example.client.controllers.RuleBuilderSceneController;
-import org.jetbrains.annotations.NotNull;
-
-import java.io.IOException;
 
 @Data
 public class RuleSceneView {

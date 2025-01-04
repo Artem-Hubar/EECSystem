@@ -4,84 +4,36 @@ import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.layout.VBox;
-import lombok.Setter;
-import org.example.client.SceneManager;
-import org.example.client.view.ActionView;
-import org.example.client.view.ConditionalView;
+import org.example.client.view.RuleContainerSceneView;
 import org.example.rule.RuleBuilder;
 import org.example.service.RuleService;
 
-
-import java.util.ArrayList;
 import java.util.List;
+
 
 public class RuleBuilderSceneController {
     @FXML
-    private VBox conditionsContainer;
-    @FXML
-    private VBox actionsContainer;
+    private VBox ruleContainer;
 
-    private ConditionalController conditionControllers;
-    private final List<ActionController> actionControllers = new ArrayList<>();
-    @Setter
-    private ConditionalView conditionalView;
-    private final List<ActionView> actionViews = new ArrayList<>();
+    RuleContainerController ruleContainerController;
+    RuleContainerSceneView ruleContainerSceneView;
 
     public RuleBuilderSceneController() {
 
     }
 
     @FXML
-    private void initialize() {
-        if (conditionalView != null){
-            addConditionalView(conditionalView);
-        }else {
-            addCondition();
-        }
-        if (actionViews !=null){
-            for (ActionView actionView : actionViews){
-                addAction(actionView);
-            }
-        }
-    }
-
-    @FXML
-    public void addCondition() {
-        SceneManager sceneManager = new SceneManager();
-        ConditionalView conditionalView = new ConditionalView();
-        addConditionalView(conditionalView);
-    }
-
-    private void addConditionalView(ConditionalView conditionalView) {
-        Parent conditionalScene = conditionalView.getView();
-        ConditionalController conditionalModelView = conditionalView.getConditionalView();
-        conditionsContainer.getChildren().add(conditionalScene);
-        conditionControllers = conditionalModelView ;
-    }
-
-
-    @FXML
-    public void onAddAction() {
-        ActionView actionView = new ActionView();
-        addAction(actionView);
-    }
-
-    private void addAction(ActionView actionView) {
-        Parent actionScene = actionView.getView();
-        ActionController actionController = actionView.getController();
-        actionsContainer.getChildren().add(actionScene);
-        actionControllers.add(actionController);
-        actionController.setOnDelete(()->onDeleteAction(actionScene, actionController));
-    }
-
-    @FXML
-    public void onDeleteAction(Parent expressionParent, ActionController actionController) {
-        actionsContainer.getChildren().remove(expressionParent);
-        actionControllers.remove(actionController);
+    public void initialize(){
+        this.ruleContainerSceneView =  new RuleContainerSceneView();
+        this.ruleContainerController = ruleContainerSceneView.getController();
+        Parent parent = ruleContainerSceneView.getView();
+        this.ruleContainer.getChildren().add(parent);
     }
 
     @FXML
     public void onSaveRule() {
+        ConditionalController conditionControllers= ruleContainerController.getConditionControllers();
+        List<ActionController> actionControllers = ruleContainerController.getActionControllers();
         RuleBuilder ruleBuilder = new RuleBuilder()
                 .fromUi(conditionControllers, actionControllers);
         RuleService ruleService = new RuleService();
@@ -94,17 +46,5 @@ public class RuleBuilderSceneController {
         alert.setContentText("Rule successfully added!");
         alert.showAndWait();
 
-        clearConditional();
-        actionsContainer.getChildren().clear();
-    }
-
-    private void clearConditional() {
-        conditionControllers.getExpressionsContainerControllers().forEach(ExpressionsContainerController::onDeleteThisExpressionsContainer);
-    }
-
-
-    public void onAddActionController(ActionController actionController) {
-        ActionView actionView = new ActionView(actionController);
-        actionViews.add(actionView);
     }
 }
